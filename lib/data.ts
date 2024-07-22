@@ -3242,12 +3242,12 @@ const data = [
         body: [
           [
             "1",
-            "to connect and transmit rotational power between the propulsion engine and the propeller shaft.",
+            "transmit rotational power from the ship's engine to the main shaft",
             "Primary",
             ["1,1", "1,2"],
             [
-              "Fails to transmit rotational power (total loss)",
-              "Fails to transmit required rotational power (partial loss)",
+              "fails to transmit rotational power",
+              "fails to deliver the required rotational power",
             ],
           ],
         ],
@@ -3268,85 +3268,86 @@ const data = [
         body: [
           [
             "1",
-            "Fails to transmit torque",
+            "Cracked",
             [
-              "1.1 Misalignment: Improper alignment of the coupling with the shaft can hinder the transmission of torque, leading to inefficiencies and increased wear.",
-              "1.2 Material defect: Material defects or degradation can compromise the structural integrity of the coupling, preventing effective torque transmission.",
+              "1.1  Stress Concentration: Stress concentration occurs due to irregularities or discontinuities in the material or design of the propeller shaft.",
+              "1.2 Fatigue: Fatigue occurs when the propeller shaft is subjected to repeated cyclic loading and unloading.",
             ],
-            ["Random", "Wear-out"],
+            ["Wear-out", "Wear-out"],
             {
               type: "number",
               text: [
-                "Reduced propulsion efficiency",
-                "Increased wear and potential damage",
+                "Surface cracks",
+                "propagation",
               ],
             },
-            ["-"],
+            ["1.2 fails to deliver the required rotational power"],
           ],
           [
             "2",
-            "Degraded torque transmission",
+            "Fractured",
             [
-              "2.1  Wear: Normal or accelerated wear reduces the coupling’s effectiveness to maintain proper grip and alignment",
-              "2.2 Fatigue: Repeated stress can lead to micro-cracks and eventual breakdown of the coupling material.",
+              "2.1  Excessive Loading: Excessive loading beyond the design limits of the propeller shaft can cause it to exceed its yield strength, resulting in sudden and complete fracture.",
+              "2.2  Material Defects: Material defects such as voids, inclusions, or inconsistencies in the metal structure can create weak points in the propeller shaft.",
             ],
             ["Wear-out", "Wear-out"],
             {
               type: "number",
               text: [
-                "Loss of propulsion power and efficiency.",
-                "Potential for sudden failure leading to total loss of propulsion.",
+                "Sudden breakage",
+                "complete fracture",
               ],
             },
-            ["-"],
+            ["1.1 fails to transmit rotational power"],
           ],
           [
             "3",
-            "Overheats",
+            "Worn",
             [
-              "3.1 Inadequate lubrication: Lack of sufficient lubrication can cause increased friction and heat.",
-              "3.2 Overload: Exceeding the design load of the coupling can lead to excessive heat due to friction and material deformation.",
+              "3.1 Abrasion: Abrasion occurs when the surface of the propeller shaft is continuously rubbed or scraped against another surface.",
+              "3.2 Erosion: Erosion happens when the surface of the propeller shaft gradually wears away due to the abrasive action of water, sediment, or other contaminants in the marine environment",
             ],
-            ["Wear-out", "Wear-out"],
+            ["Random", "Random"],
             {
               type: "number",
               text: [
-                "Possible damage to the coupling and adjacent shaft components.",
-                "Increased risk of fire or melting of critical components.",
+                "Surface wear",
+                "loss of material",
               ],
             },
-            ["-"],
+            ["1.2 fails to deliver the required rotational power"],
           ],
           [
             "4",
-            "Operates with high vibration/noise level",
+            "Deformed",
             [
-              "4.1 Unbalance: Imbalance in the rotational mass can cause the system to vibrate excessively.",
-              "4.2 Loosened: Fasteners or components that have loosened over time can cause instability and vibration.",
+              "4.1 Misalignment: Misalignment of the propeller shaft can cause uneven distribution of forces, leading to deformation or bending of the shaft over time",
+              "4.2 Excessive Vibration: Excessive vibration of the propeller shaft can induce dynamic forces that exceed the material's yield strength, causing it to deform or bend.",
+            ],
+            ["Random", "Random"],
+            {
+              type: "number",
+              text: [
+                "Distortion",
+                "bending",
+                "misshape",
+              ],
+            },
+            "1.1 fails to transmit rotational power",
+          ],
+          [
+            "5",
+            "Corroded",
+            [
+              "5.1 Exposure to Corrosive Elements: Exposure to corrosive elements such as saltwater, chemicals, or pollutants can initiate corrosion.",
+              " 5.2 Lack of Protective Coating: A lack of protective coating or inadequate corrosion protection leaves the propeller shaft vulnerable to corrosion damage.",
             ],
             ["Wear-out", "Wear-out"],
             {
               type: "number",
-              text: [
-                "Increased stress on bearings and mountings, potentially leading to their premature failure.",
-                "Discomfort and potential structural damage due to continuous vibration.",
-              ],
+              text: ["Corrosion buildup", "surface pitting"],
             },
-            "-",
-          ],
-          [
-            "5",
-            "External leak",
-            [
-              "5.1 Seal failure: Deterioration or damage to seals can allow fluids to escape.",
-              "5.2 Gasket breakdown: Degradation or damage of gaskets used within the coupling assembly.",
-            ],
-            ["Random", "Wear-out"],
-            {
-              type: "number",
-              text: ["Contamination of the environment and possible slipping hazards.", "Loss of fluid can lead to reduced lubrication and cooling, potentially causing overheating and further damage."],
-            },
-            "-",
+            "1.2 fails to deliver the required rotational power",
           ],
           [
             "6",
@@ -3358,11 +3359,35 @@ const data = [
             ["Wear-out", "Random"],
             {
               type: "number",
-              text: ["Misalignment and uneven load distribution.", "Potential for disconnection or catastrophic failure if not detected and corrected."],
+              text: ["Bolt loosening", "Joint separation"],
             },
-            "-",
+            "1.2 fails to deliver the required rotational power",
           ],
-          
+          [
+            "7",
+            "Sticking",
+            [
+              "7.1 Lack of Lubrication: Insufficient or improper lubrication of the propeller shaft bearings or sliding surfaces can result in increased friction and resistance, causing the shaft to stick or seize.",
+              "7.2 Contamination: Contamination of lubricants or bearing surfaces with dirt, debris, or water can impair their ability to function properly.",
+            ],
+            ["Wear-out", "Random"],
+            "-",
+            "1.1 fails to transmit rotational power",
+          ],
+          [
+            "8",
+            "Vibrating",
+            [
+              "8.1 Unbalance: This is a situation where the weight of the propeller or shaft isn't distributed evenly.",
+              "8.2 Alignment issues: If the engine, shaft, and propeller aren't perfectly aligned, it can cause the shaft to bend and vibrate.",
+            ],
+            ["Wear-out", "Random"],
+            {
+              type: "number",
+              text: ["Increased wear on bearings and seals", "Fastener loosening"],
+            },
+            "1.2 fails to deliver the required rotational power",
+          ],
         ],
       },
       {
@@ -3383,56 +3408,58 @@ const data = [
         body: [
           [
             "1",
-            "Fails to transmit torque",
-            "Loss of propulsion due to inability to transfer torque effectively.",
-            "3",
-            "3",
+            "Cracked",
+            "Risk of Catastrophic Failure: Cracks in the propeller shaft can propagate and lead to sudden, catastrophic failure, potentially causing the propeller to detach from the shaft or rendering the shaft unusable.",
+            "4",
+            "2",
             {
               type: "class",
               backgroundColor: "#fddb20",
               textColor: "#000",
-              text: ["Menengah"],
+              text: ["Menengah-Tinggi"],
             },
             {
               type: "number",
-              text: ["Torque measurements", "Audible noise"],
+              text: ["Visual inspection", "ultrasonic testing"],
             },
             {
               type: "dot",
               text: [
-                "Regular alignment checks",
-                "Replace worn parts",
+                "Regular inspection",
+                "stress analysis",
+                "structural reinforcement"
               ],
             },
           ],
           [
             "2",
-            "Degraded torque transmission",
-            "Reduced propulsion efficiency due to inadequate torque transfer.",
-            "3",
-            "3",
+            "Fractured",
+            "Loss of Structural Integrity: A fractured propeller shaft results in a loss of structural integrity, making it unable to transmit rotational power effectively.",
+            "4",
+            "2",
             {
               type: "class",
               backgroundColor: "#1caf51",
               textColor: "#fff",
-              text: ["Menengah"],
+              text: ["Menengah-Tinggi"],
             },
             {
               type: "number",
-              text: ["Performance monitoring", "Vibration analysis"],
+              text: ["Visual inspection", "ultrasonic testing"],
             },
             {
               type: "dot",
               text: [
-                "Regular inspections",
-                "Replace faulty components",
+                "Regular inspection",
+                "stress analysis",
+                "structural reinforcement",
               ],
             },
           ],
           [
             "3",
-            "Overheats",
-            "Potential damage to the coupling and adjacent components due to excessive heat.",
+            "Worn",
+            "Reduced Efficiency, Increased Friction: Wornin the propeller shaft leads to surface deterioration and loss of material, resulting in increased friction between the shaft and its bearings and reduce efficiency.",
             "3",
             "2",
             {
@@ -3443,41 +3470,46 @@ const data = [
             },
             {
               type: "number",
-              text: ["Temperature monitoring", "Visual inspection"],
+              text: ["Visual inspection", "ultrasonic testing"],
             },
             {
               type: "dot",
-              text: ["Ensure proper coupling", "Monitor load conditions"],
+              text: [
+                "Regular inspection",
+                "stress analysis",
+                "structural reinforcement",
+              ],
             },
           ],
           [
             "4",
-            "Operates with high vibration/noise level",
-            "Increased wear and tear on bearings and shafts due to excessive vibration.",
+            "Deformed",
+            "Alignment Issues, Increased Stress: Deformation of the propeller shaft, such as bending or misshaping, causes misalignment of the propeller and increases stress on the shaft and bearings.",
             "3",
-            "2",
+            "3",
             {
               type: "class",
               backgroundColor: "#fddb20",
               textColor: "#000",
-              text: ["Rendah-Menengah"],
+              text: ["Menengah"],
             },
             {
               type: "number",
-              text: ["Vibration analysis", "Audible inspection"],
+              text: ["Visual inspection", "ultrasonic testing"],
             },
             {
               type: "dot",
               text: [
-                "Balance coupling",
-                "Regular alignment",
+                "Regular inspection",
+                "stress analysis",
+                "structural reinforcement",
               ],
             },
           ],
           [
             "5",
-            "External leak",
-            "Loss of lubrication oil or hydraulic fluid, leading to potential damage to the coupling and surrounding components.",
+            "Corroded",
+            "Reduced Structural Integrity: Corrosion buildup and pitting on the propeller shaft weaken its structural integrity, increasing the risk of structural failure.",
             "3",
             "2",
             {
@@ -3488,22 +3520,23 @@ const data = [
             },
             {
               type: "number",
-              text: ["Visual inspection", "Oil level checks"],
+              text: ["Visual inspection", "ultrasonic testing"],
             },
             {
               type: "dot",
               text: [
-                "Replace seals and gaskets",
-                "Routine checks",
+                "Regular inspection",
+                "stress analysis",
+                "structural reinforcement",
               ],
             },
           ],
           [
             "6",
             "Loosened",
-            "Misalignment of shafting components, leading to increased wear and potential damage.",
+            "Increased Risk of Detachment: Loosening of bolts or joints in the propeller shaft increases the risk of detachment or separation of critical components.",
             "3",
-            "3",
+            "2",
             {
               type: "class",
               backgroundColor: "#00b14f",
@@ -3512,13 +3545,64 @@ const data = [
             },
             {
               type: "number",
-              text: ["Regular bolt/nut checks", "Vibration analysis"],
+              text: ["Visual inspection", "ultrasonic testing"],
             },
             {
               type: "dot",
               text: [
-                "Tighten to specifications",
-                "Regular maintenance checks",
+                "Regular inspection",
+                "stress analysis",
+                "structural reinforcement",
+              ],
+            },
+          ],
+          [
+            "7",
+            "Sticking",
+            "Reduced Efficiency, Increased Wear: Sticking of the propeller shaft due to lack of lubrication or contamination restricts its movement, leading to reduced propulsion efficiency and increased wear on the shaft and bearings.",
+            "3",
+            "2",
+            {
+              type: "class",
+              backgroundColor: "#00b14f",
+              textColor: "#fff",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "number",
+              text: ["Visual inspection", "ultrasonic testing"],
+            },
+            {
+              type: "dot",
+              text: [
+                "Regular inspection",
+                "stress analysis",
+                "structural reinforcement",
+              ],
+            },
+          ],
+          [
+            "8",
+            "Vibrating",
+            "Increased noise and vibration and damage to other component: The vibration from the shaft can travel through the drivetrain and into the hull of the boat and damage to other component.",
+            "3",
+            "2",
+            {
+              type: "class",
+              backgroundColor: "#00b14f",
+              textColor: "#fff",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "number",
+              text: ["Visual inspection", "ultrasonic testing"],
+            },
+            {
+              type: "dot",
+              text: [
+                "Regular inspection",
+                "stress analysis",
+                "structural reinforcement",
               ],
             },
           ],
@@ -3538,59 +3622,60 @@ const data = [
         body: [
           [
             "1",
-            "Fails to transmit torque",
-            "3",
-            "3",
+            "Cracked",
+            "4",
+            "2",
             {
               type: "class",
               backgroundColor: "#fddb20",
               textColor: "#000",
-              text: ["Menengah"],
+              text: ["Menengah-Tinggi"],
             },
             {
               type: "dot",
               text: [
-                "inspeksi visual",
-                "lakukan alignment check",
+                "inspeksi keretakan setiap 1000 jam",
+                "lakukan perawatan setiap melakukan docking",
               ],
             },
-            "2",
-            {
-              type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
-              text: ["Rendah-Menengah"],
-            },
-          ],
-          [
-            "2",
-            "Degraded torque transmission",
-            "3",
-            "3",
+            "1",
             {
               type: "class",
               backgroundColor: "#00b14f",
               textColor: "#fff",
               text: ["Menengah"],
             },
-            {
-              type: "dot",
-              text: [
-                "lakukan inspeksi terhadap komponen",
-                "lakukan vibration analysis",
-              ],
-            },
+          ],
+          [
+            "2",
+            "Fractured",
+            "4",
             "2",
             {
               type: "class",
               backgroundColor: "#00b14f",
               textColor: "#fff",
-              text: ["Rendah-Menengah"],
+              text: ["Menengah-Tinggi"],
+            },
+            {
+              type: "dot",
+              text: [
+                "inspeksi keretakan setiap 1000 jam",
+                "lakukan perawatan setiap melakukan docking",
+                "Segera lakukan pergantian shaft sesuai prosedur dari vendor apabila fractured",
+              ],
+            },
+            "1",
+            {
+              type: "class",
+              backgroundColor: "#00b14f",
+              textColor: "#fff",
+              text: ["Menengah"],
             },
           ],
           [
             "3",
-            "Overheats",
+            "Worn",
             "3",
             "2",
             {
@@ -3602,8 +3687,8 @@ const data = [
             {
               type: "dot",
               text: [
-                "lakukan inspeksi terhadap lubrikan",
-                "lakukan pengukuran temperatur dengan non-contact thermogun",
+                "Inspeksi kekuatan struktur shaft setiap 1000 jam",
+                "Lakukan penguatan struktur shaft apabila sudah aus",
               ],
             },
             "1",
@@ -3616,20 +3701,21 @@ const data = [
           ],
           [
             "4",
-            "Operates with high vibration/noise level",
+            "Deformed",
             "3",
-            "2",
+            "3",
             {
               type: "class",
               backgroundColor: "#fddb20",
               textColor: "#000",
-              text: ["Rendah-Menengah"],
+              text: ["Menengah"],
             },
             {
               type: "dot",
               text: [
-                "lakukan Vibration analysis",
-                "lakukan visual inspeksi terhadap kondisi komponen",
+                "Inspeksi kekuatan struktur shaft setiap 1000 jam",
+                "lakukan vibration test analysis",
+                "lakukan pengencangan baut",
               ],
             },
             "2",
@@ -3642,7 +3728,7 @@ const data = [
           ],
           [
             "5",
-            "External leak",
+            "Corroded",
             "3",
             "2",
             {
@@ -3654,8 +3740,8 @@ const data = [
             {
               type: "dot",
               text: [
-                "lakukan pressure test terhadap komponen",
-                "lakukan visual inpeksi terhadap komponen",
+                "lakukan inspeksi  pada shaft serta cek kondisi shaft terhadap kontaminasi kotoran, kerak atau korosi yang terjadi",
+                "lapisi dengan cairan anti korosi",
               ],
             },
             "1",
@@ -3670,12 +3756,12 @@ const data = [
             "6",
             "Loosened",
             "3",
-            "3",
+            "2",
             {
               type: "class",
               backgroundColor: "#00b14f",
               textColor: "#fff",
-              text: ["Menengah"],
+              text: ["Rendah-Menengah"],
             },
             {
               type: "dot",
@@ -3684,7 +3770,908 @@ const data = [
                 "lakukan vibration test analysis",
               ],
             },
+            "1",
+            {
+              type: "class",
+              backgroundColor: "#00b14f",
+              textColor: "#fff",
+              text: ["Rendah-Menengah"],
+            },
+          ],
+          [
+            "7",
+            "Sticking",
+            "3",
             "2",
+            {
+              type: "class",
+              backgroundColor: "#00b14f",
+              textColor: "#fff",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "dot",
+              text: [
+                "lakukan pelumasan secara berkala",
+                "lakukan inspeksi  pada shaft serta cek kondisi shaft terhadap kontaminasi kotoran, kerak atau korosi yang terjadi",
+              ],
+            },
+            "1",
+            {
+              type: "class",
+              backgroundColor: "#00b14f",
+              textColor: "#fff",
+              text: ["Rendah-Menengah"],
+            },
+          ],
+          [
+            "6",
+            "Vibrating",
+            "3",
+            "2",
+            {
+              type: "class",
+              backgroundColor: "#00b14f",
+              textColor: "#fff",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "dot",
+              text: [
+                "lakukan vibration test analysis",
+              ],
+            },
+            "1",
+            {
+              type: "class",
+              backgroundColor: "#00b14f",
+              textColor: "#fff",
+              text: ["Rendah-Menengah"],
+            },
+          ],
+        ],
+      },
+    ],
+  },
+  {
+    slug: "intermediet-bearing-1",
+    type: "SHAFTING",
+    specs: {
+      functionalGroup: "Propulsion Functional Group",
+      system: "Propeller and Shafting",
+      subsystem: "Shafting",
+      equipmentID: "SH-BRG-INTS-01",
+      equipmentName: "Intermediet Bearing 1",
+      drawing: "Shafting Arragment",
+    },
+
+    tables: [
+      {
+        title: "Function and Functional Failure",
+        backgroundColor: "#e5fff1",
+        borderColor: "#00B14F",
+        headRow: 1,
+        head: [
+          "No",
+          "Function Statement",
+          "Function Type",
+          "No",
+          "Functional Failure Statement",
+        ],
+        body: [
+          [
+            "1",
+            "to provide support and stability to the propeller shaft between its forward and aft ends and maintain proper alignment and minimze vibration",
+            "Primary",
+            ["1,1"],
+            [
+              "Fail to provide support and stability to the propeller shaft",
+            ],
+          ],
+        ],
+      },
+      {
+        title: "FMECA",
+        backgroundColor: "#ffefe5",
+        borderColor: "#EB5B00",
+        headRow: 1,
+        head: [
+          "No",
+          "Failure Mode",
+          "Causes",
+          "Failure Charasteristic",
+          "Local Effect",
+          "Functional Failure",
+        ],
+        body: [
+          [
+            "1",
+            "Cracked",
+            [
+              "1.1 Excessive Loading: Excessive loading on the intermediate bearing, such as sudden shocks or overloading, can exceed its capacity, leading to stress concentrations and eventual cracking of the bearing material.",
+              "1.2 Material Defects: Inherent material defects such as voids or inclusions create stress concentrations, making the bearing prone to sudden crack formation.",
+            ],
+            ["Wear-out", "Wear-out"],
+            {
+              type: "number",
+              text: [
+                "Surface cracks",
+                "propagation",
+              ],
+            },
+            ["1.1 Fail to provide support and stability to the propeller shaft"],
+          ],
+          [
+            "2",
+            "Contaminated",
+            [
+              "2.1 Lack of Lubrication: Without proper lubrication, friction between moving parts increases, leading to wear and generation of debris that contaminates the bearing.",
+              "2.2 Ingress of Foreign Particles: Entry of foreign particles, such as dust or dirt, into the bearing assembly leads to abrasion and wear, causing contamination.",
+            ],
+            ["Wear-out", "Random"],
+            {
+              type: "number",
+              text: [
+                "Buildup of contaminants",
+                "debris",
+              ],
+            },
+            ["1.1 Fail to provide support and stability to the propeller shaft"],
+          ],
+          [
+            "3",
+            "Fractured",
+            [
+              "3.1 Excessive Loading: Prolonged exposure to high loads results in material fatigue and eventual fracture of the bearing.",
+              "3. 2 Fatigue: Repeated cyclic loading and unloading of the bearing cause microscopic cracks to develop and propagate, ultimately leading to fracture.",
+            ],
+            ["Wear-out", "Wear-out"],
+            {
+              type: "number",
+              text: [
+                "Sudden breakage",
+                "complete fracture",
+              ],
+            },
+            ["1.1 Fail to provide support and stability to the propeller shaft"],
+          ],
+          [
+            "4",
+            "Worn",
+            [
+              "4.1 Abrasion: Continuous rubbing or sliding of components against each other leads to gradual material removal and surface wear.",
+              "4.2 Erosion: Action of abrasive particles or fluids causes gradual erosion of the bearing surface, resulting in material loss.",
+            ],
+            ["Random", "Random"],
+            {
+              type: "number",
+              text: [
+                "Surface wear",
+                "loss of material",
+              ],
+            },
+            "1.1 Fail to provide support and stability to the propeller shaft",
+          ],
+          [
+            "5",
+            "Corroded",
+            [
+              "5.1 Exposure to Corrosive Elements:  Continuous exposure to corrosive elements, such as saltwater, leads to gradual degradation of the bearing surface due to chemical reactions.",
+              "5.2 Lack of Protective Coating: Absence or deterioration of protective coatings exposes the bearing to corrosive environments, accelerating corrosion buildup.",
+            ],
+            ["Wear-out", "Wear-out"],
+            {
+              type: "number",
+              text: ["Corrosion buildup", "pitting"],
+            },
+            "1.1 Fail to provide support and stability to the propeller shaft",
+          ],
+        ],
+      },
+      {
+        title: "FMECA (lanjutan)",
+        backgroundColor: "#ffefe5",
+        borderColor: "#EB5B00",
+        headRow: 1,
+        head: [
+          "No",
+          "Failure Mode",
+          "End Effect",
+          "CoF",
+          "PoF",
+          "Current Risk",
+          "Failure Detection",
+          "Proporsed Basic MNTC",
+        ],
+        body: [
+          [
+            "1",
+            "Cracked",
+            "Risk of Catastrophic Failure: Cracks in the intermediate bearing can lead to sudden, catastrophic failure of the bearing.",
+            "4",
+            "2",
+            {
+              type: "class",
+              backgroundColor: "#fddb20",
+              textColor: "#000",
+              text: ["Menengah-Tinggi"],
+            },
+            {
+              type: "number",
+              text: ["Visual inspection", "ultrasonic testing"],
+            },
+            {
+              type: "dot",
+              text: [
+                "Regular inspection",
+                "stress analysis",
+                "structural reinforcement"
+              ],
+            },
+          ],
+          [
+            "2",
+            "Contaminated",
+            "Increased Friction, Overheating: Contamination of the intermediate bearing with debris or foreign particles increases friction between the bearing and the shaft.",
+            "3",
+            "2",
+            {
+              type: "class",
+              backgroundColor: "#1caf51",
+              textColor: "#fff",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "number",
+              text: ["Visual inspection", "ultrasonic testing"],
+            },
+            {
+              type: "dot",
+              text: [
+                "Regular inspection",
+                "stress analysis",
+                "structural reinforcement",
+              ],
+            },
+          ],
+          [
+            "3",
+            "Fractured",
+            "Loss of Structural Integrity: A fractured intermediate bearing results in a loss of structural integrity, making it unable to support the propeller shaft properly.",
+            "4",
+            "2",
+            {
+              type: "class",
+              backgroundColor: "#1caf51",
+              textColor: "#fff",
+              text: ["Menengah-Tinggi"],
+            },
+            {
+              type: "number",
+              text: ["Visual inspection", "ultrasonic testing"],
+            },
+            {
+              type: "dot",
+              text: [
+                "Regular inspection",
+                "stress analysis",
+                "structural reinforcement",
+              ],
+            },
+          ],
+          [
+            "4",
+            "Worn",
+            "Increased Friction, Reduced Efficiency: Wear in the intermediate bearing results in increased friction between the bearing and the shaft, reducing efficiency and increasing energy consumption.",
+            "3",
+            "2",
+            {
+              type: "class",
+              backgroundColor: "#fddb20",
+              textColor: "#000",
+              text: ["Menengah-Tinggi"],
+            },
+            {
+              type: "number",
+              text: ["Visual inspection", "ultrasonic testing"],
+            },
+            {
+              type: "dot",
+              text: [
+                "Regular inspection",
+                "stress analysis",
+                "structural reinforcement",
+              ],
+            },
+          ],
+          [
+            "5",
+            "Corroded",
+            "Reduced Structural Integrity: Corrosion buildup and pitting on the intermediate bearing weaken its structural integrity, increasing the risk of failure.",
+            "3",
+            "2",
+            {
+              type: "class",
+              backgroundColor: "#00b14f",
+              textColor: "#fff",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "number",
+              text: ["Visual inspection", "ultrasonic testing"],
+            },
+            {
+              type: "dot",
+              text: [
+                "Regular inspection",
+                "stress analysis",
+                "structural reinforcement",
+              ],
+            },
+          ],
+        ],
+      },
+      {
+        title: "Maintenance Task Selection",
+        backgroundColor: "#f5eafa",
+        borderColor: "#912BBC",
+        headRow: 2,
+        head: [
+          "No",
+          "Failure Mode",
+          ["Risk Characterization", ["CoF", "Rec PoF", "Current Risk"]],
+          ["Task Selection", ["Proposed Action (s)", "Proj PoF", "Proj Risk"]],
+        ],
+        body: [
+          [
+            "1",
+            "Cracked",
+            "4",
+            "2",
+            {
+              type: "class",
+              backgroundColor: "#fddb20",
+              textColor: "#000",
+              text: ["Menengah-Tinggi"],
+            },
+            {
+              type: "dot",
+              text: [
+                "inspeksi keretakan setiap 1000 jam",
+                "lakukan perawatan setiap melakukan docking",
+              ],
+            },
+            "1",
+            {
+              type: "class",
+              backgroundColor: "#00b14f",
+              textColor: "#fff",
+              text: ["Menengah"],
+            },
+          ],
+          [
+            "2",
+            "Contaminated",
+            "3",
+            "2",
+            {
+              type: "class",
+              backgroundColor: "#00b14f",
+              textColor: "#fff",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "dot",
+              text: [
+                "lakukan pembersihan terhadap kontaminan",
+                "lakukan pergantian pelumas yang baik untuk bisa membersihkan kontaminan",
+              ],
+            },
+            "1",
+            {
+              type: "class",
+              backgroundColor: "#00b14f",
+              textColor: "#fff",
+              text: ["Rendah-Menengah"],
+            },
+          ],
+          [
+            "3",
+            "Fractured",
+            "4",
+            "2",
+            {
+              type: "class",
+              backgroundColor: "#fddb20",
+              textColor: "#000",
+              text: ["Menengah-Tinggi"],
+            },
+            {
+              type: "dot",
+              text: [
+                "inspeksi keretakan setiap 1000 jam",
+                "lakukan perawatan setiap melakukan docking",
+                "Segera lakukan pergantian componen sesuai prosedur dari vendor"
+              ],
+            },
+            "1",
+            {
+              type: "class",
+              backgroundColor: "#00b14f",
+              textColor: "#fff",
+              text: ["Menengah"],
+            },
+          ],
+          [
+            "4",
+            "Worn",
+            "3",
+            "2",
+            {
+              type: "class",
+              backgroundColor: "#fddb20",
+              textColor: "#000",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "dot",
+              text: [
+                "Inspeksi kekuatan struktur bearing setiap 1000 jam",
+                "Lakukan penguatan struktur shaft apabila sudah aus",
+              ],
+            },
+            "1",
+            {
+              type: "class",
+              backgroundColor: "#00b14f",
+              textColor: "#fff",
+              text: ["Rendah-Menengah"],
+            },
+          ],
+          [
+            "5",
+            "Corroded",
+            "3",
+            "2",
+            {
+              type: "class",
+              backgroundColor: "#00b14f",
+              textColor: "#fff",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "dot",
+              text: [
+                "lakukan inspeksi  pada komponen serta cek kondisi komponen terhadap kontaminasi kotoran, kerak atau korosi yang terjadi",
+                "lapisi dengan cairan anti korosi",
+              ],
+            },
+            "1",
+            {
+              type: "class",
+              backgroundColor: "#00b14f",
+              textColor: "#fff",
+              text: ["Rendah-Menengah"],
+            },
+          ],
+        ],
+      },
+    ],
+  },
+  {
+    slug: "intermediet-bearing-2",
+    type: "SHAFTING",
+    specs: {
+      functionalGroup: "Propulsion Functional Group",
+      system: "Propeller and Shafting",
+      subsystem: "Shafting",
+      equipmentID: "SH-BRG-INTS-02",
+      equipmentName: "Intermediet Bearing 2",
+      drawing: "Shafting Arragment",
+    },
+
+    tables: [
+      {
+        title: "Function and Functional Failure",
+        backgroundColor: "#e5fff1",
+        borderColor: "#00B14F",
+        headRow: 1,
+        head: [
+          "No",
+          "Function Statement",
+          "Function Type",
+          "No",
+          "Functional Failure Statement",
+        ],
+        body: [
+          [
+            "1",
+            "to provide support and stability to the propeller shaft between its forward and aft ends and maintain proper alignment and minimze vibration",
+            "Primary",
+            ["1,1"],
+            [
+              "Fail to provide support and stability to the propeller shaft",
+            ],
+          ],
+        ],
+      },
+      {
+        title: "FMECA",
+        backgroundColor: "#ffefe5",
+        borderColor: "#EB5B00",
+        headRow: 1,
+        head: [
+          "No",
+          "Failure Mode",
+          "Causes",
+          "Failure Charasteristic",
+          "Local Effect",
+          "Functional Failure",
+        ],
+        body: [
+          [
+            "1",
+            "Cracked",
+            [
+              "1.1 Excessive Loading: Excessive loading on the intermediate bearing, such as sudden shocks or overloading, can exceed its capacity, leading to stress concentrations and eventual cracking of the bearing material.",
+              "1.2 Material Defects: Inherent material defects such as voids or inclusions create stress concentrations, making the bearing prone to sudden crack formation.",
+            ],
+            ["Wear-out", "Wear-out"],
+            {
+              type: "number",
+              text: [
+                "Surface cracks",
+                "propagation",
+              ],
+            },
+            ["1.1 Fail to provide support and stability to the propeller shaft"],
+          ],
+          [
+            "2",
+            "Contaminated",
+            [
+              "2.1 Lack of Lubrication: Without proper lubrication, friction between moving parts increases, leading to wear and generation of debris that contaminates the bearing.",
+              "2.2 Ingress of Foreign Particles: Entry of foreign particles, such as dust or dirt, into the bearing assembly leads to abrasion and wear, causing contamination.",
+            ],
+            ["Wear-out", "Random"],
+            {
+              type: "number",
+              text: [
+                "Buildup of contaminants",
+                "debris",
+              ],
+            },
+            ["1.1 Fail to provide support and stability to the propeller shaft"],
+          ],
+          [
+            "3",
+            "Fractured",
+            [
+              "3.1 Excessive Loading: Prolonged exposure to high loads results in material fatigue and eventual fracture of the bearing.",
+              "3. 2 Fatigue: Repeated cyclic loading and unloading of the bearing cause microscopic cracks to develop and propagate, ultimately leading to fracture.",
+            ],
+            ["Wear-out", "Wear-out"],
+            {
+              type: "number",
+              text: [
+                "Sudden breakage",
+                "complete fracture",
+              ],
+            },
+            ["1.1 Fail to provide support and stability to the propeller shaft"],
+          ],
+          [
+            "4",
+            "Worn",
+            [
+              "4.1 Abrasion: Continuous rubbing or sliding of components against each other leads to gradual material removal and surface wear.",
+              "4.2 Erosion: Action of abrasive particles or fluids causes gradual erosion of the bearing surface, resulting in material loss.",
+            ],
+            ["Random", "Random"],
+            {
+              type: "number",
+              text: [
+                "Surface wear",
+                "loss of material",
+              ],
+            },
+            "1.1 Fail to provide support and stability to the propeller shaft",
+          ],
+          [
+            "5",
+            "Corroded",
+            [
+              "5.1 Exposure to Corrosive Elements:  Continuous exposure to corrosive elements, such as saltwater, leads to gradual degradation of the bearing surface due to chemical reactions.",
+              "5.2 Lack of Protective Coating: Absence or deterioration of protective coatings exposes the bearing to corrosive environments, accelerating corrosion buildup.",
+            ],
+            ["Wear-out", "Wear-out"],
+            {
+              type: "number",
+              text: ["Corrosion buildup", "pitting"],
+            },
+            "1.1 Fail to provide support and stability to the propeller shaft",
+          ],
+        ],
+      },
+      {
+        title: "FMECA (lanjutan)",
+        backgroundColor: "#ffefe5",
+        borderColor: "#EB5B00",
+        headRow: 1,
+        head: [
+          "No",
+          "Failure Mode",
+          "End Effect",
+          "CoF",
+          "PoF",
+          "Current Risk",
+          "Failure Detection",
+          "Proporsed Basic MNTC",
+        ],
+        body: [
+          [
+            "1",
+            "Cracked",
+            "Risk of Catastrophic Failure: Cracks in the intermediate bearing can lead to sudden, catastrophic failure of the bearing.",
+            "4",
+            "2",
+            {
+              type: "class",
+              backgroundColor: "#fddb20",
+              textColor: "#000",
+              text: ["Menengah-Tinggi"],
+            },
+            {
+              type: "number",
+              text: ["Visual inspection", "ultrasonic testing"],
+            },
+            {
+              type: "dot",
+              text: [
+                "Regular inspection",
+                "stress analysis",
+                "structural reinforcement"
+              ],
+            },
+          ],
+          [
+            "2",
+            "Contaminated",
+            "Increased Friction, Overheating: Contamination of the intermediate bearing with debris or foreign particles increases friction between the bearing and the shaft.",
+            "3",
+            "2",
+            {
+              type: "class",
+              backgroundColor: "#1caf51",
+              textColor: "#fff",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "number",
+              text: ["Visual inspection", "ultrasonic testing"],
+            },
+            {
+              type: "dot",
+              text: [
+                "Regular inspection",
+                "stress analysis",
+                "structural reinforcement",
+              ],
+            },
+          ],
+          [
+            "3",
+            "Fractured",
+            "Loss of Structural Integrity: A fractured intermediate bearing results in a loss of structural integrity, making it unable to support the propeller shaft properly.",
+            "4",
+            "2",
+            {
+              type: "class",
+              backgroundColor: "#1caf51",
+              textColor: "#fff",
+              text: ["Menengah-Tinggi"],
+            },
+            {
+              type: "number",
+              text: ["Visual inspection", "ultrasonic testing"],
+            },
+            {
+              type: "dot",
+              text: [
+                "Regular inspection",
+                "stress analysis",
+                "structural reinforcement",
+              ],
+            },
+          ],
+          [
+            "4",
+            "Worn",
+            "Increased Friction, Reduced Efficiency: Wear in the intermediate bearing results in increased friction between the bearing and the shaft, reducing efficiency and increasing energy consumption.",
+            "3",
+            "2",
+            {
+              type: "class",
+              backgroundColor: "#fddb20",
+              textColor: "#000",
+              text: ["Menengah-Tinggi"],
+            },
+            {
+              type: "number",
+              text: ["Visual inspection", "ultrasonic testing"],
+            },
+            {
+              type: "dot",
+              text: [
+                "Regular inspection",
+                "stress analysis",
+                "structural reinforcement",
+              ],
+            },
+          ],
+          [
+            "5",
+            "Corroded",
+            "Reduced Structural Integrity: Corrosion buildup and pitting on the intermediate bearing weaken its structural integrity, increasing the risk of failure.",
+            "3",
+            "2",
+            {
+              type: "class",
+              backgroundColor: "#00b14f",
+              textColor: "#fff",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "number",
+              text: ["Visual inspection", "ultrasonic testing"],
+            },
+            {
+              type: "dot",
+              text: [
+                "Regular inspection",
+                "stress analysis",
+                "structural reinforcement",
+              ],
+            },
+          ],
+        ],
+      },
+      {
+        title: "Maintenance Task Selection",
+        backgroundColor: "#f5eafa",
+        borderColor: "#912BBC",
+        headRow: 2,
+        head: [
+          "No",
+          "Failure Mode",
+          ["Risk Characterization", ["CoF", "Rec PoF", "Current Risk"]],
+          ["Task Selection", ["Proposed Action (s)", "Proj PoF", "Proj Risk"]],
+        ],
+        body: [
+          [
+            "1",
+            "Cracked",
+            "4",
+            "2",
+            {
+              type: "class",
+              backgroundColor: "#fddb20",
+              textColor: "#000",
+              text: ["Menengah-Tinggi"],
+            },
+            {
+              type: "dot",
+              text: [
+                "inspeksi keretakan setiap 1000 jam",
+                "lakukan perawatan setiap melakukan docking",
+              ],
+            },
+            "1",
+            {
+              type: "class",
+              backgroundColor: "#00b14f",
+              textColor: "#fff",
+              text: ["Menengah"],
+            },
+          ],
+          [
+            "2",
+            "Contaminated",
+            "3",
+            "2",
+            {
+              type: "class",
+              backgroundColor: "#00b14f",
+              textColor: "#fff",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "dot",
+              text: [
+                "lakukan pembersihan terhadap kontaminan",
+                "lakukan pergantian pelumas yang baik untuk bisa membersihkan kontaminan",
+              ],
+            },
+            "1",
+            {
+              type: "class",
+              backgroundColor: "#00b14f",
+              textColor: "#fff",
+              text: ["Rendah-Menengah"],
+            },
+          ],
+          [
+            "3",
+            "Fractured",
+            "4",
+            "2",
+            {
+              type: "class",
+              backgroundColor: "#fddb20",
+              textColor: "#000",
+              text: ["Menengah-Tinggi"],
+            },
+            {
+              type: "dot",
+              text: [
+                "inspeksi keretakan setiap 1000 jam",
+                "lakukan perawatan setiap melakukan docking",
+                "Segera lakukan pergantian componen sesuai prosedur dari vendor"
+              ],
+            },
+            "1",
+            {
+              type: "class",
+              backgroundColor: "#00b14f",
+              textColor: "#fff",
+              text: ["Menengah"],
+            },
+          ],
+          [
+            "4",
+            "Worn",
+            "3",
+            "2",
+            {
+              type: "class",
+              backgroundColor: "#fddb20",
+              textColor: "#000",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "dot",
+              text: [
+                "Inspeksi kekuatan struktur bearing setiap 1000 jam",
+                "Lakukan penguatan struktur shaft apabila sudah aus",
+              ],
+            },
+            "1",
+            {
+              type: "class",
+              backgroundColor: "#00b14f",
+              textColor: "#fff",
+              text: ["Rendah-Menengah"],
+            },
+          ],
+          [
+            "5",
+            "Corroded",
+            "3",
+            "2",
+            {
+              type: "class",
+              backgroundColor: "#00b14f",
+              textColor: "#fff",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "dot",
+              text: [
+                "lakukan inspeksi  pada komponen serta cek kondisi komponen terhadap kontaminasi kotoran, kerak atau korosi yang terjadi",
+                "lapisi dengan cairan anti korosi",
+              ],
+            },
+            "1",
             {
               type: "class",
               backgroundColor: "#00b14f",

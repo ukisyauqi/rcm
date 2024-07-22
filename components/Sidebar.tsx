@@ -68,7 +68,7 @@ export default function Sidebar() {
               <Link href={l} key={i}>
                 {titles[0][i]}
                 {pathname === l && (
-                  <span className="text-red-500 font-bold ml-4 absolute">•</span>
+                  <span className="text-red-500 font-bold ml-2 absolute">•</span>
                 )}
               </Link>
             ))}
@@ -80,7 +80,7 @@ export default function Sidebar() {
               <Link href={l} key={i}>
                 {titles[1][i]}
                 {pathname === l && (
-                  <span className="text-red-500 font-bold ml-4 absolute">•</span>
+                  <span className="text-red-500 font-bold ml-2 absolute">•</span>
                 )}
               </Link>
             ))}

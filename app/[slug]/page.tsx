@@ -173,9 +173,13 @@ export default function Page({ params }: { params: { slug: string } }) {
                               <div className="bg-[#fddb20] py-10 rounded-lg font-semibold">
                                 {cell.text[0]}
                               </div>
+                            ) : cell.text[0] === "Rendah" ? (
+                              <div className="bg-[#5071f3] py-10 rounded-lg text-white font-semibold">
+                                {cell.text[0]}
+                              </div>
                             ) : (
-                              cell.text[0] === "Rendah" && (
-                                <div className="bg-[#5071f3] py-10 rounded-lg text-white font-semibold">
+                              cell.text[0] === "Menengah-Tinggi" && (
+                                <div className="bg-[#fc8343] py-10 rounded-lg text-white font-semibold">
                                   {cell.text[0]}
                                 </div>
                               )
