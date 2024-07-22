@@ -42,7 +42,7 @@ export default function RootLayout({
                 aria-label="close sidebar"
                 className="drawer-overlay"
               ></label>
-              <ul className="menu text-base-content min-h-full lg:pt-10 bg-base-100 px-0">
+              <ul className="menu text-base-content min-h-screen lg:pt-10 bg-base-100 px-0">
                 {/* Sidebar content here */}
 
                 <Sidebar />
