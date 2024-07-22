@@ -1,6 +1,6 @@
 "use client"
 
-import { BookText, ChevronDown, Menu } from "lucide-react"
+import { ChevronDown } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
@@ -68,7 +68,9 @@ export default function Sidebar() {
               <Link href={l} key={i}>
                 {titles[0][i]}
                 {pathname === l && (
-                  <span className="text-red-500 font-bold ml-2 absolute">•</span>
+                  <span className="text-red-500 font-bold ml-2 absolute">
+                    •
+                  </span>
                 )}
               </Link>
             ))}
@@ -80,7 +82,9 @@ export default function Sidebar() {
               <Link href={l} key={i}>
                 {titles[1][i]}
                 {pathname === l && (
-                  <span className="text-red-500 font-bold ml-2 absolute">•</span>
+                  <span className="text-red-500 font-bold ml-2 absolute">
+                    •
+                  </span>
                 )}
               </Link>
             ))}

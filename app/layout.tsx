@@ -2,9 +2,7 @@ import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
 import Sidebar from "@/components/Sidebar"
-import UITools from "@/components/UITools"
-import Image from "next/image"
-import { ChevronDown, Menu } from "lucide-react"
+import { Menu } from "lucide-react"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -21,8 +19,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <UITools imageUrl="/ui-tools/page.jpg" width={1440} height={3254} />
-
         <div className="max-w-screen-2xl mx-auto">
           <div className="drawer lg:drawer-open">
             <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />

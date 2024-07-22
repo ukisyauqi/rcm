@@ -2379,7 +2379,10 @@ const data = [
             ["Random", "Wear-out"],
             {
               type: "number",
-              text: ["Contamination of the environment and possible slipping hazards.", "Loss of fluid can lead to reduced lubrication and cooling, potentially causing overheating and further damage."],
+              text: [
+                "Contamination of the environment and possible slipping hazards.",
+                "Loss of fluid can lead to reduced lubrication and cooling, potentially causing overheating and further damage.",
+              ],
             },
             "-",
           ],
@@ -2393,11 +2396,13 @@ const data = [
             ["Wear-out", "Random"],
             {
               type: "number",
-              text: ["Misalignment and uneven load distribution.", "Potential for disconnection or catastrophic failure if not detected and corrected."],
+              text: [
+                "Misalignment and uneven load distribution.",
+                "Potential for disconnection or catastrophic failure if not detected and corrected.",
+              ],
             },
             "-",
           ],
-          
         ],
       },
       {
@@ -2434,10 +2439,7 @@ const data = [
             },
             {
               type: "dot",
-              text: [
-                "Regular alignment checks",
-                "Replace worn parts",
-              ],
+              text: ["Regular alignment checks", "Replace worn parts"],
             },
           ],
           [
@@ -2458,10 +2460,7 @@ const data = [
             },
             {
               type: "dot",
-              text: [
-                "Regular inspections",
-                "Replace faulty components",
-              ],
+              text: ["Regular inspections", "Replace faulty components"],
             },
           ],
           [
@@ -2503,10 +2502,7 @@ const data = [
             },
             {
               type: "dot",
-              text: [
-                "Balance coupling",
-                "Regular alignment",
-              ],
+              text: ["Balance coupling", "Regular alignment"],
             },
           ],
           [
@@ -2527,10 +2523,7 @@ const data = [
             },
             {
               type: "dot",
-              text: [
-                "Replace seals and gaskets",
-                "Routine checks",
-              ],
+              text: ["Replace seals and gaskets", "Routine checks"],
             },
           ],
           [
@@ -2551,10 +2544,7 @@ const data = [
             },
             {
               type: "dot",
-              text: [
-                "Tighten to specifications",
-                "Regular maintenance checks",
-              ],
+              text: ["Tighten to specifications", "Regular maintenance checks"],
             },
           ],
         ],
@@ -2584,10 +2574,7 @@ const data = [
             },
             {
               type: "dot",
-              text: [
-                "inspeksi visual",
-                "lakukan alignment check",
-              ],
+              text: ["inspeksi visual", "lakukan alignment check"],
             },
             "2",
             {
@@ -2727,7 +2714,6 @@ const data = [
               text: ["Rendah-Menengah"],
             },
           ],
-          
         ],
       },
     ],
@@ -2862,7 +2848,10 @@ const data = [
             ["Random", "Wear-out"],
             {
               type: "number",
-              text: ["Contamination of the environment and possible slipping hazards.", "Loss of fluid can lead to reduced lubrication and cooling, potentially causing overheating and further damage."],
+              text: [
+                "Contamination of the environment and possible slipping hazards.",
+                "Loss of fluid can lead to reduced lubrication and cooling, potentially causing overheating and further damage.",
+              ],
             },
             "-",
           ],
@@ -2876,11 +2865,13 @@ const data = [
             ["Wear-out", "Random"],
             {
               type: "number",
-              text: ["Misalignment and uneven load distribution.", "Potential for disconnection or catastrophic failure if not detected and corrected."],
+              text: [
+                "Misalignment and uneven load distribution.",
+                "Potential for disconnection or catastrophic failure if not detected and corrected.",
+              ],
             },
             "-",
           ],
-          
         ],
       },
       {
@@ -2917,10 +2908,7 @@ const data = [
             },
             {
               type: "dot",
-              text: [
-                "Regular alignment checks",
-                "Replace worn parts",
-              ],
+              text: ["Regular alignment checks", "Replace worn parts"],
             },
           ],
           [
@@ -2941,10 +2929,7 @@ const data = [
             },
             {
               type: "dot",
-              text: [
-                "Regular inspections",
-                "Replace faulty components",
-              ],
+              text: ["Regular inspections", "Replace faulty components"],
             },
           ],
           [
@@ -2986,10 +2971,7 @@ const data = [
             },
             {
               type: "dot",
-              text: [
-                "Balance coupling",
-                "Regular alignment",
-              ],
+              text: ["Balance coupling", "Regular alignment"],
             },
           ],
           [
@@ -3010,10 +2992,7 @@ const data = [
             },
             {
               type: "dot",
-              text: [
-                "Replace seals and gaskets",
-                "Routine checks",
-              ],
+              text: ["Replace seals and gaskets", "Routine checks"],
             },
           ],
           [
@@ -3034,10 +3013,7 @@ const data = [
             },
             {
               type: "dot",
-              text: [
-                "Tighten to specifications",
-                "Regular maintenance checks",
-              ],
+              text: ["Tighten to specifications", "Regular maintenance checks"],
             },
           ],
         ],
@@ -3067,10 +3043,7 @@ const data = [
             },
             {
               type: "dot",
-              text: [
-                "inspeksi visual",
-                "lakukan alignment check",
-              ],
+              text: ["inspeksi visual", "lakukan alignment check"],
             },
             "2",
             {
@@ -3276,10 +3249,7 @@ const data = [
             ["Wear-out", "Wear-out"],
             {
               type: "number",
-              text: [
-                "Surface cracks",
-                "propagation",
-              ],
+              text: ["Surface cracks", "propagation"],
             },
             ["1.2 fails to deliver the required rotational power"],
           ],
@@ -3293,10 +3263,7 @@ const data = [
             ["Wear-out", "Wear-out"],
             {
               type: "number",
-              text: [
-                "Sudden breakage",
-                "complete fracture",
-              ],
+              text: ["Sudden breakage", "complete fracture"],
             },
             ["1.1 fails to transmit rotational power"],
           ],
@@ -3310,10 +3277,7 @@ const data = [
             ["Random", "Random"],
             {
               type: "number",
-              text: [
-                "Surface wear",
-                "loss of material",
-              ],
+              text: ["Surface wear", "loss of material"],
             },
             ["1.2 fails to deliver the required rotational power"],
           ],
@@ -3327,11 +3291,7 @@ const data = [
             ["Random", "Random"],
             {
               type: "number",
-              text: [
-                "Distortion",
-                "bending",
-                "misshape",
-              ],
+              text: ["Distortion", "bending", "misshape"],
             },
             "1.1 fails to transmit rotational power",
           ],
@@ -3384,7 +3344,10 @@ const data = [
             ["Wear-out", "Random"],
             {
               type: "number",
-              text: ["Increased wear on bearings and seals", "Fastener loosening"],
+              text: [
+                "Increased wear on bearings and seals",
+                "Fastener loosening",
+              ],
             },
             "1.2 fails to deliver the required rotational power",
           ],
@@ -3427,7 +3390,7 @@ const data = [
               text: [
                 "Regular inspection",
                 "stress analysis",
-                "structural reinforcement"
+                "structural reinforcement",
               ],
             },
           ],
@@ -3817,9 +3780,7 @@ const data = [
             },
             {
               type: "dot",
-              text: [
-                "lakukan vibration test analysis",
-              ],
+              text: ["lakukan vibration test analysis"],
             },
             "1",
             {
@@ -3864,9 +3825,7 @@ const data = [
             "to provide support and stability to the propeller shaft between its forward and aft ends and maintain proper alignment and minimze vibration",
             "Primary",
             ["1,1"],
-            [
-              "Fail to provide support and stability to the propeller shaft",
-            ],
+            ["Fail to provide support and stability to the propeller shaft"],
           ],
         ],
       },
@@ -3894,12 +3853,11 @@ const data = [
             ["Wear-out", "Wear-out"],
             {
               type: "number",
-              text: [
-                "Surface cracks",
-                "propagation",
-              ],
+              text: ["Surface cracks", "propagation"],
             },
-            ["1.1 Fail to provide support and stability to the propeller shaft"],
+            [
+              "1.1 Fail to provide support and stability to the propeller shaft",
+            ],
           ],
           [
             "2",
@@ -3911,12 +3869,11 @@ const data = [
             ["Wear-out", "Random"],
             {
               type: "number",
-              text: [
-                "Buildup of contaminants",
-                "debris",
-              ],
+              text: ["Buildup of contaminants", "debris"],
             },
-            ["1.1 Fail to provide support and stability to the propeller shaft"],
+            [
+              "1.1 Fail to provide support and stability to the propeller shaft",
+            ],
           ],
           [
             "3",
@@ -3928,12 +3885,11 @@ const data = [
             ["Wear-out", "Wear-out"],
             {
               type: "number",
-              text: [
-                "Sudden breakage",
-                "complete fracture",
-              ],
+              text: ["Sudden breakage", "complete fracture"],
             },
-            ["1.1 Fail to provide support and stability to the propeller shaft"],
+            [
+              "1.1 Fail to provide support and stability to the propeller shaft",
+            ],
           ],
           [
             "4",
@@ -3945,10 +3901,7 @@ const data = [
             ["Random", "Random"],
             {
               type: "number",
-              text: [
-                "Surface wear",
-                "loss of material",
-              ],
+              text: ["Surface wear", "loss of material"],
             },
             "1.1 Fail to provide support and stability to the propeller shaft",
           ],
@@ -4005,7 +3958,7 @@ const data = [
               text: [
                 "Regular inspection",
                 "stress analysis",
-                "structural reinforcement"
+                "structural reinforcement",
               ],
             },
           ],
@@ -4191,7 +4144,7 @@ const data = [
               text: [
                 "inspeksi keretakan setiap 1000 jam",
                 "lakukan perawatan setiap melakukan docking",
-                "Segera lakukan pergantian componen sesuai prosedur dari vendor"
+                "Segera lakukan pergantian componen sesuai prosedur dari vendor",
               ],
             },
             "1",
@@ -4289,9 +4242,7 @@ const data = [
             "to provide support and stability to the propeller shaft between its forward and aft ends and maintain proper alignment and minimze vibration",
             "Primary",
             ["1,1"],
-            [
-              "Fail to provide support and stability to the propeller shaft",
-            ],
+            ["Fail to provide support and stability to the propeller shaft"],
           ],
         ],
       },
@@ -4319,12 +4270,11 @@ const data = [
             ["Wear-out", "Wear-out"],
             {
               type: "number",
-              text: [
-                "Surface cracks",
-                "propagation",
-              ],
+              text: ["Surface cracks", "propagation"],
             },
-            ["1.1 Fail to provide support and stability to the propeller shaft"],
+            [
+              "1.1 Fail to provide support and stability to the propeller shaft",
+            ],
           ],
           [
             "2",
@@ -4336,12 +4286,11 @@ const data = [
             ["Wear-out", "Random"],
             {
               type: "number",
-              text: [
-                "Buildup of contaminants",
-                "debris",
-              ],
+              text: ["Buildup of contaminants", "debris"],
             },
-            ["1.1 Fail to provide support and stability to the propeller shaft"],
+            [
+              "1.1 Fail to provide support and stability to the propeller shaft",
+            ],
           ],
           [
             "3",
@@ -4353,12 +4302,11 @@ const data = [
             ["Wear-out", "Wear-out"],
             {
               type: "number",
-              text: [
-                "Sudden breakage",
-                "complete fracture",
-              ],
+              text: ["Sudden breakage", "complete fracture"],
             },
-            ["1.1 Fail to provide support and stability to the propeller shaft"],
+            [
+              "1.1 Fail to provide support and stability to the propeller shaft",
+            ],
           ],
           [
             "4",
@@ -4370,10 +4318,7 @@ const data = [
             ["Random", "Random"],
             {
               type: "number",
-              text: [
-                "Surface wear",
-                "loss of material",
-              ],
+              text: ["Surface wear", "loss of material"],
             },
             "1.1 Fail to provide support and stability to the propeller shaft",
           ],
@@ -4430,7 +4375,7 @@ const data = [
               text: [
                 "Regular inspection",
                 "stress analysis",
-                "structural reinforcement"
+                "structural reinforcement",
               ],
             },
           ],
@@ -4616,7 +4561,7 @@ const data = [
               text: [
                 "inspeksi keretakan setiap 1000 jam",
                 "lakukan perawatan setiap melakukan docking",
-                "Segera lakukan pergantian componen sesuai prosedur dari vendor"
+                "Segera lakukan pergantian componen sesuai prosedur dari vendor",
               ],
             },
             "1",
