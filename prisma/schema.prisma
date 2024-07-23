@@ -1,0 +1,115 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum System {
+  PROPELLER_DAN_SHAFTING
+  DIESEL_ENGINE
+}
+
+enum Subsystem {
+  PROPELLER
+  SHAFTING
+  COOLING_SYSTEM
+  COMPRESSED_AIR_SYSTEM
+  FUEL_OIL_SYSTEM
+  LUBRICATING_OIL_SYSTEM
+}
+
+enum SubSubsystem {
+  MAIN_ENGINE_OPEN_LOOP_SYSTEM
+  MAIN_ENGINE_OPEN_CLOSE_SYSTEM
+  AUXILIARY_ENGINE_SYSTEM
+  EMERGENCY_GENERATOR_SYSTEM
+  AIR_HANDLING_UNIT_SYSTEM
+  STARTING_MAIN_ENGINE
+  FUEL_OIL_TRANSFER_SYSTEM
+  FUEL_OIL_SUPPLY_SYSTEM
+  FUEL_OIL_SUPPLY_SYSTEM_AUX_ENGINE
+  MAIN_LUBRICATING_OIL_SYSTEM
+  LUBRICATING_OIL_PURIFYING_SYSTEM
+  GEARBOX_LUBE_OIL_TRANSFER_SYSTEM
+}
+
+model AssetProfile {
+  id String @id @default(cuid())
+  system System
+  subsystem Subsystem
+  subSubsystem SubSubsystem
+  equipmentId String
+  equipmentName String
+  drawing String
+  functionalFailures FunctionAndFunctionalFailure[]
+  fmecas Fmeca[]
+  fmecasLanjutan FmecaLanjutan[]
+  maintenanceTasks MaintenanceTask[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model FunctionAndFunctionalFailure {
+  id Int @id @default(autoincrement())
+  functionStatement String
+  functionType String
+  number Float
+  functionalFailureStatement String
+  assetProfileId String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  assetProfile AssetProfile @relation(fields: [assetProfileId], references: [id], onDelete: Cascade)
+}
+
+model Fmeca {
+  id Int @id @default(autoincrement())
+  failureMode String
+  causes String
+  failureCharacteristic String
+  localEffect String
+  functionalFailure String
+  assetProfileId String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  assetProfile AssetProfile @relation(fields: [assetProfileId], references: [id], onDelete: Cascade)
+}
+
+model FmecaLanjutan {
+  id Int @id @default(autoincrement())
+  endEffect String
+  cof Int
+  recPof Int
+  currentRisk String
+  failureDetection String
+  mntc String
+
+  assetProfileId String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  assetProfile AssetProfile @relation(fields: [assetProfileId], references: [id], onDelete: Cascade)
+}
+
+model MaintenanceTask {
+  id Int @id @default(autoincrement())
+  proposedAction String
+  projPof Int
+  projRisk String
+
+  assetProfileId String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  assetProfile AssetProfile @relation(fields: [assetProfileId], references: [id], onDelete: Cascade)
+}
