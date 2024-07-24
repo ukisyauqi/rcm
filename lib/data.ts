@@ -4280,6 +4280,258 @@ const data = [
       },
     ],
   },
+  {
+    slug: "air-separator-1",
+    type: "COMPRESSED_AIR_SYSTEM",
+    specs: {
+      functionalGroup: "Propulsion Function Group",
+      system: "Diesel Engine",
+      subsystem: "Compressed Air System",
+      equipmentID: "CA-AS-01",
+      equipmentName: "Air Separator",
+      drawing: "Compressed Air",
+    },
+    tables: [
+      {
+        title: "Function and Functional Failure",
+        backgroundColor: "#e5fff1",
+        borderColor: "#00B14F",
+        headRow: 1,
+        head: [
+          "No",
+          "Function Statement",
+          "Function Type",
+          "No",
+          "Functional Failure Statement",
+        ],
+        body: [
+          [
+            "1",
+            "remove moisture, oil, and other contaminants from the compressed air, ensuring that the air supplied to various onboard systems and equipment is clean, dry, and free from impurities.",
+            "Primary",
+            ["1,1", "1,2"],
+            ["stops removing moisture and contaminants, leading to unfiltered air entering the system (Total Failure)", "reduces its effectiveness, allowing more moisture or contaminants to pass through than normal. (Partial Failure)"],
+          ],
+        ],
+      },
+      {
+        title: "FMECA",
+        backgroundColor: "#ffefe5",
+        borderColor: "#EB5B00",
+        headRow: 1,
+        head: [
+          "No",
+          "Failure Mode",
+          "Causes",
+          "Failure Charasteristic",
+          "Local Effect",
+          "Functional Failure",
+        ],
+        body: [
+          [
+            "1",
+            "External leak/rupture",
+            [
+              "1.1 Condensation: Condensation occurs when warm, moisture-laden air comes into contact with cooler surfaces within the air separator system. This can happen in areas where temperature differentials exist, such as during system shutdowns or when ambient temperatures fluctuate. Condensation can lead to the buildup of moisture within the system over time.",
+              "1.2 Air Leakage: Leakage of ambient air into the air separator system, particularly through damaged seals, gaskets, or faulty connections, can introduce moisture into the system. As air containing moisture infiltrates the system, it can contribute to the accumulation of water vapor and condensation, especially in regions with high humidity levels."
+            ],
+            ["Random", "Random"],
+            {
+              type: "number",
+              text: ["corrosion and degrade the integrity of system components.", "condense on surfaces and contribute to the formation of water droplets"]
+            },
+            [
+              "1.1 stops removing moisture and contaminants, leading to unfiltered air entering the system (Total Failure)", 
+              "1.2 reduces its effectiveness, allowing more moisture or contaminants to pass through than normal. (Partial Failure)"
+            ]
+          ],
+          [
+            "2",
+            "Corroded",
+            [
+              "2.11. Component Wear: Wear and tear of internal components such as bearings, shafts, and gears can generate metal particles or debris that contaminate the lubricating oil. Abrasive wear between moving parts can also lead to the release of fine particles that mix with the oil, causing contamination.",
+              "2.2 Corrosion: Corrosion of metal components within the air separator system can lead to the formation of rust or metal oxides, which can contaminate the oil. Corrosion may occur due to exposure to moisture or corrosive substances, such as acidic gases or chemicals present in the operating environment."
+            ],
+            ["Wear-out", "Wear-out"],
+            {
+              type: "number",
+              text: ["Reduced Seal Effectiveness", "Internal Leakage"]
+            },
+            "1.2 reduces its effectiveness, allowing more moisture or contaminants to pass through than normal. (Partial Failure)"
+          ],
+          [
+            "3",
+            "Plugged/choked",
+            [
+              "3.1 Accumulation of particulate matter or contaminants in the separation media: Over time, dust, debris, or other contaminants can accumulate in the air separator's separation media, such as coalescing filters or cyclonic separators.",
+              "3.2 Inadequate maintenance leading to clogged filtration media: Insufficient or irregular maintenance practices may result in the buildup of contaminants, obstructing airflow through the separation media."
+            ],
+            ["Wear-out", "Wear-out"],
+            {
+              type: "number",
+              text: [
+                "Restricted airflow through the separation media, reducing the effectiveness of air separation and filtration.", 
+                "Increased Friction"
+              ]
+            },
+            "1.2 reduces its effectiveness, allowing more moisture or contaminants to pass through than normal. (Partial Failure)"
+          ]
+        ]
+      },
+      {
+        title: "FMECA (lanjutan)",
+        backgroundColor: "#ffefe5",
+        borderColor: "#EB5B00",
+        headRow: 1,
+        head: [
+          "No",
+          "Failure Mode",
+          "End Effect",
+          "CoF",
+          "PoF",
+          "Current Risk",
+          "Failure Detection",
+          "Proporsed Basic MNTC",
+        ],
+        body: [
+          [
+            "1",
+            "External leak/rupture",
+            "The accumulation of moisture due to condensation can lead to several adverse consequences over time. These include increased corrosion of metal components within the air separator system, which can compromise their structural integrity and functionality. Additionally, the presence of moisture can create favorable conditions for microbial growth, leading to biofilm formation and potential contamination of the compressed air stream. Ultimately, unchecked condensation can result in reduced system efficiency, increased maintenance requirements, and potential operational failures.",
+            "1",
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "number",
+              text: ["Monitoring of moisture levels", "visual inspection of drain valves"],
+            },
+            {
+              type: "dot",
+              text: [
+                "Implement a preventive maintenance schedule for regular inspection and cleaning of drain valves and associated components.",
+              ],
+            },
+          ],
+          [
+            "2",
+            "Corroded",
+            "Corrosion and Damage: Oil contamination containing abrasive particles or corrosive substances can accelerate corrosion and damage to internal components of the air separator system and other connected equipment. Corrosion can weaken structural integrity, promote fluid leaks, and compromise the safety and reliability of critical systems onboard the ship. Additionally, abrasive contaminants can cause accelerated wear and tear on components, leading to premature failure and the need for costly repairs or replacements.",
+            "2",
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "number",
+              text: ["Visual inspection of compressor components", "Analysis of compressed air quality"],
+            },
+            {
+              type: "dot",
+              text: [
+                "Replacement of oil removal filters or coalescing elements according to manufacturer's recommendations",
+              ],
+            },
+          ],
+          [
+            "3",
+            "Plugged/choked",
+            "Degradation of Air Quality: Mechanical wear and tear may compromise the ability of the air separator to effectively remove contaminants and moisture from the compressed air stream. This can lead to degraded air quality, including increased levels of particulates, moisture content, and contaminants, which may adversely affect downstream processes and equipment.",
+            "1",
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "number",
+              text: ["Monitoring of pressure differentials", "airflow patterns within the air separator."],
+            },
+            {
+              type: "dot",
+              text: [
+                "Scheduled inspection and cleaning of separation media according to manufacturer recommendations or operational guidelines.",
+              ],
+            },
+          ],
+        ]
+      },
+      {
+        title: "Maintenance Task Selection",
+        backgroundColor: "#f5eafa",
+        borderColor: "#912BBC",
+        headRow: 2,
+        head: [
+          "No",
+          "Failure Mode",
+          ["Risk Characterization", ["CoF", "Rec PoF", "Current Risk"]],
+          ["Task Selection", ["Proposed Action (s)", "Proj PoF", "Proj Risk"]],
+        ],
+        body: [
+          [
+            "1",
+            "External leak/rupture",
+            "1",
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "dot",
+              text: ["Implement measures to regulate and maintain consistent temperatures within the air separator system to minimize temperature differentials."],
+            },
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+          ],
+          [
+            "2",
+            "Corroded",
+            "2",
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "dot",
+              text: ["Schedule and perform regular maintenance to check and replace worn components such as bearings, shafts, and gears."],
+            },
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+          ],
+          [
+            "3",
+            "Plugged/choked",
+            "1",
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "dot",
+              text: ["Develop and adhere to a regular maintenance schedule to ensure timely cleaning and replacement of filtration media."],
+            },
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+          ],
+        ]
+      }
+    ]
+  }
 ]
 
 export function getDataWithSlug(slug: string) {
