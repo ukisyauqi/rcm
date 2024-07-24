@@ -1,4 +1,28 @@
-const data = [
+type Data = {
+  slug: string;
+  type: string;
+  specs: {
+      functionalGroup: string;
+      system: string;
+      subsystem: string;
+      equipmentID: string;
+      equipmentName: string;
+      drawing: string;
+  };
+  tables: {
+    title: string;
+    backgroundColor: string;
+    borderColor: string;
+    headRow: number;
+    head: (string | (string | string[])[])[];
+    body: (string | string[] | {
+        type: string;
+        text: string[];
+    })[][];
+  }[];
+}[]
+
+const data: Data = [
   {
     slug: "boss-propeller",
     type: "PROPELLER",
@@ -9904,8 +9928,926 @@ const data = [
       },
     ]
   },
+  {
+    slug: "air-handling-unit-1",
+    type: "COOLING_SYSTEM",
+    specs: {
+      functionalGroup: "Propulsion Function Group",
+      system: "Diesel Engine",
+      subsystem: "Cooling System",
+      equipmentID: "CO-AHU-01",
+      equipmentName: "Air Handling Unit",
+      drawing: "Cooling System",
+    },
+    tables: [
+      {
+        title: "Function and Functional Failure",
+        backgroundColor: "#e5fff1",
+        borderColor: "#00B14F",
+        headRow: 1,
+        head: [
+          "No",
+          "Function Statement",
+          "Function Type",
+          "No",
+          "Functional Failure Statement",
+        ],
+        body: [
+          [
+            "1",
+            "serves as the central component responsible for the circulation, temperature regulation, and filtration of air throughout the vessel.",
+            "Primary",
+            ["1,1", "1,2"],
+            [
+              "Failed to compromised ventilation and cooling performance (Total Failure)",
+              "inadequate ventilation and reduced cooling efficiency, within capacity less than 6500 CFM (Partial Failure)"
+            ],
+          ],
+        ],
+      },
+      {
+        title: "FMECA",
+        backgroundColor: "#ffefe5",
+        borderColor: "#EB5B00",
+        headRow: 1,
+        head: [
+          "No",
+          "Part",
+          "Failure Mode",
+          "Causes",
+          "Failure Charasteristic",
+          "Local Effect",
+          "Functional Failure",
+        ],
+        body: [
+          [
+            "1a",
+            "rotor",
+            "Overheats",
+            [
+              "1.1 Moisture ingress: Entry of moisture into the motor winding can compromise insulation integrity and cause breakdown.",
+              "1.2 Voltage spikes: Sudden voltage surges can exceed the insulation's dielectric strength, leading to insulation breakdown."
+            ],
+            ["Random","Random"],
+            {
+              type: "number",
+              text: [
+                "Formation of hotspots",
+                "Potential arcing",
+              ]
+            },
+            "1.1 Failed to compromised ventilation and cooling performance"
+          ],
+          [
+            "1b",
+            "rotor",
+            "Worn",
+            [
+              "2.1 Lack of lubrication: Inadequate lubrication of the motor bearings can lead to increased friction and heat generation, accelerating wear and potentially causing bearing failure.",
+              "2.2  Contamination by foreign particles: Entry of dirt, dust, or other foreign particles into the bearing assembly can cause abrasion and scoring of bearing surfaces, leading to premature wear and eventual failure."
+            ],
+            ["Wear-out","Wear-out"],
+            {
+              type: "number",
+              text: [
+                "inncreased friction and heat generation within the bearings  ",
+                "Abrasion and scoring of bearing surfaces due to foreign particle ingress",
+              ]
+            },
+            "1.1 Failed to compromised ventilation and cooling performance"
+          ],
+          [
+            "1c",
+            "rotor",
+            "rotor",
+            [
+              "3.1 Exposure to moisture and corrosive elements: Moisture and corrosive elements can infiltrate the motor's electrical components, such as terminals and wiring, leading to degradation of insulation materials and increased conductivity between electrical paths.",
+              "3.2 Build-up of conductive contaminants: Over time, dust, dirt, and other conductive contaminants can accumulate on electrical connections, creating a pathway for electricity to flow where it shouldn't, increasing resistance, and generating heat."
+            ],
+            ["Wear-out","Wear-out"],
+            {
+              type: "number",
+              text: [
+                "Increased risk of short circuits",
+                "Accumulation of dust and debris on electrical connections",
+              ]
+            },
+            "1.1 Failed to compromised ventilation and cooling performance"
+          ],
+          [
+            "2a",
+            "Coils",
+            "Overheats",
+            [
+              "4.1  Overloading: Operating the coils beyond their rated capacity can lead to excessive heat generation and overheating.",
+              "4.2  Poor ventilation: Inadequate airflow around the coils restricts heat dissipation, causing temperature buildup."
+            ],
+            ["Random","Wear-out"],
+            {
+              type: "number",
+              text: [
+                "Localized temperature rise",
+                "Thermal expansion",
+              ]
+            },
+            "1.2 inadequate ventilation and reduced cooling efficiency, within capacity less than 6500 CFM (Partial Failure)"
+          ],
+          [
+            "2b",
+            "Coils",
+            "Corroded",
+            [
+              "5.1  Exposure to corrosive environments: Exposure of the coils to corrosive environments, such as saltwater or chemical fumes, can lead to Corroded of coil surfaces and degradation of coil materials.",
+              "5.2  Inadequate protective coatings or sealing: Lack of proper protective coatings or sealing on coil surfaces leaves them vulnerable to Corroded from environmental exposure, accelerating material degradation."
+            ],
+            ["Wear-out","Random"],
+            {
+              type: "number",
+              text: [
+                "Formation of rust or Corroded pits on coil surfaces",
+                "Thinning or weakening of coil material due to Corroded",
+              ]
+            },
+            "1.1 Failed to compromised ventilation and cooling performance"
+          ],
+          [
+            "2c",
+            "Coils",
+            "Leaking",
+            [
+              "6.2  Blockage of airflow due to dirt accumulation: Accumulation of dirt, dust, and other debris on the coils can obstruct airflow, reducing heat transfer efficiency and causing the coil surface temperatures to drop, leading to freezing.",
+              "6.2  Blockage of airflow due to dirt accumulation: Accumulation of dirt, dust, and other debris on the coils can obstruct airflow, reducing heat transfer efficiency and causing the coil surface temperatures to drop, leading to freezing."
+            ],
+            ["Wear-out","Wear-out"],
+            {
+              type: "number",
+              text: [
+                "Reduced heat absorption capacity of coils due to low refrigerant levels",
+                "Hindered airflow and decreased heat transfer efficiency caused by dirt accumulation",
+              ]
+            },
+            "1.2 inadequate ventilation and reduced cooling efficiency, within capacity less than 6500 CFM (Partial Failure)"
+          ],
+          [
+            "3a",
+            "Air Filter",
+            "Clogging",
+            [
+              "7.1 Accumulation of airborne particles and debris: Continuous operation of the air filter in dusty or debris-laden environments leads to the accumulation of airborne particles and debris on the filter media, gradually reducing airflow.",
+              "7.2   Inadequate filter maintenance or replacement intervals: Failure to perform regular filter maintenance or replace clogged filters according to recommended intervals allows debris accumulation to reach levels that impede airflow and filtration efficiency."
+            ],
+            ["Wear-out","Wear-out"],
+            {
+              type: "number",
+              text: [
+                "Gradual reduction in airflow through the filter media",
+                " Increased pressure drop across the filter",
+              ]
+            },
+            "1.1 Failed to compromised ventilation and cooling performance"
+          ],
+          [
+            "3b",
+            "Air Filter",
+            "Cracked",
+            [
+              "8.1  High-pressure differential: Excessive pressure differential across the filter due to clogging or restricted airflow can lead to structural failure.",
+              "8.2  Mechanical damage: Impact or mishandling during installation or maintenance can cause structural damage to the filter."
+            ],
+            ["Wear-out","Random"],
+            {
+              type: "number",
+              text: [
+                "Deformation or collapse",
+                "Tearing or ripping",
+              ]
+            },
+            "1.2 inadequate ventilation and reduced cooling efficiency, within capacity less than 6500 CFM (Partial Failure)  "
+          ],
+          [
+            "3c",
+            "Air Filter",
+            "Corroded",
+            [
+              "9.1   Exposure to corrosive chemicals: Exposure to corrosive chemicals in the air or surrounding environment can lead to the deterioration of filter media, resulting in tears and holes that compromise filtration efficiency.",
+              "9.2 Growth of mold and bacteria: Mold and bacteria growth on the air filter can block filter media and impede airflow, reducing filtration efficiency and promoting the spread of airborne contaminants.Growth of mold and bacteria"
+            ],
+            ["Wear-out","Wear-out"],
+            {
+              type: "number",
+              text: [
+                "Deterioration of filter media, leading to increased bypass of contaminants",
+                "Blockage of filter media and potential contamination of the air supply",
+              ]
+            },
+            "1.1 Failed to compromised ventilation and cooling performance"
+          ],
+          [
+            "4a",
+            "Gear",
+            "Worn",
+            [
+              "10.1  Inadequate lubricant quantity or quality: Insufficient lubricant quantity or use of low-quality lubricants in the gear assembly can result in inadequate lubrication film thickness, increasing friction and wear between gear surfaces.",
+              "10.2  Contamination of lubricant by foreign particles: Entry of dirt, dust, or other foreign particles into the gear lubricant can cause abrasive wear on gear surfaces and breakdown of lubricant film, leading to increased friction and heat generation."
+            ],
+            ["Wear-out","Wear-out"],
+            {
+              type: "number",
+              text: [
+                "Increased friction and wear between gear surfaces",
+                "Formation of abrasive particles or debris in the gear assembly",
+              ]
+            },
+            "1.2 inadequate ventilation and reduced cooling efficiency, within capacity less than 6500 CFM (Partial Failure)"
+          ],
+          [
+            "4b",
+            "Gear",
+            "Misalignment",
+            [
+              "11.1 Inadequate Lubrication: Insufficient lubrication between gear teeth leads to increased friction and accelerated wear.",
+              "11.2  Contamination: Entry of abrasive particles or debris into the gear meshing area causes abrasive wear on gear teeth."
+            ],
+            ["Wear-out","Wear-out"],
+            {
+              type: "number",
+              text: [
+                "Surface Pitting and Scoring",
+                "Material Removal and Deformation",
+              ]
+            },
+            "Material Removal and Deformation"
+          ],
+          [
+            "4c",
+            "Gear",
+            "Leaking",
+            [
+              "12.1 Lack of lubrication: Inadequate lubrication of gear components can lead to increased friction between gear teeth, accelerating wear and potentially causing mechanical failure.",
+              "12.2  Corroded due to chemical exposure: Exposure to corrosive chemicals can deteriorate gear material, weakening the gear structure and increasing the risk of gear failure under load conditions."
+            ],
+            ["Wear-out","Wear-out"],
+            {
+              type: "number",
+              text: [
+                "Increased friction between gear teeth",
+                "Abrasion and Corroded of gear surfaces due to the presence of contaminant",
+              ]
+            },
+            "1.2 inadequate ventilation and reduced cooling efficiency, within capacity less than 6500 CFM (Partial Failure)"
+          ],
+        ],
+      },
+      {
+        title: "FMECA (lanjutan)",
+        backgroundColor: "#ffefe5",
+        borderColor: "#EB5B00",
+        headRow: 1,
+        head: [
+          "No",
+          "Part",
+          "Failure Mode",
+          "End Effect",
+          "CoF",
+          "PoF",
+          "Current Risk",
+          "Failure Detection",
+          "Proporsed Basic MNTC",
+        ],
+        body: [
+          [
+            "1a",
+            "rotor",
+            "Overheats",
+            "Short circuits: Insulation breakdown can result in short circuits within the motor winding, causing sudden motor failure and system downtime.",
+            "3",
+            "2",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "number",
+              text: ["Monitoring of motor temperature and abnormal noises.","Visual inspection for signs of Corroded and moisture ingress."],
+            },
+            "Regular cleaning and lubrication of rotor components..Implementing moisture barriers and Corroded-resistant coatings. Scheduled replacement of lubricants and bearings."
+          ],
+          [
+            "1b",
+            "rotor",
+            "Worn",
+            "Bearing seizure and motor shaft immobilization: Severe wear or damage to the bearings can result in bearing seizure, causing the motor shaft to become immobilized and leading to sudden motor failure.",
+            "2",
+            "3",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "number",
+              text: [
+                "Monitoring of motor temperature and abnormal noises.",
+                "Visual inspection for signs of Corroded and moisture ingress."
+              ],
+            },
+            "Regular cleaning and lubrication of motor bearings. Implementing moisture barriers and Corroded-resistant coatings. Scheduled replacement of lubricants and bearings."
+          ],
+          [
+            "1c",
+            "rotor",
+            "Leaking",
+            "Sudden motor failure, potentially leading to system downtime and safety hazards: Electrical failure within the motor can result in the sudden cessation of motor operation, leading to system downtime and potential safety hazards, especially if the motor is critical for essential ship functions.",
+            "3",
+            "3",
+            {
+              type: "class",
+              text: ["Menengah"],
+            },
+            {
+              type: "number",
+              text: [
+                "Regular inspection for signs of moisture ingress and Corroded on electrical components",
+                "Monitoring of electrical connections for signs of overheating and voltage fluctuations."
+              ],
+            },
+            "Implementing moisture barriers and Corroded-resistant coatings. Regular cleaning and inspection of electrical connections. Scheduled replacement of motor windings and insulation."
+          ],
+          [
+            "2a",
+            "Coils",
+            "Overheats",
+            "Coil damage: Prolonged overheating can cause damage to coil insulation and materials, compromising coil integrity and performance.",
+            "3",
+            "1",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "number",
+              text: [
+                "Visual inspection of coil surfaces for dirt accumulation.",
+                "Visual inspection for signs of microbial growth and musty odors."
+              ],
+            },
+            "Regular cleaning and maintenance of coil surfaces. Implementing UV-C or other disinfection methods. Implementing protective coatings and Corroded-resistant materials."
+          ],
+          [
+            "2b",
+            "Coils",
+            "Corroded",
+            "Reduced coil efficiency and heat transfer capacity: Corroded-induced degradation of coil surfaces reduces their efficiency in transferring heat, leading to decreased system performance and potentially causing overheating.",
+            "3",
+            "1",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "number",
+              text: [
+                "Visual inspection for signs of Corroded and structural weakness.",
+                "Regular inspection for signs of Corroded and pitting on coil surfaces."
+              ],
+            },
+            "'Implementing protective coatings and Corroded-resistant materials.Implementing Corroded-resistant coatings and materials for coils. Implementing UV-C or other disinfection methods."
+          ],
+          [
+            "2c",
+            "Coils",
+            "Leaking",
+            " Low refrigerant level due to leakage: Refrigerant leakage from the coils can result in a decreased heat absorption capacity, causing the temperature of the coils to drop below freezing point and leading to ice formation.",
+            "1",
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "number",
+              text: [
+                "Monitoring of refrigerant levels and pressure differentials across the coil.",
+                "Visual inspection for signs of dirt accumulation and temperature differentials across the coil."
+              ],
+            },
+            "Regular inspection and maintenance to detect and repair refrigerant leaks.Regular cleaning and maintenance of coil surfaces and surrounding areas. Implementing UV-C or other disinfection methods."
+          ],
+          [
+            "3a",
+            "Air Filter",
+            "Clogging",
+            "Decreased indoor air quality or cooling system efficiency: Reduced airflow and filtration efficiency resulting from clogged filters lead to decreased indoor air quality or cooling system performance, potentially causing discomfort or health issues for occupants.",
+            "2",
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "number",
+              text: [
+                " Monitoring of pressure differentials across the filter",
+                "Visual inspection for signs of microbial growth and musty odors. 3. Regular inspection for signs of Corroded and structural weakness.."
+              ],
+            },
+            "Regular cleaning or replacement of air filters. Implementing UV-C or other disinfection methods.Implementing Corroded-resistant filter materials and housings."
+          ],
+          [
+            "3b",
+            "Air Filter",
+            "Cracked",
+            "Loss of filtration efficiency: Structural failure compromises the integrity of the filter, reducing its ability to capture airborne contaminants effectively.",
+            "3",
+            "2",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "number",
+              text: [
+                "Monitoring of pressure differentials across the filter",
+                "Visual inspection for signs of microbial growth and musty odors.."
+              ],
+            },
+            "Regular cleaning or replacement of air filters.Implementing UV-C or other disinfection methods.Implementing Corroded-resistant filter materials and housings."
+          ],
+          [
+            "3c",
+            "Air Filter",
+            "Corroded",
+            "Increased bypass of contaminants and reduced filtration efficiency: Damage to the air filter media allows contaminants to pass through the filter, reducing its ability to capture airborne particles and potentially compromising indoor air quality.",
+            "2",
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "number",
+              text: [
+                "Regular inspection for signs of physical damage and structural weakness.",
+                "Visual inspection for signs of microbial growth and musty odors."
+              ],
+            },
+            "Implementing Corroded-resistant filter materials and housings.Implementing UV-C or other disinfection methods. Implementing Corroded-resistant filter materials and housings."
+          ],
+          [
+            "4a",
+            "Gear",
+            "Worn",
+            "Progressive wear and degradation of gear teeth: Continued friction and wear between gear surfaces result in progressive damage and degradation of gear teeth, leading to reduced gear efficiency and potential gear failure.",
+            "3",
+            "1",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "number",
+              text: [
+                "Monitoring of gear temperature and vibration levels.",
+                "Visual inspection for signs of contamination and wear on gear surfaces."
+              ],
+            },
+            "Scheduled lubrication and inspection of gear components. Implementing proper sealing and contamination prevention measures.Implementing Corroded-resistant coatings and materials for gears."
+          ],
+          [
+            "4b",
+            "Gear",
+            "Misalignment",
+            "Reduced Gear Efficiency: Tooth wear decreases gear efficiency and transmission accuracy, resulting in reduced system performance.",
+            "2",
+            "3",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "number",
+              text: [
+                "Monitoring of gear temperature and vibration levels.",
+                "Visual inspection for signs of contamination and wear on gear surfaces."
+              ],
+            },
+            "Scheduled lubrication and inspection of gear components.Implementing proper sealing and contamination prevention measures.Implementing Corroded-resistant coatings and materials for gears."
+          ],
+          [
+            "4c",
+            "Gear",
+            "Leaking",
+            "Gradual loss of gear efficiency and potential mechanical failure: Increased wear and deterioration of gear components lead to a gradual loss of gear efficiency, potentially resulting in gear failure and system downtime.",
+            "3",
+            "3",
+            {
+              type: "class",
+              text: ["Menengah"],
+            },
+            {
+              type: "number",
+              text: [
+                "Monitoring of gear temperature and vibration levels.",
+                "Visual inspection for signs of contamination and wear on gear surfaces."
+              ],
+            },
+            "Regular inspection- Regular Cleaning: Implement a routine maintenance schedule to flush or clean the valve to remove accumulated debris, sediment, or scale Scheduled lubrication and inspection of gear components. Implementing proper sealing and contamination prevention measures. Implementing Corroded-resistant coatings and materials for gears."
+          ],
+        ]
+      },
+      // belum
+      {
+        title: "Maintenance Task Selection",
+        backgroundColor: "#f5eafa",
+        borderColor: "#912BBC",
+        headRow: 2,
+        head: [
+          "No",
+          "Failure Mode",
+          ["Risk Characterization", ["CoF", "Rec PoF", "Current Risk"]],
+          ["Task Selection", ["Proposed Action (s)", "Proj PoF", "Proj Risk"]],
+        ],
+        body: [
+          [
+            "1a",
+            "Tidak ada aliran bahan bakar minyak",
+            "2",
+            "3",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "dot",
+              text: [
+                "Pemeriksaan  dan pembersihann saringan hisap"		
+              ],
+            },
+            "2",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+          ],
+          [
+            "1b",
+            "Tidak ada aliran bahan bakar minyak",
+            "2",
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "dot",
+              text: [
+                "Inspeksi dan perawatan electic motor"		
+              ],
+            },
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+          ],
+          [
+            "2a",
+            "Beroperasi pada  head atau flow dibawah kinerja",
+            "2",
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "dot",
+              text: [
+                "Pemeriksaan visual apakah ada kebocoran, suara dan getaran tidak normal",
+                "Pelumasan seal dan bearing serta periksa kekencangan baut",
+                "Inspeksi dan perawatan pompa",
+                "Pergantian komponen yang rusak",				
+              ],
+            },
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+          ],
+          [
+            "2b",
+            "Beroperasi pada  head atau flow dibawah kinerja",
+            "2",
+            "2",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "dot",
+              text: [
+                "Pemeriksaan visual pompa dan bersihkan saringan hisap",				
+              ],
+            },
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+          ],
+          [
+            "2c",
+            "Beroperasi pada  head atau flow dibawah kinerja",
+            "2",
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "dot",
+              text: [
+                "Pemeriksaan visual apakah ada kebocoran pipa suction",
+                "Penanganan sementara pada pipa bocor",
+                "Pergantian seal pompa",
+              ],
+            },
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+          ],
+        ]
+      },
+      {
+        title: "Category A",
+        backgroundColor: "#003266",
+        borderColor: "#ffffff",
+        headRow: 2,
+        head: [
+          "Task",
+          "Task Type",
+          "Cause Number",
+          ["Risk", ["Current", "Projected"]],
+          "Frequency",
+          "Procedure No. Or Class Reference",
+          "Comments",
+        ],
+        body: [
+          [
+            { 
+              type: "dot", 
+              text: [" Pemeriksaan dan pembersihann saringan hisap"]
+            },
+            "PM",
+            ["2.1", "3.1"],
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            "2 Minggu",
+            "-",
+            "Dilakukan oleh mekanik",
+          ],
+          [
+            { 
+              type: "dot", 
+              text: ["Pemeriksaan visual apakah ada kebocoran, suara dan getaran tidak normal"]
+            },
+            "CM",
+            ["2.3", "3.3"],
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            "Harian",
+            "-",
+            "Segera dilakukan perbaikan, jika terjadi kerusakan",
+          ],
+          [
+            { 
+              type: "dot", 
+              text: ["Pelumasan seal dan bearing serta periksa kekencangan baut"]
+            },
+            "PM",
+            ["2.3", "3.3"],
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            "6 bulan",
+            "-",
+            "Dilakukan oleh mekanik",
+          ],
+          [
+            { 
+              type: "dot", 
+              text: ["Pemeriksaan visual pompa dan bersihkan saringan hisap"]
+            },
+            "CM",
+            ["2.4", "3.4"],
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            "2 Minggu",
+            "-",
+            "Dilakukan oleh mekanik",
+          ],
+          [
+            { 
+              type: "dot", 
+              text: ["Pemeriksaan visual pompa dan bersihkan saringan hisap"]
+            },
+            "CM",
+            ["2.2", "3.2"],
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            "2 Minggu",
+            "-",
+            "Dilakukan oleh mekanik",
+          ],
+          [
+            { 
+              type: "dot", 
+              text: ["Penanganan sementara pada pipa bocor"]
+            },
+            "OTC",
+            ["2.5", "3.5"],
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            "Jika terjadi kerusakan",
+            "-",
+            "Segera dilakukan perbaikan, jika terjadi kerusakan",
+          ],
+          [
+            { 
+              type: "dot", 
+              text: ["Pergantian seal pompa"]
+            },
+            "OTC",
+            ["2.5", "3.5"],
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            "Jika terjadi kerusakan",
+            "-",
+            "Segera dilakukan perbaikan, jika terjadi kerusakan",
+          ],
+        ],
+      },
+      {
+        title: "Category B",
+        backgroundColor: "#003266",
+        borderColor: "#ffffff",
+        headRow: 2,
+        head: [
+          "Task",
+          "Task Type",
+          "Cause Number",
+          ["Risk", ["Current", "Projected"]],
+          "Frequency",
+          "Procedure No. Or Class Reference",
+          "Comments",
+        ],
+        body: [
+          [
+            { 
+              type: "dot", 
+              text: ["Pergantian komponen yang rusak"]
+            },
+            "OTC",
+            ["2.2", "3.2"],
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            "Jika terjadi kerusakan",
+            "-",
+            "Segera dilakukan perbaikan, jika terjadi kerusakan",
+          ],
+        ]
+      },
+      {
+        title: "Category C",
+        backgroundColor: "#003266",
+        borderColor: "#ffffff",
+        headRow: 2,
+        head: [
+          "Task",
+          "Task Type",
+          "Cause Number",
+          ["Risk", ["Current", "Projected"]],
+          "Frequency",
+          "Procedure No. Or Class Reference",
+          "Comments",
+        ],
+        body: [
+          [
+            { 
+              type: "dot", 
+              text: ["Pembersihan dan inspeksi pada tanki utama bahan bakar"]
+            },
+            "CM",
+            "1.1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            "Special Survey Docking",
+            "Class",
+            "Tanki perlu di kosongkan dan dibersikan, sebelum dilakukan inspeksi internal tanki",
+          ],
+          [
+            { 
+              type: "dot", 
+              text: ["Uji tes ketebalan plat dengan Metode NDT ((Non-Destructive Test)"]
+            },
+            "FF",
+            "1.1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            "Setiap Docking",
+            "Class",
+            "Untuk memantau ketebalan plat tanki yang berhubungan langsung dengan air laut",
+          ],
+        ]
+      },
+    ]
+  },
 ]
 
 export function getDataWithSlug(slug: string) {
   return data.find((d) => d.slug === slug)
+}
+
+export function getSlugAtType(type: string) {
+  return data.filter((d) => d.type === type).map((d) => d.slug)
+}
+
+// return [ "PROPELLER", "SHAFTING", "COMPRESSED_AIR_SYSTEM", "FUEL_OIL_SYSTEM", "COOLING_SYSTEM" ]
+export function getRouteTypes() {
+  let types = data.map((c) => c.type)
+  return types.filter((item, i, ar) => ar.indexOf(item) === i);
+}
+
+export function kebabToTitleCase(str: string) {
+  return str
+    .split('-') // Split the string by hyphens
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()) // Capitalize the first letter of each word
+    .join(' '); // Join the words with spaces
+}
+
+export function snakeToUpperCase(str: string) {
+  return str
+    .split('_') // Split the string by underscores
+    .map(word => word.toUpperCase()) // Convert each word to uppercase
+    .join(' '); // Join the words with spaces
 }
