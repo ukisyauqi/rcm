@@ -78,12 +78,12 @@ export default function Page({ params }: { params: { id: string } }) {
         <h1
           className="my-8 border rounded-xl w-full p-4 text-center font-bold text-xl"
           style={{
-            backgroundColor: "#e6fef1",
-            color: "#00B14F",
-            borderColor: "#00B14F",
+            backgroundColor: "#feefe5",
+            color: "#EB5B00",
+            borderColor: "#EB5B00",
           }}
         >
-          Function and Functional Failure
+          FMECA
         </h1>
 
         <div
@@ -126,16 +126,18 @@ export default function Page({ params }: { params: { id: string } }) {
   }
 
   const forms = [
-    Form("Function Statement", "functionStatement", "text"),
-    Form("Function Type", "functionType", "text"),
-    Form("Number", "number", "number"),
-    Form("Functional Failure Statement", "functionalFailureStatement", "text"),
+    Form("Failure Mode", "failureMode", "text"),
+    Form("Causes", "causes", "text"),
+    Form("Failure Characteristic", "failureCharacteristic", "text"),
+    Form("Local Effect", "localEffect", "text"),
+    Form("Functional Failure", "functionalFailure", "text"),
     Preview(
       [
-        "Function Statement",
-        "Function Type",
-        "Number",
-        "Functional Failure Statement",
+        "Failure Mode",
+        "Causes",
+        "Failure Characteristic",
+        "Local Effect",
+        "Functional Failure",
       ],
       "/add-maintenance-task/fmeca/" + params.id
     ),
