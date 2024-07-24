@@ -624,6 +624,204 @@ const data = [
           ],
         ],
       },
+      {
+        title: "Category A",
+        backgroundColor: "#003266",
+        borderColor: "#ffffff",
+        headRow: 2,
+        head: [
+          "Task",
+          "Task Type",
+          "Cause Number",
+          ["Risk", ["Current", "Projected"]],
+          "Frequency",
+          "Procedure No. Or Class Reference",
+          "Comments",
+        ],
+        body: [
+          [
+            {
+              type: "dot",
+              text: [
+                "Perawatan Shafting",
+              ],
+            },
+            "CM",
+            ["1.1", "1.2"],
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            "-",
+            "-",
+            "-",
+          ],
+        ],
+      },
+      {
+        title: "Category B",
+        backgroundColor: "#003266",
+        borderColor: "#ffffff",
+        headRow: 2,
+        head: [
+          "Task",
+          "Task Type",
+          "Cause Number",
+          ["Risk", ["Current", "Projected"]],
+          "Frequency",
+          "Procedure No. Or Class Reference",
+          "Comments",
+        ],
+        body: [
+          [
+            {
+              type: "dot",
+              text: [
+                "lakukan analisis historik terkait debrish atau benda yang pernah menabrak komponen",
+              ],
+            },
+            "FF",
+            "1,2",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            "dilakukan apabila terjadi failure",
+            "-",
+            "-",
+          ],
+          [
+            {
+              type: "dot",
+              text: [
+                "-lakukan vibration test analysis",
+              ],
+            },
+            "CM",
+            "2,2",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            "dilakukan apabila terjadi failure",
+            "-",
+            "Dilakukan oleh mekanik",
+          ],
+          [
+            {
+              type: "dot",
+              text: [
+                "lakukan vibration test analysis",
+              ],
+            },
+            "CM",
+            "3,2",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            "dilakukan apabila terjadi failure",
+            "-",
+            "Dilakukan oleh mekanik",
+          ],
+        ],
+      },
+      {
+        title: "Category C",
+        backgroundColor: "#003266",
+        borderColor: "#ffffff",
+        headRow: 2,
+        head: [
+          "Task",
+          "Task Type",
+          "Cause Number",
+          ["Risk", ["Current", "Projected"]],
+          "Frequency",
+          "Procedure No. Or Class Reference",
+          "Comments",
+        ],
+        body: [
+          [
+            { 
+              type: "dot",
+              text: [
+                "lakukan inspeksi visual terhadap komponen dan lakukan perawatan apabila terjadi kegagalan"
+              ] 
+            },
+            "PM",
+            "1.1",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            "6 bulan dan/atau pada: Pada saat kerusakan (failure) terjadi",
+            "-",
+            "Ikuti petunjuk rekomendasi pabrikan/vendor",
+          ],
+          [
+            {
+              type: "dot",
+              text: [
+                "berikan cairan anti korosi terhadap komponen",
+              ],
+            },
+            "PM",
+            "2.1",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            "6 bulan dan/atau pada: Pada saat kerusakan (failure) terjadi",
+            "-",
+            "Ikuti petunjuk rekomendasi pabrikan/vendor",
+          ],
+          [
+            {
+              type: "dot",
+              text: [
+                "lakukan inspeksi visual terhadap komponen dan lakukan perawatan apabila terjadi kegagalan",
+              ],
+            },
+            "PM",
+            "3.1",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            "6 bulan dan/atau pada: Pada saat kerusakan (failure) terjadi",
+            "-",
+            "Ikuti petunjuk rekomendasi pabrikan/vendor",
+          ],
+        ],
+      },
     ],
   },
   {
@@ -1175,6 +1373,267 @@ const data = [
           ],
         ],
       },
+      {
+        title: "Category A",
+        backgroundColor: "#003266",
+        borderColor: "#ffffff",
+        headRow: 2,
+        head: [
+          "Task",
+          "Task Type",
+          "Cause Number",
+          ["Risk", ["Current", "Projected"]],
+          "Frequency",
+          "Procedure No. Or Class Reference",
+          "Comments",
+        ],
+        body: [
+          [
+            {
+              type: "dot",
+              text: [
+                "Pemeriksaan kekencangan dari mur dan baut pada component propeller shaft",
+              ],
+            },
+            "FF",
+            "6,2",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            "Dilakukan Saat Kerusakan (failure) Terjadi",
+            "-",
+            "Dilakukan oleh Mekanik",
+          ],
+          [
+            {
+              type: "dot",
+              text: [
+                "Lakukan Pengecekan terhadap sumber kontaminasi yang terjadi",
+              ],
+            },
+            "FF",
+            "7,2",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            "Dilakukan Saat Kerusakan (failure) Terjadi",
+            "-",
+            "Dilakukan oleh Mekanik",
+          ],
+        ],
+      },
+      {
+        title: "Category B",
+        backgroundColor: "#003266",
+        borderColor: "#ffffff",
+        headRow: 2,
+        head: [
+          "Task",
+          "Task Type",
+          "Cause Number",
+          ["Risk", ["Current", "Projected"]],
+          "Frequency",
+          "Procedure No. Or Class Reference",
+          "Comments",
+        ],
+        body: [
+          [
+            {
+              type: "dot",
+              text: [
+                "Inpeksi Visual terhadap kondisi Propeller Shaft",
+              ],
+            },
+            "CM",
+            ["8.1", "8.2"],
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            "1000 jam dan/atau dilakukan pada: Vibration Test Analysis, Pada saat kerusakan (failure) terjadi",
+            "-",
+            "Ikuti petunjuk rekomendasi pabrikan/vendor",
+          ],
+          [
+            {
+              type: "dot",
+              text: [
+                "Lakukan Pemeriksaan Kekencangan baut pada komponen Propeller Shaft",
+              ],
+            },
+            "PM",
+            "6,1",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            "dilakukan apabila terjadi failure",
+            "-",
+            "-",
+          ],
+          [
+            {
+              type: "dot",
+              text: [
+                "Berikan tambahan pelumas atau ganti pelumas baru",
+              ],
+            },
+            "PM",
+            "7,1",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            "6 Bulan",
+            "-",
+            "Dilakukan oleh mekanik",
+          ],
+          [
+            {
+              type: "dot",
+              text: [
+                "Berikan tambahan pelumas atau ganti pelumas baru",
+              ],
+            },
+            "PM",
+            ["5.1", "5,2"],
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            "6 Bulan",
+            "-",
+            "Dilakukan oleh mekanik",
+          ],
+        ],
+      },
+      {
+        title: "Category C",
+        backgroundColor: "#003266",
+        borderColor: "#ffffff",
+        headRow: 2,
+        head: [
+          "Task",
+          "Task Type",
+          "Cause Number",
+          ["Risk", ["Current", "Projected"]],
+          "Frequency",
+          "Procedure No. Or Class Reference",
+          "Comments",
+        ],
+        body: [
+          [
+            { 
+              type: "dot",
+              text: [
+                "Pemeriksaan Serta Perawatan Pada Kondisi Propeller Shaft yang sudah Crack"
+              ] 
+            },
+            "PM",
+            ["1.1", "1.2"],
+            {
+              type: "class",
+              text: ["Menengah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            "Dilakukan Saat Kerusakan (failure) Terjadi",
+            "-",
+            "Ikuti petunjuk rekomendasi pabrikan/vendor",
+          ],
+          [
+            { 
+              type: "dot",
+              text: [
+                "-Pemeriksaan Serta Perawatan Pada Kondisi Propeller Shaft yang sudah Fractured"
+              ] 
+            },
+            "PM",
+            ["2.1", "2.2"],
+            {
+              type: "class",
+              text: ["Menengah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            "Dilakukan Saat Kerusakan (failure) Terjadi",
+            "-",
+            "Ikuti petunjuk rekomendasi pabrikan/vendor",
+          ],
+          [
+            { 
+              type: "dot",
+              text: [
+                "Lakukan Replacement komponen yang mengalami kerusakan mayor"
+              ] 
+            },
+            "OTC",
+            ["3.1", "3.2"],
+            {
+              type: "class",
+              text: ["Menengah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            "Dilakukan Saat Kerusakan (failure) Terjadi",
+            "-",
+            "Ikuti petunjuk rekomendasi pabrikan/vendor",
+          ],
+          [
+            { 
+              type: "dot",
+              text: [
+                "Lakukan Replacement komponen yang mengalami kerusakan mayor"
+              ] 
+            },
+            "OTC",
+            ["4.1", "4.2"],
+            {
+              type: "class",
+              text: ["Menengah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            "Dilakukan Saat Kerusakan (failure) Mayor Terjadi",
+            "-",
+            "Ikuti petunjuk rekomendasi pabrikan/vendor",
+          ],
+        ],
+      },
     ],
   },
   {
@@ -1569,6 +2028,170 @@ const data = [
               type: "class",
               text: ["Rendah-Menengah"],
             },
+          ],
+        ],
+      },
+      {
+        title: "Category B",
+        backgroundColor: "#003266",
+        borderColor: "#ffffff",
+        headRow: 2,
+        head: [
+          "Task",
+          "Task Type",
+          "Cause Number",
+          ["Risk", ["Current", "Projected"]],
+          "Frequency",
+          "Procedure No. Or Class Reference",
+          "Comments",
+        ],
+        body: [
+          [
+            {
+              type: "dot",
+              text: [
+                "Lakukan Vibration Monitoring untuk mengidentifikasi kelainan atau perubahan pola getaran.",
+              ],
+            },
+            "FF",
+            "1.2",
+            {
+              type: "class",
+              text: ["Menengah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            "Dilakukan Saat Kerusakan (failure) Terjadi",
+            "-",
+            "dilakukan oleh mekanik",
+          ],
+          [
+            {
+              type: "dot",
+              text: [
+                "Lakukan simulasi CFD untuk membantu mengidentifikasi area rawan kavitasi dan mengoptimalkan desain baling-baling",
+              ],
+            },
+            "FF",
+            "3,1",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            "dilakukan apabila terjadi failure",
+            "-",
+            "-",
+          ],
+        ],
+      },
+      {
+        title: "Category C",
+        backgroundColor: "#003266",
+        borderColor: "#ffffff",
+        headRow: 2,
+        head: [
+          "Task",
+          "Task Type",
+          "Cause Number",
+          ["Risk", ["Current", "Projected"]],
+          "Frequency",
+          "Procedure No. Or Class Reference",
+          "Comments",
+        ],
+        body: [
+          [
+            { 
+              type: "dot",
+              text: [
+                "Inspeksi visual dan perawatan pada propeller"
+              ] 
+            },
+            "PM",
+            "1.1",
+            {
+              type: "class",
+              text: ["Menengah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            "6 bulan dan/atau Dilakukan pada: Pada saat kerusakan (failure) terjadi",
+            "-",
+            "di lakukan saat dry dock",
+          ],
+          [
+            { 
+              type: "dot",
+              text: [
+                "-lakukan pembersihan dan gunakan cairan anti fouling",
+                "lakukan re-adjustment pada pitch propeller",
+              ] 
+            },
+            "PM",
+            "2.1",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            "6 bulan dan/atau Dilakukan pada: Pada saat kerusakan (failure) terjadi",
+            "-",
+            "di lakukan saat dry dock",
+          ],
+          [
+            { 
+              type: "dot",
+              text: [
+                "Lakukan balancing propeller",
+                "Lakukan re-alignment pada shaft yang terjadi misalignment",
+                "kencangkan baut dan mur yang longgar",
+              ] 
+            },
+            "PM",
+            ["4.1", '4.2'],
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            "6 bulan dan/atau Dilakukan pada: Pada saat kerusakan (failure) terjadi",
+            "-",
+            "di lakukan saat dry dock",
+          ],
+          [
+            { 
+              type: "dot",
+              text: [
+                "Lakukan inspeksi visual dan perawatan",
+                "gunakan cairan anti korosi",
+              ] 
+            },
+            "PM",
+            ["5.1", '5.2'],
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            "6 bulan dan/atau Dilakukan pada: Pada saat kerusakan (failure) terjadi",
+            "-",
+            "di lakukan saat dry dock",
           ],
         ],
       },
@@ -2076,6 +2699,212 @@ const data = [
               type: "class",
               text: ["Rendah-Menengah"],
             },
+          ],
+        ],
+      },
+      {
+        title: "Category B",
+        backgroundColor: "#003266",
+        borderColor: "#ffffff",
+        headRow: 2,
+        head: [
+          "Task",
+          "Task Type",
+          "Cause Number",
+          ["Risk", ["Current", "Projected"]],
+          "Frequency",
+          "Procedure No. Or Class Reference",
+          "Comments",
+        ],
+        body: [
+          [
+            {
+              type: "dot",
+              text: [
+                "Berikan/Tambahkan Cairan Anti Korosi",
+              ],
+            },
+            "PM",
+            ["5.1", "5.2"],
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            "Dilakukan Saat Kerusakan (failure) Terjadi",
+            "-",
+            "dilakukan oleh mekanik",
+          ],
+          [
+            {
+              type: "dot",
+              text: [
+                "Lakukan Pemeriksaan Kekencangan baut pada komponen Propeller Shaft",
+              ],
+            },
+            "PM",
+            "6,1",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            "dilakukan apabila terjadi failure",
+            "-",
+            "-",
+          ],
+          [
+            {
+              type: "dot",
+              text: [
+                "Berikan/Tambahkan Cairan Anti Korosi",
+              ],
+            },
+            "CM",
+            "6.2",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            "Dilakukan Saat Kerusakan (failure) Terjadi",
+            "-",
+            "Ikuti petunjuk rekomendasi pabrikan/vendor",
+          ],
+          [
+            {
+              type: "dot",
+              text: [
+                "Segera lakukan pergantian seal apabila terjadi kegagalan",
+              ],
+            },
+            "PM",
+            ["7.1", "7.2"],
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            "dilakukan apabila terjadi failure",
+            "-",
+            "Ikuti petunjuk rekomendasi pabrikan/vendor",
+          ],
+        ],
+      },
+      {
+        title: "Category C",
+        backgroundColor: "#003266",
+        borderColor: "#ffffff",
+        headRow: 2,
+        head: [
+          "Task",
+          "Task Type",
+          "Cause Number",
+          ["Risk", ["Current", "Projected"]],
+          "Frequency",
+          "Procedure No. Or Class Reference",
+          "Comments",
+        ],
+        body: [
+          [
+            { 
+              type: "dot",
+              text: [
+                "Inspeksi visual dan perawatan pada propeller"
+              ] 
+            },
+            "PM",
+            "1.1",
+            {
+              type: "class",
+              text: ["Menengah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            "6 bulan dan/atau Dilakukan pada: Pada saat kerusakan (failure) terjadi",
+            "-",
+            "di lakukan saat dry dock",
+          ],
+          [
+            { 
+              type: "dot",
+              text: [
+                "-lakukan pembersihan dan gunakan cairan anti fouling",
+                "lakukan re-adjustment pada pitch propeller",
+              ] 
+            },
+            "PM",
+            "2.1",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            "6 bulan dan/atau Dilakukan pada: Pada saat kerusakan (failure) terjadi",
+            "-",
+            "di lakukan saat dry dock",
+          ],
+          [
+            { 
+              type: "dot",
+              text: [
+                "Lakukan balancing propeller",
+                "Lakukan re-alignment pada shaft yang terjadi misalignment",
+                "kencangkan baut dan mur yang longgar",
+              ] 
+            },
+            "PM",
+            ["4.1", '4.2'],
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            "6 bulan dan/atau Dilakukan pada: Pada saat kerusakan (failure) terjadi",
+            "-",
+            "di lakukan saat dry dock",
+          ],
+          [
+            { 
+              type: "dot",
+              text: [
+                "Lakukan inspeksi visual dan perawatan",
+                "gunakan cairan anti korosi",
+              ] 
+            },
+            "PM",
+            ["5.1", '5.2'],
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            "6 bulan dan/atau Dilakukan pada: Pada saat kerusakan (failure) terjadi",
+            "-",
+            "di lakukan saat dry dock",
           ],
         ],
       },
