@@ -1,7 +1,7 @@
-import { PrismaClient } from "@prisma/client"
-import { z } from "zod"
+'use server'
 
-const prisma = new PrismaClient
+import { z } from "zod"
+import prisma from "@/db"
 
 const AssetProfileSchema = z.object({
   system: z.enum([
@@ -35,16 +35,9 @@ const AssetProfileSchema = z.object({
   drawing: z.string(),
 })
 
-export async function createAssetProfile(formData: FormData) {
+export async function createAssetProfile(data: any) {
 
-  const validatedFields = AssetProfileSchema.safeParse({
-    system: formData.get("system"),
-    subsystem: formData.get("subsystem"),
-    subSubsystem: formData.get("subsubsystem"),
-    equipmentId: formData.get("equipmentId"),
-    equipmentName: formData.get("equipmentName"),
-    drawing: formData.get("drawing"),
-  })
+  const validatedFields = AssetProfileSchema.safeParse(data)
 
   if (!validatedFields.success) throw new Error(validatedFields.error.toString())
 
