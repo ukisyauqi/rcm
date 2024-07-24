@@ -17,7 +17,7 @@ const riskMatrix: RiskLevel[][] = [
   ['Rendah', 'Rendah-Menengah', 'Menengah', 'Menengah-Tinggi', 'Tinggi']
 ];
 
-function getCurrentRisk(cof: number, pof: number): number {
+export function getCurrentRisk(cof: number, pof: number): number {
   if (cof < 1 || cof > 5 || pof < 1 || pof > 5) {
     throw new Error("CoF dan PoF harus berada dalam rentang 1-5");
   }
