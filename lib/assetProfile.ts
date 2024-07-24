@@ -2,6 +2,7 @@
 
 import { z } from "zod"
 import prisma from "@/db"
+import { redirect } from "next/navigation"
 
 const AssetProfileSchema = z.object({
   system: z.enum([
@@ -35,15 +36,17 @@ const AssetProfileSchema = z.object({
   drawing: z.string(),
 })
 
-export async function createAssetProfile(data: any) {
+export async function createAssetProfile(data: Record<string, string>) {
 
   const validatedFields = AssetProfileSchema.safeParse(data)
 
   if (!validatedFields.success) throw new Error(validatedFields.error.toString())
 
-  await prisma.assetProfile.create({
+  const newData = await prisma.assetProfile.create({
     data: validatedFields.data
   })
+
+  redirect("/add-maintenance-task/function-failure/" + newData.id)
 }
 
 export async function getAssetProfile() {

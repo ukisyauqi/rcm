@@ -1,7 +1,23 @@
+"use client"
+import FormLayout from "@/components/layout/FormLayout"
 import { createAssetProfile } from "@/lib/assetProfile"
+import { redirect } from "next/navigation"
+import React, { useState } from "react"
 
-export default function assetProfile(
-  nextForm: () => void,
+export default function Page() {
+  const [activeForm, setActiveForm] = useState(0)
+  const [formData, setFormData] = useState<any>({})
+
+  const forms = [
+    AssetProfile(setActiveForm, setFormData),
+    AssetProfilePreview(formData, setActiveForm),
+  ]
+
+  return <FormLayout>{forms[activeForm]}</FormLayout>
+}
+
+function AssetProfile(
+  setActiveForm: React.Dispatch<React.SetStateAction<number>>,
   setFormData: React.Dispatch<React.SetStateAction<{}>>
 ) {
   const formStructure = [
@@ -91,11 +107,12 @@ export default function assetProfile(
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    const data = Object.fromEntries(new FormData(e.target as HTMLFormElement))
+    const formElm = e.target as HTMLFormElement
+    const data = Object.fromEntries(new FormData(formElm))
 
     setFormData(data)
 
-    nextForm()
+    setActiveForm((prev) => prev + 1)
   }
 
   return (
@@ -152,5 +169,76 @@ export default function assetProfile(
         Lanjut
       </button>
     </form>
+  )
+}
+
+function AssetProfilePreview(
+  formData: any,
+  setActiveForm: React.Dispatch<React.SetStateAction<number>>
+) {
+  return (
+    <>
+      <div className="flex gap-20">
+        <table>
+          <tbody>
+            <tr>
+              <td className="text-right font-bold py-2">Functional Group</td>
+              <td className="px-2 text-center font-bold">:</td>
+              <td className="text-left">Functional Group</td>
+            </tr>
+            <tr>
+              <td className="text-right font-bold py-2">System</td>
+              <td className="px-2 text-center font-bold">:</td>
+              <td className="text-left">{formData.system}</td>
+            </tr>
+            <tr>
+              <td className="text-right font-bold py-2">Subsystem</td>
+              <td className="px-2 text-center font-bold">:</td>
+              <td className="text-left">{formData.subsystem}</td>
+            </tr>
+            <tr>
+              <td className="text-right font-bold py-2">Subsystem</td>
+              <td className="px-2 text-center font-bold">:</td>
+              <td className="text-left">{formData.subSubsystem}</td>
+            </tr>
+          </tbody>
+        </table>
+        <table>
+          <tbody>
+            <tr>
+              <td className="text-right font-bold py-2">Equipment ID</td>
+              <td className="px-2 text-center font-bold">:</td>
+              <td className="text-left min-w-24">{formData.equipmentId}</td>
+            </tr>
+            <tr>
+              <td className="text-right font-bold py-2">Equipment Name</td>
+              <td className="px-2 text-center font-bold">:</td>
+              <td className="text-left min-w-24">{formData.equipmentName}</td>
+            </tr>
+            <tr>
+              <td className="text-right font-bold py-2">Drawing</td>
+              <td className="px-2 text-center font-bold">:</td>
+              <td className="text-left min-w-24">{formData.drawing}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <button
+        className="btn btn-primary text-white w-full text-xl mt-10 mb-4"
+        onClick={async () => {
+          await createAssetProfile(formData)
+        }}
+      >
+        Lanjut
+      </button>
+      <button
+        className="btn btn-secondary text-primary w-full text-xl"
+        onClick={() => {
+          setActiveForm((prev) => prev - 1)
+        }}
+      >
+        Kembali
+      </button>
+    </>
   )
 }
