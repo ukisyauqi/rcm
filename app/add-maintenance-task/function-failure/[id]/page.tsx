@@ -41,6 +41,7 @@ function Preview(
       ...formData,
       assetProfileId: assetProfileId,
     })
+    redirect("/add-maintenance-task/fmeca/" + assetProfileId)
   }
 
   return (

@@ -113,8 +113,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
@@ -139,8 +137,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
@@ -167,8 +163,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
@@ -204,8 +198,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
@@ -218,8 +210,6 @@ const data = [
             "1",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
           ],
@@ -230,8 +220,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
@@ -243,8 +231,6 @@ const data = [
             "1",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
           ],
@@ -255,8 +241,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
@@ -266,8 +250,6 @@ const data = [
             "1",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
           ],
@@ -299,14 +281,10 @@ const data = [
             ["3.1", "3.2"],
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             "6 bulan dan/atau pada: Pada saat kerusakan (failure) terjadi",
@@ -336,14 +314,10 @@ const data = [
             ["1.1", "1.2"],
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             "6 bulan dan/atau pada: Pada saat kerusakan (failure) terjadi",
@@ -361,14 +335,10 @@ const data = [
             ["1.1", "1.3"],
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             "6 bulan dan/atau pada: Pada saat kerusakan (failure) terjadi",
@@ -506,8 +476,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
@@ -533,8 +501,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
@@ -560,8 +526,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
@@ -600,8 +564,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
@@ -614,8 +576,6 @@ const data = [
             "1",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
           ],
@@ -626,8 +586,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
@@ -640,8 +598,6 @@ const data = [
             "1",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
           ],
@@ -652,8 +608,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
@@ -665,8 +619,6 @@ const data = [
             "1",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
           ],
@@ -864,8 +816,6 @@ const data = [
             "3",
             {
               type: "class",
-              backgroundColor: "#fddb20",
-              textColor: "#000",
               text: ["Menengah"],
             },
             {
@@ -889,8 +839,6 @@ const data = [
             "3",
             {
               type: "class",
-              backgroundColor: "#fddb20",
-              textColor: "#000",
               text: ["Menengah"],
             },
             {
@@ -914,8 +862,6 @@ const data = [
             "3",
             {
               type: "class",
-              backgroundColor: "#fddb20",
-              textColor: "#000",
               text: ["Menengah"],
             },
             {
@@ -935,8 +881,6 @@ const data = [
             "3",
             {
               type: "class",
-              backgroundColor: "#fddb20",
-              textColor: "#000",
               text: ["Menengah"],
             },
             {
@@ -960,8 +904,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
@@ -985,8 +927,6 @@ const data = [
             "3",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
@@ -1010,8 +950,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
@@ -1035,8 +973,6 @@ const data = [
             "3",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
@@ -1069,8 +1005,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#fddb20",
-              textColor: "#000",
               text: ["Menengah"],
             },
             {
@@ -1083,8 +1017,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
           ],
@@ -1095,8 +1027,6 @@ const data = [
             "3",
             {
               type: "class",
-              backgroundColor: "#fddb20",
-              textColor: "#000",
               text: ["Menengah"],
             },
             {
@@ -1110,8 +1040,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
           ],
@@ -1122,8 +1050,6 @@ const data = [
             "3",
             {
               type: "class",
-              backgroundColor: "#fddb20",
-              textColor: "#000",
               text: ["Menengah"],
             },
             {
@@ -1136,8 +1062,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
           ],
@@ -1148,8 +1072,6 @@ const data = [
             "3",
             {
               type: "class",
-              backgroundColor: "#fddb20",
-              textColor: "#000",
               text: ["Menengah"],
             },
             {
@@ -1163,8 +1085,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
           ],
@@ -1175,8 +1095,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
@@ -1189,8 +1107,6 @@ const data = [
             "1",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
           ],
@@ -1201,8 +1117,6 @@ const data = [
             "3",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
@@ -1215,8 +1129,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
           ],
@@ -1227,8 +1139,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
@@ -1241,8 +1151,6 @@ const data = [
             "1",
             {
               type: "class",
-              backgroundColor: "#5071f3",
-              textColor: "#fff",
               text: ["Rendah"],
             },
           ],
@@ -1253,8 +1161,6 @@ const data = [
             "3",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
@@ -1264,8 +1170,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
           ],
@@ -1433,8 +1337,6 @@ const data = [
             "3",
             {
               type: "class",
-              backgroundColor: "#fddb20",
-              textColor: "#000",
               text: ["Menengah"],
             },
             {
@@ -1460,8 +1362,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#1caf51",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
@@ -1484,8 +1384,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#1caf51",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
@@ -1511,8 +1409,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#fddb20",
-              textColor: "#000",
               text: ["Menengah"],
             },
             {
@@ -1538,8 +1434,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
@@ -1575,8 +1469,6 @@ const data = [
             "3",
             {
               type: "class",
-              backgroundColor: "#fddb20",
-              textColor: "#000",
               text: ["Menengah"],
             },
             {
@@ -1589,8 +1481,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
           ],
@@ -1601,8 +1491,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
@@ -1615,8 +1503,6 @@ const data = [
             "1",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah"],
             },
           ],
@@ -1627,8 +1513,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#fddb20",
-              textColor: "#000",
               text: ["Rendah-Menengah"],
             },
             {
@@ -1640,8 +1524,6 @@ const data = [
             "1",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah"],
             },
           ],
@@ -1652,8 +1534,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#fddb20",
-              textColor: "#000",
               text: ["Menengah"],
             },
             {
@@ -1666,8 +1546,6 @@ const data = [
             "1",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
           ],
@@ -1678,8 +1556,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
@@ -1691,8 +1567,6 @@ const data = [
             "1",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
           ],
@@ -1888,8 +1762,6 @@ const data = [
             "3",
             {
               type: "class",
-              backgroundColor: "#fddb20",
-              textColor: "#000",
               text: ["Menengah"],
             },
             {
@@ -1913,8 +1785,6 @@ const data = [
             "3",
             {
               type: "class",
-              backgroundColor: "#1caf51",
-              textColor: "#fff",
               text: ["Menengah"],
             },
             {
@@ -1938,8 +1808,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#1caf51",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
@@ -1959,8 +1827,6 @@ const data = [
             "3",
             {
               type: "class",
-              backgroundColor: "#fddb20",
-              textColor: "#000",
               text: ["Menengah"],
             },
             {
@@ -1984,8 +1850,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
@@ -2009,8 +1873,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
@@ -2034,8 +1896,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
@@ -2072,8 +1932,6 @@ const data = [
             "3",
             {
               type: "class",
-              backgroundColor: "#fddb20",
-              textColor: "#000",
               text: ["Menengah"],
             },
             {
@@ -2086,8 +1944,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
           ],
@@ -2098,8 +1954,6 @@ const data = [
             "3",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Menengah"],
             },
             {
@@ -2112,8 +1966,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
           ],
@@ -2124,8 +1976,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#fddb20",
-              textColor: "#000",
               text: ["Rendah-Menengah"],
             },
             {
@@ -2138,8 +1988,6 @@ const data = [
             "1",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
           ],
@@ -2150,8 +1998,6 @@ const data = [
             "3",
             {
               type: "class",
-              backgroundColor: "#fddb20",
-              textColor: "#000",
               text: ["Menengah"],
             },
             {
@@ -2165,8 +2011,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
           ],
@@ -2177,8 +2021,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
@@ -2191,8 +2033,6 @@ const data = [
             "1",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
           ],
@@ -2203,8 +2043,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
@@ -2217,8 +2055,6 @@ const data = [
             "1",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah"],
             },
           ],
@@ -2229,8 +2065,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
@@ -2240,8 +2074,6 @@ const data = [
             "1",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
           ],
@@ -2429,8 +2261,6 @@ const data = [
             "3",
             {
               type: "class",
-              backgroundColor: "#fddb20",
-              textColor: "#000",
               text: ["Menengah"],
             },
             {
@@ -2450,8 +2280,6 @@ const data = [
             "3",
             {
               type: "class",
-              backgroundColor: "#1caf51",
-              textColor: "#fff",
               text: ["Menengah"],
             },
             {
@@ -2471,8 +2299,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#1caf51",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
@@ -2492,8 +2318,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#fddb20",
-              textColor: "#000",
               text: ["Rendah-Menengah"],
             },
             {
@@ -2513,8 +2337,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
@@ -2534,8 +2356,6 @@ const data = [
             "3",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Menengah"],
             },
             {
@@ -2568,8 +2388,6 @@ const data = [
             "3",
             {
               type: "class",
-              backgroundColor: "#fddb20",
-              textColor: "#000",
               text: ["Menengah"],
             },
             {
@@ -2579,8 +2397,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
           ],
@@ -2591,8 +2407,6 @@ const data = [
             "3",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Menengah"],
             },
             {
@@ -2605,8 +2419,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
           ],
@@ -2617,8 +2429,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#fddb20",
-              textColor: "#000",
               text: ["Rendah-Menengah"],
             },
             {
@@ -2631,8 +2441,6 @@ const data = [
             "1",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
           ],
@@ -2643,8 +2451,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#fddb20",
-              textColor: "#000",
               text: ["Menengah"],
             },
             {
@@ -2657,8 +2463,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
           ],
@@ -2669,8 +2473,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
@@ -2683,8 +2485,6 @@ const data = [
             "1",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
           ],
@@ -2695,8 +2495,6 @@ const data = [
             "3",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Menengah"],
             },
             {
@@ -2709,8 +2507,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
           ],
@@ -2898,8 +2694,6 @@ const data = [
             "3",
             {
               type: "class",
-              backgroundColor: "#fddb20",
-              textColor: "#000",
               text: ["Menengah"],
             },
             {
@@ -2919,8 +2713,6 @@ const data = [
             "3",
             {
               type: "class",
-              backgroundColor: "#1caf51",
-              textColor: "#fff",
               text: ["Menengah"],
             },
             {
@@ -2940,8 +2732,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#1caf51",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
@@ -2961,8 +2751,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#fddb20",
-              textColor: "#000",
               text: ["Rendah-Menengah"],
             },
             {
@@ -2982,8 +2770,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
@@ -3003,8 +2789,6 @@ const data = [
             "3",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Menengah"],
             },
             {
@@ -3037,8 +2821,6 @@ const data = [
             "3",
             {
               type: "class",
-              backgroundColor: "#fddb20",
-              textColor: "#000",
               text: ["Menengah"],
             },
             {
@@ -3048,8 +2830,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
           ],
@@ -3060,8 +2840,6 @@ const data = [
             "3",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Menengah"],
             },
             {
@@ -3074,8 +2852,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
           ],
@@ -3086,8 +2862,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#fddb20",
-              textColor: "#000",
               text: ["Rendah-Menengah"],
             },
             {
@@ -3100,8 +2874,6 @@ const data = [
             "1",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
           ],
@@ -3112,8 +2884,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#fddb20",
-              textColor: "#000",
               text: ["Rendah-Menengah"],
             },
             {
@@ -3126,8 +2896,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
           ],
@@ -3138,8 +2906,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
@@ -3152,8 +2918,6 @@ const data = [
             "1",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
           ],
@@ -3164,8 +2928,6 @@ const data = [
             "3",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Menengah"],
             },
             {
@@ -3178,8 +2940,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
           ],
@@ -3377,8 +3137,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#fddb20",
-              textColor: "#000",
               text: ["Menengah-Tinggi"],
             },
             {
@@ -3402,8 +3160,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#1caf51",
-              textColor: "#fff",
               text: ["Menengah-Tinggi"],
             },
             {
@@ -3427,8 +3183,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#1caf51",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
@@ -3452,8 +3206,6 @@ const data = [
             "3",
             {
               type: "class",
-              backgroundColor: "#fddb20",
-              textColor: "#000",
               text: ["Menengah"],
             },
             {
@@ -3477,8 +3229,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
@@ -3502,8 +3252,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Menengah"],
             },
             {
@@ -3527,8 +3275,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
@@ -3552,8 +3298,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
@@ -3590,8 +3334,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#fddb20",
-              textColor: "#000",
               text: ["Menengah-Tinggi"],
             },
             {
@@ -3604,8 +3346,6 @@ const data = [
             "1",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Menengah"],
             },
           ],
@@ -3616,8 +3356,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Menengah-Tinggi"],
             },
             {
@@ -3631,8 +3369,6 @@ const data = [
             "1",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Menengah"],
             },
           ],
@@ -3643,8 +3379,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#fddb20",
-              textColor: "#000",
               text: ["Rendah-Menengah"],
             },
             {
@@ -3657,8 +3391,6 @@ const data = [
             "1",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
           ],
@@ -3669,8 +3401,6 @@ const data = [
             "3",
             {
               type: "class",
-              backgroundColor: "#fddb20",
-              textColor: "#000",
               text: ["Menengah"],
             },
             {
@@ -3684,8 +3414,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
           ],
@@ -3696,8 +3424,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
@@ -3710,8 +3436,6 @@ const data = [
             "1",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
           ],
@@ -3722,8 +3446,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
@@ -3736,8 +3458,6 @@ const data = [
             "1",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
           ],
@@ -3748,8 +3468,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
@@ -3762,8 +3480,6 @@ const data = [
             "1",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
           ],
@@ -3774,8 +3490,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
@@ -3785,8 +3499,6 @@ const data = [
             "1",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
           ],
@@ -3945,8 +3657,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#fddb20",
-              textColor: "#000",
               text: ["Menengah-Tinggi"],
             },
             {
@@ -3970,8 +3680,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#1caf51",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
@@ -3995,8 +3703,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#1caf51",
-              textColor: "#fff",
               text: ["Menengah-Tinggi"],
             },
             {
@@ -4020,8 +3726,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#fddb20",
-              textColor: "#000",
               text: ["Menengah-Tinggi"],
             },
             {
@@ -4045,8 +3749,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
@@ -4083,8 +3785,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#fddb20",
-              textColor: "#000",
               text: ["Menengah-Tinggi"],
             },
             {
@@ -4097,8 +3797,6 @@ const data = [
             "1",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Menengah"],
             },
           ],
@@ -4109,8 +3807,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
@@ -4123,8 +3819,6 @@ const data = [
             "1",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
           ],
@@ -4135,8 +3829,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#fddb20",
-              textColor: "#000",
               text: ["Menengah-Tinggi"],
             },
             {
@@ -4150,8 +3842,6 @@ const data = [
             "1",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Menengah"],
             },
           ],
@@ -4162,8 +3852,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#fddb20",
-              textColor: "#000",
               text: ["Rendah-Menengah"],
             },
             {
@@ -4176,8 +3864,6 @@ const data = [
             "1",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
           ],
@@ -4188,8 +3874,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
@@ -4202,8 +3886,6 @@ const data = [
             "1",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
           ],
@@ -4362,8 +4044,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#fddb20",
-              textColor: "#000",
               text: ["Menengah-Tinggi"],
             },
             {
@@ -4387,8 +4067,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#1caf51",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
@@ -4412,8 +4090,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#1caf51",
-              textColor: "#fff",
               text: ["Menengah-Tinggi"],
             },
             {
@@ -4437,8 +4113,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#fddb20",
-              textColor: "#000",
               text: ["Menengah-Tinggi"],
             },
             {
@@ -4462,8 +4136,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
@@ -4500,8 +4172,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#fddb20",
-              textColor: "#000",
               text: ["Menengah-Tinggi"],
             },
             {
@@ -4514,8 +4184,6 @@ const data = [
             "1",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Menengah"],
             },
           ],
@@ -4526,8 +4194,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
@@ -4540,8 +4206,6 @@ const data = [
             "1",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
           ],
@@ -4552,8 +4216,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#fddb20",
-              textColor: "#000",
               text: ["Menengah-Tinggi"],
             },
             {
@@ -4567,8 +4229,6 @@ const data = [
             "1",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Menengah"],
             },
           ],
@@ -4579,8 +4239,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#fddb20",
-              textColor: "#000",
               text: ["Rendah-Menengah"],
             },
             {
@@ -4593,8 +4251,6 @@ const data = [
             "1",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
           ],
@@ -4605,8 +4261,6 @@ const data = [
             "2",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
             {
@@ -4619,8 +4273,6 @@ const data = [
             "1",
             {
               type: "class",
-              backgroundColor: "#00b14f",
-              textColor: "#fff",
               text: ["Rendah-Menengah"],
             },
           ],
