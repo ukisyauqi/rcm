@@ -9904,6 +9904,2878 @@ const data = [
       },
     ]
   },
+  {
+    slug: "fo-transfer-hand-pump",
+    type: "FUEL_OIL_SYSTEM",
+    specs: {
+      functionalGroup: "Propulsion Function Group",
+      system: "Diesel Engine",
+      subsystem: "Fuel Oil System",
+      equipmentID: "FO-HTP-01",
+      equipmentName: "FO Transfer Hand Pump",
+      drawing: "Sistem Pipa Bahan Bakar",
+    },
+    tables: [
+      {
+        title: "Function and Functional Failure",
+        backgroundColor: "#e5fff1",
+        borderColor: "#00B14F",
+        headRow: 1,
+        head: [
+          "No",
+          "Function Statement",
+          "Function Type",
+          "No",
+          "Functional Failure Statement",
+        ],
+        body: [
+          [
+            "1",
+            "Berfungsi untuk memompa dan transfer bahan bakar secara manual dari storage tank ke tangki harian secara dengan debit tidak kurang dari Kapasitas 105 liter/menit.",
+            "Primary",
+            "4.1",
+            "Tidak ada aliran bahan bakar minyak yang dipindahkan",
+          ],
+        ],
+      },
+      {
+        title: "FMECA",
+        backgroundColor: "#ffefe5",
+        borderColor: "#EB5B00",
+        headRow: 1,
+        head: [
+          "No",
+          "Failure Mode",
+          "Causes",
+          "Failure Charasteristic",
+          "Local Effect",
+          "Functional Failure",
+        ],
+        body: [
+          [
+            "1a",
+            "Pompa gagal bekerja",
+            "4.1 Terdapat kebocoran pada bagian hisap (suction)",
+            "Random",
+            {
+              type: "number",
+              text: [
+                "Hilangnya kemampuan memompa bahan bakar secara manual",
+              ]
+            },
+            "4,1 Tidak ada aliran bahan bakar minyak yang dipindahkan"
+          ],
+          [
+            "1b",
+            "Pompa gagal bekerja",
+            "4.2 Kehausan komponen internal dan kelelahan mekanis",
+            "Wear-out",
+            {
+              type: "number",
+              text: [
+                "Hilangnya kemampuan memompa bahan bakar secara manual karena kehausan komponen internal",
+              ]
+            },
+            "4,1 Tidak ada aliran bahan bakar minyak yang dipindahkan"
+          ],
+        ],
+      },
+      {
+        title: "FMECA (lanjutan)",
+        backgroundColor: "#ffefe5",
+        borderColor: "#EB5B00",
+        headRow: 1,
+        head: [
+          "No",
+          "Failure Mode",
+          "End Effect",
+          "CoF",
+          "PoF",
+          "Current Risk",
+          "Failure Detection",
+          "Proporsed Basic MNTC",
+        ],
+        body: [
+          [
+            "1a",
+            "Pompa gagal bekerja",
+            "Gagal mengirimkan bahan bakar secara manual saat kondisi emergency/kedua pompa utama tidak berfungsi",
+            "1",
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "number",
+              text: ["Terdapat kebocoran pada bagian hisap"],
+            },
+            {
+              type: "dot",
+              text: [
+                "Pemeriksan rutin",
+              ],
+            },
+          ],
+          [
+            "1b",
+            "Pompa gagal bekerja",
+            "Gagal mengirimkan bahan bakar secara manual saat kondisi emergency/kedua pompa utama tidak berfungsi",
+            "1",
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "number",
+              text: ["Adaya kebocoran", "Kebisingan dan getaran yang tidak normal"],
+            },
+            {
+              type: "dot",
+              text: [
+                "Pemeriksan rutin",
+                "Inspeksi dan perawatan rutin",
+              ],
+            },
+          ],
+        ]
+      },
+      {
+        title: "Maintenance Task Selection",
+        backgroundColor: "#f5eafa",
+        borderColor: "#912BBC",
+        headRow: 2,
+        head: [
+          "No",
+          "Failure Mode",
+          ["Risk Characterization", ["CoF", "Rec PoF", "Current Risk"]],
+          ["Task Selection", ["Proposed Action (s)", "Proj PoF", "Proj Risk"]],
+        ],
+        body: [
+          [
+            "1a",
+            "Pompa gagal bekerja",
+            "1",
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "dot",
+              text: [
+                "Pemeriksaan visual kebocoran pada suction pompa",
+              ],
+            },
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+          ],
+          [
+            "1b",
+            "Pompa gagal bekerja",
+            "1",
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "dot",
+              text: [
+                "Pemeriksaan visual kebocoran, suara dan getaran pompa",
+                "Pemeriksaan dan perawatan pompa tangan bahan bakar",
+                "Pergantian komponen pompa yang rusak",
+              ],
+            },
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+          ],
+        ]
+      },
+      {
+        title: "Category A",
+        backgroundColor: "#003266",
+        borderColor: "#ffffff",
+        headRow: 2,
+        head: [
+          "Task",
+          "Task Type",
+          "Cause Number",
+          ["Risk", ["Current", "Projected"]],
+          "Frequency",
+          "Procedure No. Or Class Reference",
+          "Comments",
+        ],
+        body: [
+          [
+            { 
+              type: "dot", 
+              text: ["Pemeriksaan visual kebocoran, suara dan getaran pompa"]
+            },
+            "CM",
+            "4.2",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            "2 Minggu",
+            "-",
+            "Segera dilakukan perbaikan, jika terjadi kerusakan",
+          ],
+          [
+            { 
+              type: "dot", 
+              text: ["Pemeriksaan visual kebocoran pada suction pompa		"]
+            },
+            "CM",
+            "4.1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            "2 Minggu",
+            "-",
+            "Segera dilakukan perbaikan, jika terjadi kerusakan",
+          ],
+        ],
+      },
+      {
+        title: "Category B",
+        backgroundColor: "#003266",
+        borderColor: "#ffffff",
+        headRow: 2,
+        head: [
+          "Task",
+          "Task Type",
+          "Cause Number",
+          ["Risk", ["Current", "Projected"]],
+          "Frequency",
+          "Procedure No. Or Class Reference",
+          "Comments",
+        ],
+        body: [
+          [
+            { 
+              type: "dot", 
+              text: ["Pergantian komponen pompa yang rusak"]
+            },
+            "OTC",
+            "4.2",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            "Jika terjadi kerusakan",
+            "-",
+            "Segera dilakukan perbaikan, jika terjadi kerusakan",
+          ],
+        ]
+      },
+      {
+        title: "Category C",
+        backgroundColor: "#003266",
+        borderColor: "#ffffff",
+        headRow: 2,
+        head: [
+          "Task",
+          "Task Type",
+          "Cause Number",
+          ["Risk", ["Current", "Projected"]],
+          "Frequency",
+          "Procedure No. Or Class Reference",
+          "Comments",
+        ],
+        body: [
+          [
+            { 
+              type: "dot", 
+              text: ["Pemeriksaan dan perawatan pompa tangan bahan bakar"]
+            },
+            "PM",
+            "4.2",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            "Special Survey Docking",
+            "Rekomendasi vendor",
+            "Hal ini di lakukan untuk melihat kondisi pompa dan perawatan pompa",
+          ],
+        ]
+      },
+    ]
+  },
+  {
+    slug: "fo-service-tank-m/e",
+    type: "FUEL_OIL_SYSTEM",
+    specs: {
+      functionalGroup: "Propulsion Function Group",
+      system: "Diesel Engine",
+      subsystem: "Fuel Oil System",
+      equipmentID: "FO-SRT-01",
+      equipmentName: "FO Service Tank M/E",
+      drawing: "Sistem Pipa Bahan Bakar",
+    },
+    tables: [
+      {
+        title: "Function and Functional Failure",
+        backgroundColor: "#e5fff1",
+        borderColor: "#00B14F",
+        headRow: 1,
+        head: [
+          "No",
+          "Function Statement",
+          "Function Type",
+          "No",
+          "Functional Failure Statement",
+        ],
+        body: [
+          [
+            "1",
+            "Berfungsi untuk menyimpan bahan bakar minyak yang diperlukan untuk sistem penggerak dan pembangkit listrik bantu dengan kapasitas 4800 liter.",
+            "Primary",
+            "5.1",
+            "Tangki tidak dapat menyimpan bahan bakar minyak untuk tanki harian",
+          ],
+        ],
+      },
+      {
+        title: "FMECA",
+        backgroundColor: "#ffefe5",
+        borderColor: "#EB5B00",
+        headRow: 1,
+        head: [
+          "No",
+          "Failure Mode",
+          "Causes",
+          "Failure Charasteristic",
+          "Local Effect",
+          "Functional Failure",
+        ],
+        body: [
+          [
+            "1",
+            "Kebocoran pada service tank mesin utama",
+            "5.1 Dinding menipis karena korosi oleh waktu dari kondisi lingkungan",
+            "Wear-out",
+            {
+              type: "number",
+              text: [
+                "Hilangnya Kemampuan menyimpan bahan bakar",
+                "Kerusakan struktural  pada tanki",
+              ]
+            },
+            "5,1 Tangki tidak dapat menyimpan bahan bakar minyak untuk tanki harian"
+          ],
+        ],
+      },
+      {
+        title: "FMECA (lanjutan)",
+        backgroundColor: "#ffefe5",
+        borderColor: "#EB5B00",
+        headRow: 1,
+        head: [
+          "No",
+          "Failure Mode",
+          "End Effect",
+          "CoF",
+          "PoF",
+          "Current Risk",
+          "Failure Detection",
+          "Proporsed Basic MNTC",
+        ],
+        body: [
+          [
+            "1",
+            "Kebocoran pada service tank mesin utama",
+            "Kebocoran dapat menyebabkab keluarnya bahan bakar yang berpotensi terjadi kebakaran atau ledakan. Dapat mengurangi endurance kapal.",
+            "2",
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "number",
+              text: ["Visual inspeksi", "Pemantauan level bahan bakar"],
+            },
+            {
+              type: "dot",
+              text: [
+                "Pembersihan dan inspeksi pada tanki",
+              ],
+            },
+          ],
+        ]
+      },
+      {
+        title: "Maintenance Task Selection",
+        backgroundColor: "#f5eafa",
+        borderColor: "#912BBC",
+        headRow: 2,
+        head: [
+          "No",
+          "Failure Mode",
+          ["Risk Characterization", ["CoF", "Rec PoF", "Current Risk"]],
+          ["Task Selection", ["Proposed Action (s)", "Proj PoF", "Proj Risk"]],
+        ],
+        body: [
+          [
+            "1",
+            "Kebocoran pada service tank mesin utama",
+            "2",
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "dot",
+              text: [
+                "Pembersihan dan inspeksi pada tanki harian bahan bakar",
+                "Pengecekan volume tanki harian mesin utama",
+              ],
+            },
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+          ],
+        ]
+      },
+      {
+        title: "Category A",
+        backgroundColor: "#003266",
+        borderColor: "#ffffff",
+        headRow: 2,
+        head: [
+          "Task",
+          "Task Type",
+          "Cause Number",
+          ["Risk", ["Current", "Projected"]],
+          "Frequency",
+          "Procedure No. Or Class Reference",
+          "Comments",
+        ],
+        body: [
+          [
+            { 
+              type: "dot", 
+              text: ["Pengecekan volume tanki harian mesin utama"]
+            },
+            "CM",
+            "5.1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            "Harian",
+            "-",
+            "Dilakukan oleh mekanik",
+          ],
+        ],
+      },
+      {
+        title: "Category C",
+        backgroundColor: "#003266",
+        borderColor: "#ffffff",
+        headRow: 2,
+        head: [
+          "Task",
+          "Task Type",
+          "Cause Number",
+          ["Risk", ["Current", "Projected"]],
+          "Frequency",
+          "Procedure No. Or Class Reference",
+          "Comments",
+        ],
+        body: [
+          [
+            { 
+              type: "dot", 
+              text: ["Pembersihan dan inspeksi pada tanki harian bahan bakar"]
+            },
+            "CM",
+            "5.1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            "Special Survey Docking",
+            "Class",
+            "Tanki perlu di kosongkan dan dibersikan, sebelum dilakukan inspeksi tanki",
+          ],
+        ]
+      },
+    ]
+  },
+  {
+    slug: "fo-strainer-m/e",
+    type: "FUEL_OIL_SYSTEM",
+    specs: {
+      functionalGroup: "Propulsion Function Group",
+      system: "Diesel Engine",
+      subsystem: "Fuel Oil System",
+      equipmentID: "FO-STR-01",
+      equipmentName: "FO Strainer M/E",
+      drawing: "Sistem Pipa Bahan Bakar",
+    },
+    tables: [
+      {
+        title: "Function and Functional Failure",
+        backgroundColor: "#e5fff1",
+        borderColor: "#00B14F",
+        headRow: 1,
+        head: [
+          "No",
+          "Function Statement",
+          "Function Type",
+          "No",
+          "Functional Failure Statement",
+        ],
+        body: [
+          [
+            "1",
+            "Tanki perlu di kosongkan dan dibersikan, sebelum dilakukan inspeksi tanki",
+            "Primary",
+            ["6.1", "6.2"],
+            [
+              "Tidak dapat mengalirkan bahan bakar sesuai dengan desain sistem",
+              "Tidak dapat menghilangkan kotoran dan kontaminan bahan bakar minyak",
+            ],
+          ],
+        ],
+      },
+      {
+        title: "FMECA",
+        backgroundColor: "#ffefe5",
+        borderColor: "#EB5B00",
+        headRow: 1,
+        head: [
+          "No",
+          "Failure Mode",
+          "Causes",
+          "Failure Charasteristic",
+          "Local Effect",
+          "Functional Failure",
+        ],
+        body: [
+          [
+            "1",
+            "Filter tersumbat/ penyumbatan aliran",
+            "6.1 Penumpuksn partikel atau kontaminan yang secara terus menerus pada elemen filter",
+            "Wear-out",
+            {
+              type: "number",
+              text: [
+                "Tekanan aliran bahan bakar menurub",
+                "Mengurangi kemampuan memfilter kotoran atau kontaminan",
+                "Potensi merusak elemen filter",
+              ]
+            },
+            "6,1 Tidak dapat mengalirkan bahan bakar sesuai dengan desain sistem"
+          ],
+          [
+            "2a",
+            "Elemen filter runtuh atau rusak",
+            "6.2 Erosi dan abrasi yang menyebabkan kerusakan elemen filter",
+            "Wear-out",
+            {
+              type: "number",
+              text: [
+                "Kerusakan pada filter seperti retakan, pecah atau perubahan bentuk.", 
+                "Meningkatnya risiko masuknya kontaminasi ke mesin utama",
+              ]
+            },
+            "6,2 Tidak dapat menghilangkan kotoran dan kontaminan bahan bakar minyak"
+          ],
+          [
+            "2b",
+            "Elemen filter runtuh atau rusak",
+            "6.3 Mechanical Fatigue",
+            "Wear-out",
+            {
+              type: "number",
+              text: [
+                "Kerusakan pada element filter seperti retakan, pengikisan/ penipisan elemen filter.",
+                "Berkurangnya efisiensi filter",
+                "Meningkatnya risiko masuknya kontaminasi ke mesin utama",
+              ]
+            },
+            "6,2 Tidak dapat menghilangkan kotoran dan kontaminan bahan bakar minyak"
+          ],
+        ],
+      },
+      {
+        title: "FMECA (lanjutan)",
+        backgroundColor: "#ffefe5",
+        borderColor: "#EB5B00",
+        headRow: 1,
+        head: [
+          "No",
+          "Failure Mode",
+          "End Effect",
+          "CoF",
+          "PoF",
+          "Current Risk",
+          "Failure Detection",
+          "Proporsed Basic MNTC",
+        ],
+        body: [
+          [
+            "1",
+            "Filter tersumbat/ penyumbatan aliran",
+            [
+              "Operasional main engine tertunda karena kekurangan bahan bakar.",
+              "Menurunkan kinerja mesin utama"	
+            ],
+            "2",
+            "3",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "number",
+              text: ["Tekanan bahan bakar menurun", "Tidak ada aliran bahan bakar minyak"],
+            },
+            {
+              type: "dot",
+              text: [
+                "Pemeriksaan dan pembersihan rutin",
+              ],
+            },
+          ],
+          [
+            "2a",
+            "Elemen filter runtuh atau rusak",
+            [
+              "Kotoran dan kontaminan yang tidak tersaing menyebabkan kerusakan pada mesin utama",
+              "Mengurangi performa mesin utama",
+            ],
+            "1",
+            "2",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "number",
+              text: ["Tekanan bahan bakar menurun", "Ketidaknormalan aliran bahan bakar main engine"],
+            },
+            {
+              type: "dot",
+              text: [
+                "Pemeriksaan rutin",
+              ],
+            },
+          ],
+          [
+            "2b",
+            "Elemen filter runtuh atau rusak",
+            [
+              "Kotoran dan kontaminan yang tidak tersaing menyebabkan kerusakan pada mesin utama",
+              "Mengurangi performa mesin utama",
+            ],
+            "1",
+            "2",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "number",
+              text: ["Tekanan bahan bakar menurun", "Ketidaknormalan aliran bahan bakar main engine"],
+            },
+            {
+              type: "dot",
+              text: [
+                "Pemeriksaan rutin",
+              ],
+            },
+          ],
+        ]
+      },
+      {
+        title: "Maintenance Task Selection",
+        backgroundColor: "#f5eafa",
+        borderColor: "#912BBC",
+        headRow: 2,
+        head: [
+          "No",
+          "Failure Mode",
+          ["Risk Characterization", ["CoF", "Rec PoF", "Current Risk"]],
+          ["Task Selection", ["Proposed Action (s)", "Proj PoF", "Proj Risk"]],
+        ],
+        body: [
+          [
+            "1",
+            "Filter tersumbat/ penyumbatan aliran",
+            "2",
+            "3",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "dot",
+              text: [
+                "Pemeriksaan kondisi filter dan pembersihan elemen filter",
+              ],
+            },
+            "2",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+          ],
+          [
+            "2a",
+            "Elemen filter runtuh atau rusak",
+            "1",
+            "2",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "dot",
+              text: [
+                "Pemeriksaan kebocoran filter",
+                "Dilakukan pergantian filter",
+              ],
+            },
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+          ],
+          [
+            "2b",
+            "Elemen filter runtuh atau rusak",
+            "1",
+            "2",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "dot",
+              text: [
+                "Dilakukan pergantian filter",
+              ],
+            },
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+          ],
+        ]
+      },
+      {
+        title: "Category A",
+        backgroundColor: "#003266",
+        borderColor: "#ffffff",
+        headRow: 2,
+        head: [
+          "Task",
+          "Task Type",
+          "Cause Number",
+          ["Risk", ["Current", "Projected"]],
+          "Frequency",
+          "Procedure No. Or Class Reference",
+          "Comments",
+        ],
+        body: [
+          [
+            { 
+              type: "dot", 
+              text: ["Pemeriksaan kondisi filter dan pembersihan elemen filter"]
+            },
+            "CM",
+            "6.1",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            "2 Minggu",
+            "-",
+            "Dilakukan oleh mekanik",
+          ],
+          [
+            { 
+              type: "dot", 
+              text: ["Pemeriksaan kebocoran filter"]
+            },
+            "CM",
+            "6.2",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            "Harian",
+            "-",
+            "Dilakukan oleh mekanik",
+          ],
+          [
+            { 
+              type: "dot", 
+              text: ["Pemeriksaan pergantian filter"]
+            },
+            "OTC",
+            "6.3",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            "Jika terjadi kerusakkan",
+            "-",
+            "Segera dilakukan perbaikan, jika terjadi kerusakan",
+          ],
+        ],
+      },
+      {
+        title: "Category C",
+        backgroundColor: "#003266",
+        borderColor: "#ffffff",
+        headRow: 2,
+        head: [
+          "Task",
+          "Task Type",
+          "Cause Number",
+          ["Risk", ["Current", "Projected"]],
+          "Frequency",
+          "Procedure No. Or Class Reference",
+          "Comments",
+        ],
+        body: [
+          [
+            { 
+              type: "dot", 
+              text: ["Pembersihan dan inspeksi pada tanki harian bahan bakar"]
+            },
+            "CM",
+            "5.1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            "Special Survey Docking",
+            "Class",
+            "Tanki perlu di kosongkan dan dibersikan, sebelum dilakukan inspeksi tanki",
+          ],
+        ]
+      },
+    ]
+  },
+  {
+    slug: "fo-sedimation-tank",
+    type: "FUEL_OIL_SYSTEM",
+    specs: {
+      functionalGroup: "Propulsion Function Group",
+      system: "Diesel Engine",
+      subsystem: "Fuel Oil System",
+      equipmentID: "FO-FOST-01",
+      equipmentName: "FO Sedimation Tank",
+      drawing: "Sistem Pipa Bahan Bakar",
+    },
+    tables: [
+      {
+        title: "Function and Functional Failure",
+        backgroundColor: "#e5fff1",
+        borderColor: "#00B14F",
+        headRow: 1,
+        head: [
+          "No",
+          "Function Statement",
+          "Function Type",
+          "No",
+          "Functional Failure Statement",
+        ],
+        body: [
+          [
+            "1",
+            "Berfungsi mengendapkan bahan bakar minyak setelah di saring dari sedimen/kontaminan yang lolos. Terdapat katup untuk mengeluarkan sedimen yang terkumpul di dasar tanki",
+            "Primary",
+            "7,1",
+            "Katup pembuangan pada tanki tidak dapat berfungsi/ tidak dapat dibuka dengan baik",
+          ],
+        ],
+      },
+      {
+        title: "FMECA",
+        backgroundColor: "#ffefe5",
+        borderColor: "#EB5B00",
+        headRow: 1,
+        head: [
+          "No",
+          "Failure Mode",
+          "Causes",
+          "Failure Charasteristic",
+          "Local Effect",
+          "Functional Failure",
+        ],
+        body: [
+          [
+            "1",
+            "Saluran keluar sedimen tersumbat",
+            "7.1 Korosi dalam tangki dan karat pada katup keluar",
+            "Wear-out",
+            {
+              type: "number",
+              text: [
+                "Penumpukan sedimentasi yang tidak dapat keluarkan mengganggu proses pengendapan di tangki",
+              ]
+            },
+            "7,1 Katup pembuangan pada tanki tidak dapat berfungsi/ tidak dapat dibuka dengan baik"
+          ],
+        ],
+      },
+      {
+        title: "FMECA (lanjutan)",
+        backgroundColor: "#ffefe5",
+        borderColor: "#EB5B00",
+        headRow: 1,
+        head: [
+          "No",
+          "Failure Mode",
+          "End Effect",
+          "CoF",
+          "PoF",
+          "Current Risk",
+          "Failure Detection",
+          "Proporsed Basic MNTC",
+        ],
+        body: [
+          [
+            "1",
+            "Saluran keluar sedimen tersumbat",
+            [
+              "Terganggunya operasional mesin utama",
+              "Sedimen dapat masuk ke dalam mesin dan menyebabkan kerusakan pada mesin utama"		
+            ],
+            "2",
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "number",
+              text: ["Katup saluran keluar susah dibuka/ macet"],
+            },
+            {
+              type: "dot",
+              text: [
+                "Pemeriksaan rutin",
+                "Pembersihan tanki",
+              ],
+            },
+          ],
+        ]
+      },
+      {
+        title: "Maintenance Task Selection",
+        backgroundColor: "#f5eafa",
+        borderColor: "#912BBC",
+        headRow: 2,
+        head: [
+          "No",
+          "Failure Mode",
+          ["Risk Characterization", ["CoF", "Rec PoF", "Current Risk"]],
+          ["Task Selection", ["Proposed Action (s)", "Proj PoF", "Proj Risk"]],
+        ],
+        body: [
+          [
+            "1",
+            "Saluran keluar sedimen tersumbat",
+            "2",
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "dot",
+              text: [
+                "Pemeriksaan visual kondisi tanki sedimtasi dan katup pembuangan",
+                "Pembersihan dan inspeksi pada tanki sedimentasi",
+              ],
+            },
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+          ],
+        ]
+      },
+      {
+        title: "Category A",
+        backgroundColor: "#003266",
+        borderColor: "#ffffff",
+        headRow: 2,
+        head: [
+          "Task",
+          "Task Type",
+          "Cause Number",
+          ["Risk", ["Current", "Projected"]],
+          "Frequency",
+          "Procedure No. Or Class Reference",
+          "Comments",
+        ],
+        body: [
+          [
+            { 
+              type: "dot", 
+              text: ["Pemeriksaan visual kondisi tanki sedimtasi dan katup pembuangan"]
+            },
+            "CM",
+            "7.1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            "1 Minggu",
+            "-",
+            "Dilakukan oleh mekanik",
+          ],
+        ],
+      },
+      {
+        title: "Category C",
+        backgroundColor: "#003266",
+        borderColor: "#ffffff",
+        headRow: 2,
+        head: [
+          "Task",
+          "Task Type",
+          "Cause Number",
+          ["Risk", ["Current", "Projected"]],
+          "Frequency",
+          "Procedure No. Or Class Reference",
+          "Comments",
+        ],
+        body: [
+          [
+            { 
+              type: "dot", 
+              text: ["Pembersihan dan inspeksi pada tanki sedimentasi"]
+            },
+            "CM",
+            "7.1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            "Special Survey Docking",
+            "Class",
+            "Tanki perlu di kosongkan dan dibersikan, sebelum dilakukan inspeksi tanki",
+          ],
+        ]
+      },
+    ]
+  },
+  {
+    slug: "fo-daerating-tank",
+    type: "FUEL_OIL_SYSTEM",
+    specs: {
+      functionalGroup: "Propulsion Function Group",
+      system: "Diesel Engine",
+      subsystem: "Fuel Oil System",
+      equipmentID: "FO-DAT-01",
+      equipmentName: "FO Daerating Tank",
+      drawing: "Sistem Pipa Bahan Bakar",
+    },
+    tables: [
+      {
+        title: "Function and Functional Failure",
+        backgroundColor: "#e5fff1",
+        borderColor: "#00B14F",
+        headRow: 1,
+        head: [
+          "No",
+          "Function Statement",
+          "Function Type",
+          "No",
+          "Functional Failure Statement",
+        ],
+        body: [
+          [
+            "1",
+            "Berfungsi untuk menampung bahan bakar dari tanki sedimentasi dan menampung sisa bahan bakar dari proses injeksi bahan bakar ke mesin utama. Kapasitas tanki 100 liter.",
+            "Primary",
+            "8,1",
+            "Tangki tidak dapat menyimpan bahan bakar minyak dan sisa injeksi bahan bakar ke mesin",
+          ],
+        ],
+      },
+      {
+        title: "FMECA",
+        backgroundColor: "#ffefe5",
+        borderColor: "#EB5B00",
+        headRow: 1,
+        head: [
+          "No",
+          "Failure Mode",
+          "Causes",
+          "Failure Charasteristic",
+          "Local Effect",
+          "Functional Failure",
+        ],
+        body: [
+          [
+            "1",
+            "Kebocoran pada daerating tank",
+            "7.1 Korosi dalam tangki dan karat pada katup keluar",
+            "Wear-out",
+            {
+              type: "number",
+              text: [
+                "Menyebabkan sisa bahan bakar bocor keluar",
+                "Udara luar dapat masuk kedalam tangki",
+                "Menimbulkan kerusakan struktur tanki",
+              ]
+            },
+            "8,1 Tangki tidak dapat menyimpan bahan bakar minyak dan sisa injeksi bahan bakar ke mesin"
+          ],
+        ],
+      },
+      {
+        title: "FMECA (lanjutan)",
+        backgroundColor: "#ffefe5",
+        borderColor: "#EB5B00",
+        headRow: 1,
+        head: [
+          "No",
+          "Failure Mode",
+          "End Effect",
+          "CoF",
+          "PoF",
+          "Current Risk",
+          "Failure Detection",
+          "Proporsed Basic MNTC",
+        ],
+        body: [
+          [
+            "1",
+            "Kebocoran pada daerating tank",
+            [
+              "Menimbulkan risiko keselamatan crew di kapal",
+              "Waktu henti operasional mesin untuk memperbaiki tanki yang rusak",		
+            ],
+            "2",
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "number",
+              text: ["Terlihat retakan dan korosi pada tanki", "Terlihat kebocoran"],
+            },
+            {
+              type: "dot",
+              text: [
+                "Pemeriksaan rutin",
+              ],
+            },
+          ],
+        ]
+      },
+      {
+        title: "Maintenance Task Selection",
+        backgroundColor: "#f5eafa",
+        borderColor: "#912BBC",
+        headRow: 2,
+        head: [
+          "No",
+          "Failure Mode",
+          ["Risk Characterization", ["CoF", "Rec PoF", "Current Risk"]],
+          ["Task Selection", ["Proposed Action (s)", "Proj PoF", "Proj Risk"]],
+        ],
+        body: [
+          [
+            "1",
+            "Kebocoran pada daerating tank",
+            "2",
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "dot",
+              text: [
+                "Pemeriksaan visual kondisi tanki daerating",
+                "Pembersihan dan inspeksi pada daerating tank",
+              ],
+            },
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+          ],
+        ]
+      },
+      {
+        title: "Category A",
+        backgroundColor: "#003266",
+        borderColor: "#ffffff",
+        headRow: 2,
+        head: [
+          "Task",
+          "Task Type",
+          "Cause Number",
+          ["Risk", ["Current", "Projected"]],
+          "Frequency",
+          "Procedure No. Or Class Reference",
+          "Comments",
+        ],
+        body: [
+          [
+            { 
+              type: "dot", 
+              text: ["Pemeriksaan visual kondisi tanki daerating"]
+            },
+            "CM",
+            "8.1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            "1 Minggu",
+            "-",
+            "Dilakukan oleh mekanik",
+          ],
+        ],
+      },
+      {
+        title: "Category C",
+        backgroundColor: "#003266",
+        borderColor: "#ffffff",
+        headRow: 2,
+        head: [
+          "Task",
+          "Task Type",
+          "Cause Number",
+          ["Risk", ["Current", "Projected"]],
+          "Frequency",
+          "Procedure No. Or Class Reference",
+          "Comments",
+        ],
+        body: [
+          [
+            { 
+              type: "dot", 
+              text: [" Pembersihan dan inspeksi pada  daerating tank		"]
+            },
+            "CM",
+            "8.1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            "Special Survey Docking",
+            "Class",
+            "Tanki perlu di kosongkan dan dibersikan, sebelum dilakukan inspeksi tanki",
+          ],
+        ]
+      },
+    ]
+  },
+  {
+    slug: "feed-pump-fo",
+    type: "FUEL_OIL_SYSTEM",
+    specs: {
+      functionalGroup: "Propulsion Function Group",
+      system: "Diesel Engine",
+      subsystem: "Fuel Oil System",
+      equipmentID: "FO-FP-01",
+      equipmentName: "Feed Pump FO",
+      drawing: "Sistem Pipa Bahan Bakar",
+    },
+    tables: [
+      {
+        title: "Function and Functional Failure",
+        backgroundColor: "#e5fff1",
+        borderColor: "#00B14F",
+        headRow: 1,
+        head: [
+          "No",
+          "Function Statement",
+          "Function Type",
+          "No",
+          "Functional Failure Statement",
+        ],
+        body: [
+          [
+            "1",
+            "Berfungsi untuk menyalurkan bahan dari Daerating Tank ke mesin utama sebelum di injeksi oleh ijection pump dengan kapacitas 1700 Liter/Jam dengan Head 4 m (Digerakkan oleh Mesin Utama)",
+            "Primary",
+            ["9,1", "9,2"],
+            [
+              "Tidak ada aliran bahan bakar minyak yang dipindahkan",
+              "Memompa bahan bakar dengan debit dibawah 1700 liter/Jam dan head 4 m"
+            ],
+          ],
+        ],
+      },
+      {
+        title: "FMECA",
+        backgroundColor: "#ffefe5",
+        borderColor: "#EB5B00",
+        headRow: 1,
+        head: [
+          "No",
+          "Failure Mode",
+          "Causes",
+          "Failure Charasteristic",
+          "Local Effect",
+          "Functional Failure",
+        ],
+        body: [
+          [
+            "1",
+            "Tidak ada aliran bahan bakar minyak",
+            "9.1 komponen internal retak atau pecah",
+            "Random",
+            {
+              type: "number",
+              text: [
+                "Pompa tidak dapat memindahkan bahan bakar",
+              ]
+            },
+            "9,1 Tidak ada aliran bahan bakar minyak yang dipindahkan",
+          ],
+          [
+            "2",
+            "Beroperasi pada  head atau flow dibawah kinerja",
+            "9.2 Keausan komponen internal atau mechanical fatigue.",
+            "Random",
+            {
+              type: "number",
+              text: [
+                "Kapasitas pompa berkurang",
+                "Tangki harian tidak menerima bahan bakar  yang cukup sesuai dengan kebutuhan",
+              ]
+            },
+            "9,2 Memompa bahan bakar dengan debit dibawah 1700 liter/Jam dan head 4 m",
+          ],
+        ],
+      },
+      {
+        title: "FMECA (lanjutan)",
+        backgroundColor: "#ffefe5",
+        borderColor: "#EB5B00",
+        headRow: 1,
+        head: [
+          "No",
+          "Failure Mode",
+          "End Effect",
+          "CoF",
+          "PoF",
+          "Current Risk",
+          "Failure Detection",
+          "Proporsed Basic MNTC",
+        ],
+        body: [
+          [
+            "1",
+            "Tidak ada aliran bahan bakar minyak",
+            [
+              "Operasional mesin utama terhenti, karena tidak ada suplai bahan bakar.",
+              "Hilangnya tenaga mesin utama sehingga tidak ada tenaga penggerak",		
+            ],
+            "2",
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "number",
+              text: [
+                "Visual inspeksi",
+                "Getaran dan suara tidak normal",
+                "Tidak ada aliran",	
+              ],
+            },
+            {
+              type: "dot",
+              text: [
+                "Pemeriksaan rutin",
+              ],
+            },
+          ],
+          [
+            "2",
+            "Beroperasi pada  head atau flow dibawah kinerja",
+            [
+              "Operasional tertunda selama pengisian bahan bakar. Komponen internal harus diganti",		
+            ],
+            "2",
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "number",
+              text: [
+                "Kebisingan dan getaran yang tidak normal",
+                "Penurunan laju aliran dan tekanan"	,	
+              ],
+            },
+            {
+              type: "dot",
+              text: [
+                "Visual check dan pemeriksaan pelumasan",
+              ],
+            },
+          ],
+        ]
+      },
+      {
+        title: "Maintenance Task Selection",
+        backgroundColor: "#f5eafa",
+        borderColor: "#912BBC",
+        headRow: 2,
+        head: [
+          "No",
+          "Failure Mode",
+          ["Risk Characterization", ["CoF", "Rec PoF", "Current Risk"]],
+          ["Task Selection", ["Proposed Action (s)", "Proj PoF", "Proj Risk"]],
+        ],
+        body: [
+          [
+            "1",
+            "Tidak ada aliran bahan bakar minyak",
+            "2",
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "dot",
+              text: [
+                "Pemeriksaan visual apakah ada retak atau pecah pada komponen feed pompa",
+                "Inspeksi dan perawatan feed pompa",
+                "Pergantian komponen yang rusak pada feed pump",
+              ],
+            },
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+          ],
+          [
+            "2",
+            "Beroperasi pada head atau flow dibawah kinerja",
+            "2",
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "dot",
+              text: [
+                "Pemeriksaan visual apakah ada kehausan pada komponen feed pompa",
+                "Pelumasan seal dan bearing serta periksa kekencangan baut feed pump", 
+                "Inspeksi dan perawatan feed pump",
+                "Pergantian komponen yang rusak pada feed pump"		,
+              ],
+            },
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+          ],
+        ]
+      },
+      {
+        title: "Category A",
+        backgroundColor: "#003266",
+        borderColor: "#ffffff",
+        headRow: 2,
+        head: [
+          "Task",
+          "Task Type",
+          "Cause Number",
+          ["Risk", ["Current", "Projected"]],
+          "Frequency",
+          "Procedure No. Or Class Reference",
+          "Comments",
+        ],
+        body: [
+          [
+            { 
+              type: "dot", 
+              text: ["Pemeriksaan visual apakah ada retak atau pecah pada komponen feed pompa"]
+            },
+            "CM",
+            "9.1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            "Harian",
+            "-",
+            "Dilakukan oleh mekanik",
+          ],
+          [
+            { 
+              type: "dot", 
+              text: ["Pemeriksaan visual apakah ada kehausan pada komponen feed pump"]
+            },
+            "CM",
+            "9.2",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            "Harian",
+            "-",
+            "Dilakukan oleh mekanik",
+          ],
+          [
+            { 
+              type: "dot", 
+              text: ["Pelumasan seal dan bearing serta periksa kekencangan baut feed pump"]
+            },
+            "PM",
+            "9.2",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            "6 Bulan",
+            "-",
+            "Dilakukan oleh mekanik",
+          ],
+        ],
+      },
+      {
+        title: "Category B",
+        backgroundColor: "#003266",
+        borderColor: "#ffffff",
+        headRow: 2,
+        head: [
+          "Task",
+          "Task Type",
+          "Cause Number",
+          ["Risk", ["Current", "Projected"]],
+          "Frequency",
+          "Procedure No. Or Class Reference",
+          "Comments",
+        ],
+        body: [
+          [
+            { 
+              type: "dot", 
+              text: ["Pergantian komponen yang rusak pada feed pump"]
+            },
+            "OTC",
+            ["9.1", "9.2"],
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            "Jika terjadi kerusakan",
+            "-",
+            "Segera dilakukan perbaikan, jika terjadi kerusakan",
+          ],
+        ]
+      },
+      {
+        title: "Category C",
+        backgroundColor: "#003266",
+        borderColor: "#ffffff",
+        headRow: 2,
+        head: [
+          "Task",
+          "Task Type",
+          "Cause Number",
+          ["Risk", ["Current", "Projected"]],
+          "Frequency",
+          "Procedure No. Or Class Reference",
+          "Comments",
+        ],
+        body: [
+          [
+            { 
+              type: "dot", 
+              text: ["Inspeksi dan perawatan feed pompa"]
+            },
+            "PM",
+            ["9.1", "9.2"],
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            " Intermadiate Survey Docking",
+            "Rekomendasi vendor",
+            "Hal ini di lakukan untuk melihat kondisi pompa dan perawatan pompa",
+          ],
+        ]
+      },
+    ]
+  },
+  {
+    slug: "fo-stand-by-feed-pump",
+    type: "FUEL_OIL_SYSTEM",
+    specs: {
+      functionalGroup: "Propulsion Function Group",
+      system: "Diesel Engine",
+      subsystem: "Fuel Oil System",
+      equipmentID: "FO-EFP-01",
+      equipmentName: "FO Stand-by Feed Pump",
+      drawing: "Sistem Pipa Bahan Bakar",
+    },
+    tables: [
+      {
+        title: "Function and Functional Failure",
+        backgroundColor: "#e5fff1",
+        borderColor: "#00B14F",
+        headRow: 1,
+        head: [
+          "No",
+          "Function Statement",
+          "Function Type",
+          "No",
+          "Functional Failure Statement",
+        ],
+        body: [
+          [
+            "1",
+            "Berfungsi untuk menyalurkan bahan dari Daerating Tank ke mesin utama sebelum di injeksi oleh ijection pump dengan kapacitas 1700 Liter/Jam dengan Head 4 m (Sebagai Feed Pump cadangan dengan elekrik motor sebagai penggeraknya)",
+            "Primary",
+            ["10,1", "10,2"],
+            [
+              "Tidak ada aliran bahan bakar minyak yang dipindahkan",
+              "Memompa bahan bakar dengan debit dibawah 1700 liter/Jam dan head 4 m"
+            ],
+          ],
+        ],
+      },
+      {
+        title: "FMECA",
+        backgroundColor: "#ffefe5",
+        borderColor: "#EB5B00",
+        headRow: 1,
+        head: [
+          "No",
+          "Failure Mode",
+          "Causes",
+          "Failure Charasteristic",
+          "Local Effect",
+          "Functional Failure",
+        ],
+        body: [
+          [
+            "1a",
+            "Tidak ada aliran bahan bakar minyak",
+            "10.1 Suction saringan pompa tersumbat sepenuhnya",
+            "Wear-out",
+            {
+              type: "number",
+              text: [
+                "Pompa tidak dapat memindahkan bahan bakar",
+              ]
+            },
+            "10,1 Tidak ada aliran bahan bakar minyak yang dipindahkan",
+          ],
+          [
+            "1b",
+            "Tidak ada aliran bahan bakar minyak",
+            "10.2  komponen internal retak atau pecah",
+            "Random",
+            {
+              type: "number",
+              text: [
+                "Pompa tidak dapat memindahkan bahan bakar",
+              ]
+            },
+            "10,1 Tidak ada aliran bahan bakar minyak yang dipindahkan",
+          ],
+          [
+            "1c",
+            "Tidak ada aliran bahan bakar minyak",
+            "10.3  Motor elektrik gagal bekerja",
+            "Random",
+            {
+              type: "number",
+              text: [
+                "Pompa tidak dapat memindahkan bahan bakar",
+                "Tangki harian tidak menerima bahan bakar sesuai dengan kebutuhan",
+              ]
+            },
+            "10,1 Tidak ada aliran bahan bakar minyak yang dipindahkan",
+          ],
+          [
+            "2a",
+            "Beroperasi pada  head atau flow dibawah kinerja",
+            "10.4 Keausan komponen internal atau mechanical fatigue.",
+            "Wear-out",
+            {
+              type: "number",
+              text: [
+                "Kapasitas pompa berkurang",
+                "Tangki harian tidak menerima bahan bakar  yang cukup sesuai dengan kebutuhan",
+              ]
+            },
+            "10,2 Memompa bahan bakar dengan debit dibawah 1700 liter/Jam dan head 4 m",
+          ],
+          [
+            "2b",
+            "Beroperasi pada  head atau flow dibawah kinerja",
+            "10.5 Suction saringan pompa tersumbat sebagian",
+            "Wear-out",
+            {
+              type: "number",
+              text: [
+                "Aliran pompa menurun",
+                "Tangki harian tidak menerima bahan bakar sesuai dengan kebutuhan",
+              ]
+            },
+            "10,2 Memompa bahan bakar dengan debit dibawah 1700 liter/Jam dan head 4 m",
+          ],
+        ],
+      },
+      {
+        title: "FMECA (lanjutan)",
+        backgroundColor: "#ffefe5",
+        borderColor: "#EB5B00",
+        headRow: 1,
+        head: [
+          "No",
+          "Failure Mode",
+          "End Effect",
+          "CoF",
+          "PoF",
+          "Current Risk",
+          "Failure Detection",
+          "Proporsed Basic MNTC",
+        ],
+        body: [
+          [
+            "1a",
+            "Tidak ada aliran bahan bakar minyak",
+            [
+              "Operasional mesin utama terhenti, karena tidak ada suplai bahan bakar. Diperlukan pergantian suction filter yang tersumbat",		
+            ],
+            "2",
+            "2",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "number",
+              text: [
+                "Tidak ada aliran",	
+              ],
+            },
+            {
+              type: "dot",
+              text: [
+                "Pemeriksaan dan pembersihan rutin",
+              ],
+            },
+          ],
+          [
+            "1b",
+            "Tidak ada aliran bahan bakar minyak",
+            [
+              "Operasional mesin utama terhenti, karena tidak ada suplai bahan bakar.",
+              "Hilangnya tenaga mesin utama sehingga tidak ada tenaga penggerak",		
+            ],
+            "2",
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "number",
+              text: [
+                "Visual inspeksi",
+                "Getaran dan suara tidak normal",
+                "Tidak ada aliran",	
+              ],
+            },
+            {
+              type: "dot",
+              text: [
+                "Pemeriksaan rutin",
+              ],
+            },
+          ],
+          [
+            "1c",
+            "Tidak ada aliran bahan bakar minyak",
+            [
+              "Operasional mesin utama terhenti, karena tidak ada suplai bahan bakar. Diperlukan pergantian suction filter yang tersumbat",		
+            ],
+            "2",
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "number",
+              text: [
+                "Motor tidak bergerak saat dihidupkan",	
+              ],
+            },
+            {
+              type: "dot",
+              text: [
+                "Inspeksi dan perawatan",
+              ],
+            },
+          ],
+          [
+            "2a",
+            "Beroperasi pada  head atau flow dibawah kinerja",
+            [
+              "Operasional tertunda selama pengisian bahan bakar. Komponen internal harus diganti",		
+            ],
+            "2",
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "number",
+              text: [
+                "Kebisingan dan getaran yang tidak normal",
+                "Penurunan laju aliran dan tekanan"	,	
+              ],
+            },
+            {
+              type: "dot",
+              text: [
+                "Visual check dan pemeriksaan pelumasan",
+              ],
+            },
+          ],
+          [
+            "2b",
+            "Beroperasi pada  head atau flow dibawah kinerja",
+            [
+              "Operasional tertunda selama pengisian bahan bakar. Diperlukan pembersihan atau pergantian suction filter yang tersumbat",		
+            ],
+            "2",
+            "2",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "number",
+              text: [
+                "Kebisingan dan getaran yang tidak normal",
+                "Penurunan laju aliran dan tekanan"	,	
+              ],
+            },
+            {
+              type: "dot",
+              text: [
+                "Pemeriksan dan pembersihan rutin",
+              ],
+            },
+          ],
+        ]
+      },
+      {
+        title: "Maintenance Task Selection",
+        backgroundColor: "#f5eafa",
+        borderColor: "#912BBC",
+        headRow: 2,
+        head: [
+          "No",
+          "Failure Mode",
+          ["Risk Characterization", ["CoF", "Rec PoF", "Current Risk"]],
+          ["Task Selection", ["Proposed Action (s)", "Proj PoF", "Proj Risk"]],
+        ],
+        body: [
+          [
+            "1a",
+            "Tidak ada aliran bahan bakar minyak",
+            "2",
+            "2",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "dot",
+              text: [
+                "Pemeriksaan dan pembersihann saringan hisap",
+              ],
+            },
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+          ],
+          [
+            "1b",
+            "Tidak ada aliran bahan bakar minyak",
+            "2",
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "dot",
+              text: [
+                "Pemeriksaan visual apakah ada retak atau pecah pada komponen feed pompa",
+                "Inspeksi dan perawatan feed pompa",
+                "Pergantian komponen yang rusak pada feed pump",
+              ],
+            },
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+          ],
+          [
+            "1c",
+            "Tidak ada aliran bahan bakar minyak",
+            "2",
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "dot",
+              text: [
+                "Inspeksi dan perawatan electic motor",
+              ],
+            },
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+          ],
+          [
+            "2a",
+            "Beroperasi pada head atau flow dibawah kinerja",
+            "2",
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "dot",
+              text: [
+                "Pemeriksaan visual apakah ada kehausan pada komponen standy-by pompa",
+                "Pelumasan seal dan bearing serta periksa kekencangan baut standy-by pump", 
+                "Inspeksi dan perawatan standy-by pump",
+                "Pergantian komponen yang rusak pada standy-by pump",
+              ],
+            },
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+          ],
+          [
+            "2b",
+            "Beroperasi pada head atau flow dibawah kinerja",
+            "2",
+            "2",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "dot",
+              text: [
+                "Pemeriksaan visual pompa dan bersihkan saringan hisap",
+              ],
+            },
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+          ],
+        ]
+      },
+      {
+        title: "Category A",
+        backgroundColor: "#003266",
+        borderColor: "#ffffff",
+        headRow: 2,
+        head: [
+          "Task",
+          "Task Type",
+          "Cause Number",
+          ["Risk", ["Current", "Projected"]],
+          "Frequency",
+          "Procedure No. Or Class Reference",
+          "Comments",
+        ],
+        body: [
+          [
+            { 
+              type: "dot", 
+              text: ["Pemeriksaan dan pembersihann saringan hisap"]
+            },
+            "PM",
+            "10.1",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            "2 Minggu",
+            "-",
+            "Dilakukan oleh mekanik",
+          ],
+          [
+            { 
+              type: "dot", 
+              text: ["Pemeriksaan visual apakah ada kehausan pada komponen standy-by pump"]
+            },
+            "CM",
+            "10.2",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            "Harian",
+            "-",
+            "Dilakukan oleh mekanik",
+          ],
+          [
+            { 
+              type: "dot", 
+              text: ["Pemeriksaan visual apakah ada kebocoran, suara dan getaran tidak normal"]
+            },
+            "CM",
+            "10.4",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            "Harian",
+            "-",
+            "Segera dilakukan perbaikan, jika terjadi kerusakan",
+          ],
+          [
+            { 
+              type: "dot", 
+              text: ["Pelumasan seal dan bearing serta periksa kekencangan baut"]
+            },
+            "PM",
+            "10.4",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            "6 Bulan",
+            "-",
+            "Dilakukan oleh mekanik",
+          ],
+          [
+            { 
+              type: "dot", 
+              text: [" Pemeriksaan visual pompa dan bersihkan saringan hisap"]
+            },
+            "CM",
+            "10.5",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            "6 Bulan",
+            "-",
+            "Dilakukan oleh mekanik",
+          ],
+        ],
+      },
+      {
+        title: "Category B",
+        backgroundColor: "#003266",
+        borderColor: "#ffffff",
+        headRow: 2,
+        head: [
+          "Task",
+          "Task Type",
+          "Cause Number",
+          ["Risk", ["Current", "Projected"]],
+          "Frequency",
+          "Procedure No. Or Class Reference",
+          "Comments",
+        ],
+        body: [
+          [
+            { 
+              type: "dot", 
+              text: ["Pergantian komponen yang rusak pada stand-by pump"]
+            },
+            "OTC",
+            ["10.2", "10.4"],
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            "Intermadiate Survey Docking",
+            "Class",
+            "Segera dilakukan perbaikan, jika terjadi kerusakan",
+          ],
+        ]
+      },
+      {
+        title: "Category C",
+        backgroundColor: "#003266",
+        borderColor: "#ffffff",
+        headRow: 2,
+        head: [
+          "Task",
+          "Task Type",
+          "Cause Number",
+          ["Risk", ["Current", "Projected"]],
+          "Frequency",
+          "Procedure No. Or Class Reference",
+          "Comments",
+        ],
+        body: [
+          [
+            { 
+              type: "dot", 
+              text: ["Inspeksi dan perawatan electic motor"]
+            },
+            "CM",
+            "10.2",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            "Setiap Docking",
+            "Class",
+            "Hal ini di lakukan untuk melihat tahanan elekrik motor",
+          ],
+          [
+            { 
+              type: "dot", 
+              text: ["Inspeksi dan perawatan standy-by pompa"]
+            },
+            "PM",
+            ["10.2", "10.4"],
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            "Intermadiate Survey Docking",
+            "Rekomendasi vendor",
+            "Hal ini di lakukan untuk melihat kondisi pompa dan perawatan pompa	",
+          ],
+        ]
+      },
+    ]
+  },
+  {
+    slug: "fo-service-tank-a/e",
+    type: "FUEL_OIL_SYSTEM",
+    specs: {
+      functionalGroup: "Propulsion Function Group",
+      system: "Diesel Engine",
+      subsystem: "Fuel Oil System",
+      equipmentID: "FO-SRT-02",
+      equipmentName: "FO Service Tank A/E",
+      drawing: "Sistem Pipa Bahan Bakar",
+    },
+    tables: [
+      {
+        title: "Function and Functional Failure",
+        backgroundColor: "#e5fff1",
+        borderColor: "#00B14F",
+        headRow: 1,
+        head: [
+          "No",
+          "Function Statement",
+          "Function Type",
+          "No",
+          "Functional Failure Statement",
+        ],
+        body: [
+          [
+            "1",
+            "Berfungsi untuk menyimpan bahan bakar minyak yang diperlukan untuk sistem penggerak dan pembangkit listrik bantu dengan kapasitas 2400 liter.",
+            "Primary",
+            "11,1",
+            "Tangki tidak dapat menyimpan bahan bakar minyak untuk tanki harian",
+          ],
+        ],
+      },
+      {
+        title: "FMECA",
+        backgroundColor: "#ffefe5",
+        borderColor: "#EB5B00",
+        headRow: 1,
+        head: [
+          "No",
+          "Failure Mode",
+          "Causes",
+          "Failure Charasteristic",
+          "Local Effect",
+          "Functional Failure",
+        ],
+        body: [
+          [
+            "1",
+            "Kebocoran service tank mesin bantu",
+            "11.1 Dinding menipis karena korosi oleh waktu dari kondisi lingkungan",
+            "Wear-out",
+            {
+              type: "number",
+              text: [
+                "Hilangnya Kemampuan menyimpan bahan bakar","Kerusakan struktural  pada tanki",
+              ]
+            },
+            "11,1 Tangki tidak dapat menyimpan bahan bakar minyak untuk tanki harian",
+          ],
+        ],
+      },
+      {
+        title: "FMECA (lanjutan)",
+        backgroundColor: "#ffefe5",
+        borderColor: "#EB5B00",
+        headRow: 1,
+        head: [
+          "No",
+          "Failure Mode",
+          "End Effect",
+          "CoF",
+          "PoF",
+          "Current Risk",
+          "Failure Detection",
+          "Proporsed Basic MNTC",
+        ],
+        body: [
+          [
+            "1",
+            "Kebocoran service tank mesin bantu",
+            [
+              "Kebocoran dapat menyebabkab keluarnya bahan bakar yang berpotensi terjadi kebakaran atau ledakan. Dapat mengurangi kebutuhan listrik di kapal",		
+            ],
+            "2",
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "number",
+              text: [
+                "Visual inspeksi",
+                "Pemantauan level bahan bakar",	
+              ],
+            },
+            {
+              type: "dot",
+              text: [
+                "Pembersihan dan inspeksi pada tanki",
+              ],
+            },
+          ],
+        ]
+      },
+      {
+        title: "Maintenance Task Selection",
+        backgroundColor: "#f5eafa",
+        borderColor: "#912BBC",
+        headRow: 2,
+        head: [
+          "No",
+          "Failure Mode",
+          ["Risk Characterization", ["CoF", "Rec PoF", "Current Risk"]],
+          ["Task Selection", ["Proposed Action (s)", "Proj PoF", "Proj Risk"]],
+        ],
+        body: [
+          [
+            "1",
+            "Kebocoran service tank mesin bantu",
+            "2",
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "dot",
+              text: [
+                "Pembersihan dan inspeksi pada tanki harian bahan bakar mesin bantu",
+                "Pengecekan volume tanki harian mesin bantu",
+              ],
+            },
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+          ],
+        ]
+      },
+      {
+        title: "Category A",
+        backgroundColor: "#003266",
+        borderColor: "#ffffff",
+        headRow: 2,
+        head: [
+          "Task",
+          "Task Type",
+          "Cause Number",
+          ["Risk", ["Current", "Projected"]],
+          "Frequency",
+          "Procedure No. Or Class Reference",
+          "Comments",
+        ],
+        body: [
+          [
+            { 
+              type: "dot", 
+              text: ["Pengecekan volume tanki harian mesin bantu"]
+            },
+            "CM",
+            "11.1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            "Harian",
+            "-",
+            "Dilakukan oleh mekanik",
+          ],
+        ],
+      },
+      {
+        title: "Category C",
+        backgroundColor: "#003266",
+        borderColor: "#ffffff",
+        headRow: 2,
+        head: [
+          "Task",
+          "Task Type",
+          "Cause Number",
+          ["Risk", ["Current", "Projected"]],
+          "Frequency",
+          "Procedure No. Or Class Reference",
+          "Comments",
+        ],
+        body: [
+          [
+            { 
+              type: "dot", 
+              text: ["Pembersihan dan inspeksi pada tanki harian bahan bakar mesin bantu"]
+            },
+            "CM",
+            "11.1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            "Special Survey Docking",
+            "Class",
+            "Tanki perlu di kosongkan dan dibersikan, sebelum dilakukan inspeksi internal tanki",
+          ],
+        ]
+      },
+    ]
+  },
+  {
+    slug: "water-separator",
+    type: "FUEL_OIL_SYSTEM",
+    specs: {
+      functionalGroup: "Propulsion Function Group",
+      system: "Diesel Engine",
+      subsystem: "Fuel Oil System",
+      equipmentID: "FO-OWS-01",
+      equipmentName: "Water Separator",
+      drawing: "Sistem Pipa Bahan Bakar",
+    },
+    tables: [
+      {
+        title: "Function and Functional Failure",
+        backgroundColor: "#e5fff1",
+        borderColor: "#00B14F",
+        headRow: 1,
+        head: [
+          "No",
+          "Function Statement",
+          "Function Type",
+          "No",
+          "Functional Failure Statement",
+        ],
+        body: [
+          [
+            "1",
+            "Menyaring bahan bakar minyak dari kotoran dan kontaminan, memastikan pasokan bahan bakar yang bersih dan bebas serpihan sebelum di alirkan ke mesin bantu dnegan ukuran 15A.",
+            "Primary",
+            ["12,1", "12,2"],
+            [
+              "Tidak dapat mengalirkan bahan bakar sesuai dengan desain sistem",
+              "Tidak dapat menghilangkan kotoran dan kontaminan bahan bakar minyak"
+            ],
+          ],
+        ],
+      },
+      {
+        title: "FMECA",
+        backgroundColor: "#ffefe5",
+        borderColor: "#EB5B00",
+        headRow: 1,
+        head: [
+          "No",
+          "Failure Mode",
+          "Causes",
+          "Failure Charasteristic",
+          "Local Effect",
+          "Functional Failure",
+        ],
+        body: [
+          [
+            "1",
+            "Filter tersumbat/ penyumbatan aliran",
+            "12.1 Penumpuksn partikel atau kontaminan yang secara terus menerus pada elemen filter",
+            "Wear-out",
+            {
+              type: "number",
+              text: [
+                "Tekanan aliran bahan bakar menurun",
+                "Mengurangi kemampuan memfilter kotoran atau kontaminan",
+                "Potensi merusak elemen filter",
+              ]
+            },
+            "12,1 Tidak dapat mengalirkan bahan bakar sesuai dengan desain sistem",
+          ],
+          [
+            "2a",
+            "Elemen filter runtuh atau rusak",
+            "12.2 Erosi dan abrasi yang menyebabkan kerusakan elemen filter",
+            "Wear-out",
+            {
+              type: "number",
+              text: [
+                "Kerusakan pada filter seperti retakan, pecah atau perubahan bentuk.",
+                "Meningkatnya risiko masuknya kontaminasi ke mesin utama",
+              ]
+            },
+            "12,2 Tidak dapat menghilangkan kotoran dan kontaminan bahan bakar minyak",
+          ],
+          [
+            "2b",
+            "Elemen filter runtuh atau rusak",
+            "12.3 Mechanical Fatigue",
+            "Wear-out",
+            {
+              type: "number",
+              text: [
+                "Kerusakan pada filter seperti retakan, pecah atau perubahan bentuk.",
+                "Meningkatnya risiko masuknya kontaminasi ke mesin utama",
+              ]
+            },
+            "12,2 Tidak dapat menghilangkan kotoran dan kontaminan bahan bakar minyak",
+          ],
+        ],
+      },
+      {
+        title: "FMECA (lanjutan)",
+        backgroundColor: "#ffefe5",
+        borderColor: "#EB5B00",
+        headRow: 1,
+        head: [
+          "No",
+          "Failure Mode",
+          "End Effect",
+          "CoF",
+          "PoF",
+          "Current Risk",
+          "Failure Detection",
+          "Proporsed Basic MNTC",
+        ],
+        body: [
+          [
+            "1",
+            "Filter tersumbat/ penyumbatan aliran",
+            [
+              "Operasional main engine tertunda karena kekurangan bahan bakar.",
+              "Menurunkan kinerja mesin utama",		
+            ],
+            "2",
+            "3",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "number",
+              text: [
+                "Tekanan bahan bakar menurun",
+                "Tidak ada aliran bahan bakar minyak",	
+              ],
+            },
+            {
+              type: "dot",
+              text: [
+                "Pemeriksaan dan pembersihan rutin",
+              ],
+            },
+          ],
+          [
+            "2a",
+            "Elemen filter runtuh atau rusak",
+            [
+              "Kotoran dan kontaminan yang tidak tersaing menyebabkan kerusakan pada mesin utama",
+              "Mengurangi performa mesin utama",		
+            ],
+            "1",
+            "2",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "number",
+              text: [
+                "Tekanan bahan bakar menurun",
+                "Tidak ada aliran bahan bakar minyak",	
+              ],
+            },
+            {
+              type: "dot",
+              text: [
+                "Pemeriksaan rutin",
+              ],
+            },
+          ],
+          [
+            "2b",
+            "Elemen filter runtuh atau rusak",
+            [
+              "Kotoran dan kontaminan yang tidak tersaing menyebabkan kerusakan pada mesin utama",
+              "Mengurangi performa mesin utama",		
+            ],
+            "1",
+            "2",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "number",
+              text: [
+                "Tekanan bahan bakar menurun",
+                "Tidak ada aliran bahan bakar minyak",	
+              ],
+            },
+            {
+              type: "dot",
+              text: [
+                "Pemeriksaan rutin",
+              ],
+            },
+          ],
+        ]
+      },
+      {
+        title: "Maintenance Task Selection",
+        backgroundColor: "#f5eafa",
+        borderColor: "#912BBC",
+        headRow: 2,
+        head: [
+          "No",
+          "Failure Mode",
+          ["Risk Characterization", ["CoF", "Rec PoF", "Current Risk"]],
+          ["Task Selection", ["Proposed Action (s)", "Proj PoF", "Proj Risk"]],
+        ],
+        body: [
+          [
+            "1",
+            "Filter tersumbat/ penyumbatan aliran",
+            "2",
+            "3",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "dot",
+              text: [
+                "Pemeriksaan kondisi filter dan pembersihan elemen filter",
+              ],
+            },
+            "2",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+          ],
+          [
+            "2a",
+            "Elemen filter runtuh atau rusak",
+            "1",
+            "2",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "dot",
+              text: [
+                "Pemeriksaan kebocoran filter",
+                "Dilakukan pergantian filter",
+              ],
+            },
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+          ],
+          [
+            "2b",
+            "Elemen filter runtuh atau rusak",
+            "1",
+            "2",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "dot",
+              text: [
+                "Dilakukan pergantian filter",
+              ],
+            },
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+          ],
+        ],
+      },
+      {
+        title: "Category A",
+        backgroundColor: "#003266",
+        borderColor: "#ffffff",
+        headRow: 2,
+        head: [
+          "Task",
+          "Task Type",
+          "Cause Number",
+          ["Risk", ["Current", "Projected"]],
+          "Frequency",
+          "Procedure No. Or Class Reference",
+          "Comments",
+        ],
+        body: [
+          [
+            { 
+              type: "dot", 
+              text: ["Pemeriksaan kondisi filter dan pembersihan elemen filter"]
+            },
+            "CM",
+            "12.1",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            "2 Minggu",
+            "-",
+            "Dilakukan oleh mekanik",
+          ],
+          [
+            { 
+              type: "dot", 
+              text: ["Pemeriksaan kebocoran filter"]
+            },
+            "CM",
+            "12.2",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            "Harian",
+            "-",
+            "Dilakukan oleh mekanik",
+          ],
+          [
+            { 
+              type: "dot", 
+              text: ["Dilakukan pergantian filter"]
+            },
+            "OTC",
+            ["12.2", "12.3"],
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            "Jika terjadi kerusakan",
+            "-",
+            "Segera dilakukan perbaikan, jika terjadi kerusakan",
+          ],
+        ],
+      },
+    ]
+  },
 ]
 
 export function getDataWithSlug(slug: string) {
