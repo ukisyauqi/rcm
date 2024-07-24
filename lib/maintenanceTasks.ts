@@ -12,22 +12,22 @@ const MaintenanceTaskSchema = z.object({
 })
 
 export async function createMaintenanceTask(data: Record<string, string>) {
-  const { cof, projPof } = data
+  // const { cof, projPof } = data
 
-  const projRisk = getCurrentRisk(parseInt(cof), parseInt(projPof))
+  // const projRisk = getCurrentRisk(parseInt(cof), parseInt(projPof))
 
   const validatedFields = MaintenanceTaskSchema.safeParse({
     ...data,
-    projRisk
+    projPof: parseInt(data.projPof),
   })
-
-  console.log(validatedFields)
 
   if (!validatedFields.success) throw new Error(validatedFields.error.toString())
 
   await prisma.maintenanceTask.create({
     data: validatedFields.data
   })
+
+  console.log("success")
 }
 
 export async function getMaintenanceTasks() {

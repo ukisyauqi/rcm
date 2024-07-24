@@ -2,6 +2,7 @@
 
 import FormLayout from "@/components/layout/FormLayout"
 import { createAssetProfile } from "@/lib/assetProfile"
+import { createFmeca } from "@/lib/fmeca"
 import { createFunctionalFailure } from "@/lib/functionalFailure"
 import Link from "next/link"
 import { redirect, useRouter } from "next/navigation"
@@ -66,7 +67,8 @@ export default function Page({ params }: { params: { id: string } }) {
     const values = Object.values(formData)
 
     const handleSubmit = async () => {
-      await createFunctionalFailure({
+      console.log(formData)
+      await createFmeca({
         ...formData,
         assetProfileId: params.id,
       })
@@ -139,7 +141,7 @@ export default function Page({ params }: { params: { id: string } }) {
         "Local Effect",
         "Functional Failure",
       ],
-      "/add-maintenance-task/fmeca/" + params.id
+      "/add-maintenance-task/fmeca-lanjutan/" + params.id + "?" + (new URLSearchParams({failureMode: formData.failureMode})).toString()
     ),
   ]
 

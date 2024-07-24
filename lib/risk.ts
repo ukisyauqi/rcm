@@ -8,6 +8,14 @@ const riskMapping: Record<RiskLevel, number> = {
   'Tinggi': 5
 };
 
+export const riskStyles = [
+  {text: "Rendah", backgroundColor: "#0071c0", color: "#fff"},
+  {text: "Rendah-Menengah", backgroundColor: "#00af50", color: "#fff"},
+  {text: "Menengah", backgroundColor: "#00af50", color: "#000"},
+  {text: "Menengah-Tinggi", backgroundColor: "#ffc000", color: "#000"},
+  {text: "Tinggi", backgroundColor: "#fe0000", color: "#fff"},
+]
+
 // Matriks risiko berdasarkan gambar
 const riskMatrix: RiskLevel[][] = [
   ['Rendah', 'Rendah', 'Rendah-Menengah', 'Menengah', 'Tinggi'],

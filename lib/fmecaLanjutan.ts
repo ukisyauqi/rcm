@@ -15,16 +15,13 @@ const FmecaLanjutanSchema = z.object({
 })
 
 export async function createFmecaLanjutan(data: Record<string, string>) {
-  const { cof, recPof } = data
-
-  const currentRisk = getCurrentRisk(parseInt(cof), parseInt(recPof))
 
   const validatedFields = FmecaLanjutanSchema.safeParse({
     ...data,
-    currentRisk
+    cof: parseInt(data.cof),
+    recPof: parseInt(data.recPof),
   })
 
-  console.log(validatedFields)
 
   if (!validatedFields.success) throw new Error(validatedFields.error.toString())
 
