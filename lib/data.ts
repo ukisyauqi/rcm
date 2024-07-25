@@ -16138,6 +16138,1274 @@ const data: Data = [
     ]
   },
   {
+    slug: "circulating-pump-1",
+    type: "COOLING_SYSTEM",
+    specs: {
+      functionalGroup: "Propulsion Function Group",
+      system: "Diesel Engine",
+      subsystem: "Cooling System",
+      equipmentID: "CO-CIP-01",
+      equipmentName: "Ciculating Pump",
+      drawing: "Cooling System",
+    },
+    tables: [
+      {
+        title: "Function and Functional Failure",
+        backgroundColor: "#e5fff1",
+        borderColor: "#00B14F",
+        headRow: 1,
+        head: [
+          "No",
+          "Function Statement",
+          "Function Type",
+          "No",
+          "Functional Failure Statement",
+        ],
+        body: [
+          [
+            "1",
+            "Circulate coolant throughout various components of the ship's cooling system, ensuring optimal operating temperatures and preventing overheating of critical machinery and systems, within specification Capacity 100 M3/H, Head 20m.",
+            "Primary",
+            ["1,1", "1,2"],
+            [
+              "No pumping water to initiate coolant circulation (Total Failure)",
+              "Pumping water to suboptimal cooling efficiency and potential overheating of equipment within capacity less than 100 M3/H (Partial Failure)"
+            ],
+          ],
+        ],
+      },
+      {
+        title: "FMECA",
+        backgroundColor: "#ffefe5",
+        borderColor: "#EB5B00",
+        headRow: 1,
+        head: [
+          "No",
+          "Part",
+          "Failure Mode",
+          "Causes",
+          "Failure Charasteristic",
+          "Local Effect",
+          "Functional Failure",
+        ],
+        body: [
+          [
+            "1a",
+            " Pump Casing",
+            "Corroded",
+            [
+              "1.1 Mechanical Stress: Operating conditions such as vibration, pressure changes, and mechanical shocks can subject the casing to mechanical stress. Over time, this stress can cause deformation, especially if the casing material is not sufficiently robust.",
+              "1.2 Age and Wear: Like any other equipment on a ship, Cooling pumps and their casings are subject to wear and tear over time. With age, the protective coatings on the casing may degrade, making it more susceptible to corrosion"
+            ],
+            ["Random","Wear-out"],
+            {
+              type: "number",
+              text: [
+                "Reduced Pump Efficiency",
+                "Pump Operation with Vibration and Noise",
+              ]
+            },
+            "1.2 Pumping water to suboptimal cooling efficiency and potential overheating of equipment within capacity less than 100 M3/H (Partial Failure)"
+          ],
+          [
+            "1b",
+            " Pump Casing",
+            "Fractured",
+            [
+              "2.1 Mechanical Stress: The casing may experience mechanical stress due to factors such as vibration, shock loads, or impacts during normal operation or in rough sea conditions. Over time, this stress can lead to fatigue and eventually fracture of the casing.",
+              "2.2  Overloading: If the Cooling pump is subjected to loads beyond its design capacity, such as excessive pressure or flow rate, it can put undue stress on the casing, leading to fracture."
+            ],
+            ["Random","Random"],
+            {
+              type: "number",
+              text: [
+                "Reduced Efficiency",
+                "Material Weakening",
+              ]
+            },
+            "1.2 Pumping water to suboptimal cooling efficiency and potential overheating of equipment within capacity less than 100 M3/H (Partial Failure)"
+          ],
+          [
+            "1c",
+            " Pump Casing",
+            "Deformed",
+            [
+              "3.1 Mechanical Stress: Operating conditions such as vibration, pressure changes, and mechanical shocks can subject the casing to mechanical stress. Over time, this stress can cause deformation, especially if the casing material is not sufficiently robust.",
+              "3.2 Corrosion: Continuous exposure to seawater and other corrosive substances can lead to the corrosion of metal casings over time. Corrosion weakens the structural integrity of the casing, making it susceptible to deformation."
+            ],
+            ["Random","Wear-out"],
+            {
+              type: "number",
+              text: [
+                "Reduced Pump Efficiency",
+                "Immediate Loss of Functionality",
+              ]
+            },
+            "1.2 Pumping water to suboptimal cooling efficiency and potential overheating of equipment within capacity less than 100 M3/H (Partial Failure)"
+          ],
+          [
+            "2a",
+            "Impeller",
+            "Corroded",
+            [
+              "4.1 High Temperatures: Elevated temperatures in the Cooling area, either due to the pump's operation or nearby machinery, can accelerate corrosion processes, especially if combined with other factors like saltwater exposure or chemical contamination.",
+              "4.2  Saltwater Exposure: Ships operate in a highly corrosive environment due to constant exposure to saltwater. If the Cooling pump is not adequately protected or made from corrosion-resistant materials, saltwater exposure can lead to corrosion of the impeller over time."
+            ],
+            ["Wear-out","Wear-out"],
+            {
+              type: "number",
+              text: [
+                "Reduced Efficiency",
+                "Material Weakening",
+              ]
+            },
+            "1.2 Pumping water to suboptimal cooling efficiency and potential overheating of equipment within capacity less than 100 M3/H (Partial Failure)"
+          ],
+          [
+            "2b",
+            "Impeller",
+            "Fractured",
+            [
+              "5.1 Material Fatigue: Continuous operation of the Cooling pump impeller can subject it to repeated cycles of stress, leading to material fatigue over time. This fatigue can weaken the material structure of the impeller, eventually resulting in cracks or fractures.",
+              "5.2  Impact or Mechanical Damage: External factors such as collisions, debris ingestion, or abrasive wear can cause physical damage to the impeller, resulting in cracks or fractures. Impact from foreign objects or sudden changes in operating conditions can lead to immediate failure or accelerate existing damage."
+            ],
+            ["Wear-out","Random"],
+            {
+              type: "number",
+              text: [
+                "Reduced Pump Efficiency",
+                "Immediate Loss of Functionality",
+              ]
+            },
+            "1.2 Pumping water to suboptimal cooling efficiency and potential overheating of equipment within capacity less than 100 M3/H (Partial Failure)"
+          ],
+          [
+            "2c",
+            "Impeller",
+            "Deformed",
+            [
+              "6.1  Mechanical Stress: Continuous operation of the Cooling pump can subject the impeller to mechanical stress, especially if it encounters high fluid flow rates or pressure. Over time, this stress can cause the impeller to deform, particularly in areas where the material is weaker or subjected to uneven loading.",
+              "6.2  Overloading: Excessive loads on the Cooling pump system, such as sudden surges in fluid volume or pressure, can exceed the impeller's design limits and cause deformation. This can occur due to factors like blockages in the pump, changes in fluid viscosity, or improper pump operation."
+            ],
+            ["Wear-out","Random"],
+            {
+              type: "number",
+              text: [
+                "Vibration and Noise",
+                "Reduced Pump Efficiency",
+              ]
+            },
+            [
+              "1.1 No Pumping water to initiate coolant circulation (Total Failure)",
+              "1.2 Pumping water to suboptimal cooling efficiency and potential overheating of equipment within capacity less than 100 M3/H (Partial Failure)"
+            ]  
+          ],
+          [
+            "3a",
+            "Bearing",
+            "Cracked",
+            [
+              "7.1 Impact or Mechanical Damage: External factors like impacts from debris or improper handling during maintenance procedures can cause mechanical damage to the bearings, resulting in cracks.",
+              "7.2  Fatigue: Over time, repeated stress cycles experienced by the bearings during pump operation can weaken the material, leading to microscopic cracks that propagate and eventually result in visible cracks."
+            ],
+            ["Random","Wear-out"],
+            {
+              type: "number",
+              text: [
+                "Increased Operating Temperature",
+                "Structural Damage",
+              ]
+            },
+            [
+              "1.1 No Pumping water to initiate coolant circulation (Total Failure)",
+              "1.2 Pumping water to suboptimal cooling efficiency and potential overheating of equipment within capacity less than 100 M3/H (Partial Failure)"
+            ]
+          ],
+          [
+            "3b",
+            "Bearing",
+            "Contaiminated",
+            [
+              "8.1  Ingress of Foreign Particles: Small particles such as dirt, sand, debris, or rust can enter the bearing housing, especially if the pump is operating in a harsh environment or if seals are compromised. These particles can contaminate the lubricant and cause abrasive wear on the bearing surfaces.",
+              "8.2   Oil or Fuel Leakage: Leakage of oil or fuel from nearby machinery or systems can contaminate the bearing. Oil or fuel contamination can degrade the lubricant's effectiveness, leading to increased friction and wear on the bearing surfaces."
+            ],
+            ["Random","Random"],
+            {
+              type: "number",
+              text: [
+                " Increased Friction and Wear",
+                "Reduced Efficiency",
+              ]
+            },
+            "1.2 Pumping water to suboptimal cooling efficiency and potential overheating of equipment within capacity less than 100 M3/H (Partial Failure)"
+          ],
+          [
+            "3c",
+            "Bearing",
+            "Fractured",
+            [
+              "9.1   .Overloading: Excessive loads on the bearing beyond its designed capacity can lead to fractures. This can happen due to sudden surges in pump operation, such as during startup or when pumping against high resistance, causing stress concentrations and eventual fracture.",
+              "9.2 Fatigue: Prolonged cyclic loading and unloading of the bearing during normal pump operation can lead to fatigue failure over time. This is particularly common in bearings subjected to repeated stress cycles, causing microscopic cracks to form and propagate until complete fracture occurs."
+            ],
+            ["Random","Wear-out"],
+            {
+              type: "number",
+              text: [
+                "Immediate Loss of Functionality",
+                "Vibration and Noise",
+              ]
+            },
+            [
+              "1.1 No Pumping water to initiate coolant circulation (Total Failure)",
+              "1.2 Pumping water to suboptimal cooling efficiency and potential overheating of equipment within capacity less than 100 M3/H (Partial Failure)"
+            ]
+          ],
+          [
+            "4a",
+            "Shaft Seal Cover",
+            "Corroded",
+            [
+              "10.1 Exposure to Corrosive Substances: The seal may come into contact with corrosive substances present in the Cooling water, such as saltwater, chemicals, or pollutants. Prolonged exposure to these corrosive agents can degrade the seal material and lead to corrosion.",
+              "10.2   High Temperatures and Pressure: Elevated temperatures and pressures within the Cooling pump system can accelerate corrosion processes, particularly if the seal material is not resistant to these conditions."
+            ],
+            ["Wear-out","Wear-out"],
+            {
+              type: "number",
+              text: [
+                "Corrosion weakens the structural integrity",
+                "Reduced Seal Performance",
+              ]
+            },
+            "1.2 Pumping water to suboptimal cooling efficiency and potential overheating of equipment within capacity less than 100 M3/H (Partial Failure)"
+          ],
+          [
+            "4b",
+            "GearShaft Seal Cover",
+            "Fractured",
+            [
+              "11.1 Material Fatigue: Over time, repeated stress cycles can weaken the seal material, leading to microscopic cracks that propagate and eventually result in a fracture. This fatigue can occur due to the cyclical pressure changes experienced during pump operation.",
+              "11.2  Impact or Mechanical Damage: External factors such as impacts from debris or improper handling during maintenance procedures can cause mechanical damage to the seal, resulting in fractures."
+            ],
+            ["Wear-out","Random"],
+            {
+              type: "number",
+              text: [
+                "fractured seal compromises",
+                "Reduced Seal Performance",
+              ]
+            },
+            [
+
+              "1.1 No Pumping water to initiate coolant circulation (Total Failure)",
+              "1.2 Pumping water to suboptimal cooling efficiency and potential overheating of equipment within capacity less than 100 M3/H (Partial Failure)"
+            ]
+          ],
+          [
+            "4c",
+            "Shaft Seal Cover",
+            "Worn",
+            [
+              "12.1 Abrasion: Continuous contact between the seal and rotating shaft can lead to abrasive wear over time. Particles present in the Cooling water, such as sand, sediment, or debris, can cause abrasive damage to the seal surface, leading to wear",
+              "12.2  Corrosion: Exposure to corrosive substances in the Cooling water, such as saltwater or chemicals, can corrode the seal material, leading to localized material degradation and wear. Corrosion weakens the seal's structural integrity and can accelerate wear, particularly in areas with high stress concentrations."
+            ],
+            ["Wear-out","Wear-out"],
+            {
+              type: "number",
+              text: [
+                "Reduced Pump Performance",
+                "Vibration and Noise",
+              ]
+            },
+            "1.2 Pumping water to suboptimal cooling efficiency and potential overheating of equipment within capacity less than 100 M3/H (Partial Failure)"
+          ],
+          [
+            "5a",
+            "Shaft",
+            "Corroded",
+            [
+              "13.1 Improper Material Selection: Choosing materials for the shaft that are not resistant to corrosion or incompatible with the Cooling environment can promote corrosion and accelerate its progression.",
+              "13.2  High Humidity and Temperature: Elevated humidity levels and fluctuating temperatures in the Cooling area can create conducive conditions for corrosion to occur on the shaft surface.",
+              "14.1 Fatigue: Prolonged cyclic loading and unloading of the shaft during pump operation can lead to fatigue failure, causing microscopic cracks to form and propagate over time until a fracture occurs."
+            ],
+            ["Wear-in","Wear-out","Wear-out"],
+            {
+              type: "number",
+              text: [
+                "Reduced Strength",
+                "Impeller Misalignment",
+              ]
+            },
+            "1.2 Pumping water to suboptimal cooling efficiency and potential overheating of equipment within capacity less than 100 M3/H (Partial Failure)"
+          ],
+          [
+            "5b",
+            "Shaft",
+            "Fractured",
+            [
+              "14.1 Fatigue: Prolonged cyclic loading and unloading of the shaft during pump operation can lead to fatigue failure, causing microscopic cracks to form and propagate over time until a fracture occurs.",
+              "14.2  Corrosion: Corrosive substances present in the Cooling water can degrade the shaft material, reducing its structural integrity and making it more susceptible to fracture failure."
+            ],
+            ["Wear-out","Wear-out"],
+            {
+              type: "number",
+              text: [
+                "Loss of Functionality",
+                "Immediate Loss of Functionality",
+              ]
+            },
+            "1.2 Pumping water to suboptimal cooling efficiency and potential overheating of equipment within capacity less than 100 M3/H (Partial Failure)"
+          ],
+          [
+            "5c",
+            "Shaft",
+            "Worn",
+            [
+              "15.1   Abrasion: Continuous contact with abrasive particles present in the Cooling water, such as sand, sediment, or debris, can gradually wear down the surface of the shaft. This abrasion occurs over time and can lead to the thinning of the shaft diameter or the formation of grooves and pits on its surface.",
+              "15.2 Corrosion: Exposure to corrosive substances present in the Cooling water, such as saltwater or chemicals, can corrode the shaft material, leading to localized wear and pitting. Corrosion-induced wear weakens the shaft's structural integrity and accelerates its deterioration."
+            ],
+            ["Wear-out","Wear-out"],
+            {
+              type: "number",
+              text: [
+                "Reduced Efficiency",
+                "Seal Leakage",
+              ]
+            },
+            "1.2 Pumping water to suboptimal cooling efficiency and potential overheating of equipment within capacity less than 100 M3/H (Partial Failure)"
+          ],
+          
+        ],
+      },
+      {
+        title: "FMECA (lanjutan)",
+        backgroundColor: "#ffefe5",
+        borderColor: "#EB5B00",
+        headRow: 1,
+        head: [
+          "No",
+          "Part",
+          "Failure Mode",
+          "End Effect",
+          "CoF",
+          "PoF",
+          "Current Risk",
+          "Failure Detection",
+          "Proporsed Basic MNTC",
+        ],
+        body: [
+          [
+            "1a",
+            "Pump Casing",
+            "Corroded",
+            "Pump Failure: Progressive corrosion of the pump casing weakens the structural integrity of the casing, eventually leading to catastrophic failure, pump malfunction, or complete breakdown, resulting in system downtime and loss of cooling capacity.",
+            "1",
+            "2",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "number",
+              text: [
+                "Leakage from cooling Pump",
+                "Decrease flow rate from cooling Pump."
+              ],
+            },
+            "prevent or mitigate corrosion of cooling pump casings, proper maintenance, regular inspections, and use of corrosion-resistant materials are essential."
+          ],
+          [
+            "1b",
+            " Pump Casing",
+            "Fractured",
+            "Environmental Contamination: Fluid leakage from fractured pump casings can contaminate the surrounding environment, posing environmental hazards and safety risks to onboard personnel and marine ecosystems.Bearing seizure and motor shaft immobilization: Severe wear or damage to the bearings can result in bearing seizure, causing the motor shaft to become immobilized and leading to sudden motor failure.",
+            "3",
+            "1",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "number",
+              text: [
+                "Decrease flow rate from cooling Pump",
+                "No flow from cooling Pump."
+              ],
+            },
+            "To prevent casing fracture of cooling pumps on ships, it's important to adhere to proper installation procedures, conduct regular inspections for signs of stress or damage, and ensure that the pump is operated within its design limits."
+          ],
+          [
+            "1c",
+            " Pump Casing",
+            "Deformed",
+            "pump Malfunction: Deformed pump casings disrupt the normal operation of the circulating pump, resulting in reduced coolant circulation, loss of system efficiency, and potential pump failure, leading to cooling system downtime and operational disruptions.",
+            "2",
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "number",
+              text: [
+                "Bend, crack, casing material",
+                "Decrease flow rate from cooling pump."
+              ],
+            },
+            "Recommended to conduct regular inspections, enhance material selection for casing construction, optimize operating conditions, improve installation practices, enhance maintenance procedures"
+          ],
+          [
+            "2a",
+            "Impeller",
+            "Corroded",
+            "Increased Maintenance Costs: Corrosion-related pump failures necessitate costly repairs or replacements, as well as associated labor and downtime expenses, increasing maintenance costs and disrupting vessel operations.",
+            "3",
+            "2",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "number",
+              text: [
+                " Decrease cooling pump performance",
+                " Visible corrosion",
+                "Increase noise and vibration."
+              ],
+            },
+            "Assess the damage and consider replacing it with a corrosion-resistant impeller. Implement regular maintenance and consider applying corrosion-resistant coatings. Monitor for future corrosion for sustained pump performance."
+          ],
+          [
+            "2b",
+            "Impeller",
+            "Fractured",
+            "Pump Failure: Fractured pump casings jeopardize the structural integrity of the circulating pump, resulting in pump malfunction, reduced coolant circulation, and eventual pump failure, leading to system downtime and loss of cooling capacity.",
+            "2",
+            "3",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "number",
+              text: [
+                "Decrease cooling pump performance",
+                "No flow from cooling Pump."
+              ],
+            },
+            "If the impeller of a cooling pump is fractured, it must be swiftly replaced to maintain pump functionality. Prioritize the installation of a new, intact impeller and conduct regular inspections to prevent future fractures."
+          ],
+          [
+            "2c",
+            "Impeller",
+            "Deformed",
+            "Increased Risk of heating: Inadequate cooling water removal due to impeller deformation increases the risk of heating in critical areas of the ship. This poses a safety hazard to the crew, passengers, and cargo, potentially compromising the vessel's seaworthiness and stability.",
+            "1",
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "number",
+              text: [
+                "Decrease cooling pump performance",
+                "Noise and vibration."
+              ],
+            },
+            "Replace the deformed impeller promptly with a new one to maintain optimal performance. Regular inspections and monitoring can help detect deformities early on, preventing further issues."
+          ],
+          [
+            "3a",
+            "Bearing",
+            "Cracked",
+            "Compromise structural integrity and load-bearing capacity, leading to progressive deterioration and eventual catastrophic failure, resulting in pump malfunction and system downtime.",
+            "3",
+            "3",
+            {
+              type: "class",
+              text: ["Menengah"],
+            },
+            {
+              type: "number",
+              text: [
+                "Visbile abnormal crack",
+                "Vibration abnormal."
+              ],
+            },
+            "Conduct routine visual and ultrasonic inspections to detect early signs of structural damage or load-bearing capacity compromise."
+          ],
+          [
+            "3b",
+            "Bearing",
+            "Contaiminated",
+            "Prone to premature failure due to accelerated wear, surface damage, and reduced load-bearing capacity, ultimately leading to pump malfunction, system downtime, and potentially catastrophic equipment failure.",
+            "1",
+            "2",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "number",
+              text: [
+                "Oil /substance analysis",
+                "Vibration and noise.",
+                "Decrease efficiency."
+              ],
+            },
+            "Apply surface treatments or coatings to reduce wear and protect against surface damage."
+          ],
+          [
+            "3c",
+            "Bearing",
+            "Fractured",
+            "Fluid leakage from fractured bearing can contaminate the surrounding environment, posing environmental hazards and safety risks to onboard personnel and marine ecosystems.",
+            "2",
+            "3",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "number",
+              text: [
+                "Abnormal noise and vibration",
+                "Lubricant Leakage.",
+                "Decrease flow rate and pressure."
+              ],
+            },
+            "Regularly inspect and maintain seals to prevent fluid leakage from bearings."
+          ],
+          [
+            "4a",
+            "Shaft Seal Cover",
+            "Corroded",
+            "Fluid Loss: Corroded shaft seal covers can lead to coolant or lubricant leakage from the pump assembly, resulting in reduced fluid levels, loss of system pressure, and diminished cooling or lubrication performance.",
+            "2",
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "number",
+              text: [
+                "Decrease pressure and flowrate",
+                "Water leakage arround the pump"
+              ],
+            },
+            "conduct a thorough inspection to assess the extent of corrosion and potential leaks. Replace the corroded seal promptly with a new one, ensuring compatibility with the pump system. Implement corrosion prevention measures, such as applying protective coatings or using corrosion-resistant materials for future seals."
+          ],
+          [
+            "4b",
+            "Shaft Seal Cover",
+            "Fractured",
+            "environmental Hazard: Fluid leakage from fractured shaft seal covers poses environmental hazards, particularly in marine environments, where leaked fluids may pollute waterways or cause harm to marine life.",
+            "2",
+            "3",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "number",
+              text: [
+                "Decrease pressure and flowrate",
+                " leakage of water."
+              ],
+            },
+            "shut down the pump to prevent further damage and water ingress. Replace the fractured seal with a new one, ensuring compatibility and proper installation. Conduct a thorough inspection of the surrounding components for any damage or wear."
+          ],
+          [
+            "4c",
+            "Shaft Seal Cover",
+            "Worn",
+            "Fluid Leakage: Worn shaft seal covers can contribute to increased fluid leakage from the pump assembly, resulting in loss of coolant or lubricant, reduced system performance, and potential damage to surrounding components due to inadequate lubrication or cooling.",
+            "2",
+            "1",
+            {
+              type: "class",
+              text: ["Menengah"],
+            },
+            {
+              type: "number",
+              text: [
+                "Leakage of water",
+                "Reduced flow rate, decreased pressure, increase power consumption."
+              ],
+            },
+            "To address worn pump seals, promptly replace them and inspect surrounding components for damage. Implement preventive maintenance, monitor seal performance, and apply proper lubrication."
+          ],
+          [
+            "5a",
+            "Shaft",
+            "Corroded",
+            "Shaft Failure: Severe corrosion can weaken the shaft to the point of mechanical failure, resulting in pump malfunction, system downtime, and potential damage to other pump components.",
+            "3",
+            "1",
+            {
+              type: "class",
+              text: ["Menengah"],
+            },
+            {
+              type: "number",
+              text: [
+                "Friction and vibration",
+                "Decrease pump flowrate."
+              ],
+            },
+            "replace it with a corrosion-resistant alternative and inspect surrounding components for damage. Apply protective coatings and establish a preventive maintenance schedule to minimize future corrosion risks."
+          ],
+          [
+            "5b",
+            "Shaft",
+            "Fractured",
+            "Pump Failure: Fractured shafts result in the loss of mechanical integrity and functionality of the circulating pump, leading to system downtime, impaired cooling performance, and disruption of ship operations.",
+            "2",
+            "2",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "number",
+              text: [
+                "cooling water output may have fractured metal shaft",
+                "Noise and vibration",
+                "Decrease pump flowrate",
+                "No flow form cooling pump",
+              ],
+            },
+            "If a fractured cooling pump shaft is detected, consider repairing or replacing it depending on the severity of the damage. Inspect other components for any additional damage or corrosion."
+          ],
+          [
+            "4c",
+            "Shaft",
+            "Worn",
+            "Reduced Efficiency: Worn shafts diminish the efficiency of the circulating pump, as increased friction and surface roughness lead to higher energy consumption, reduced flow rates, and decreased coolant circulation.",
+            "2",
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "number",
+              text: [
+                "Abnormal vibration and noise",
+                "Reduce flow rate cooling pump",
+                "Temperature abnormal caused by friction",
+              ],
+            },
+            "Regular inspection Regular Cleaning: To address a worn shaft in a cooling pump, promptly replace it with a new one and inspect surrounding components for wear or damage. Implement preventive maintenance measures and monitor pump performance regularly."
+          ],
+        ]
+      },
+      {
+        title: "Maintenance Task Selection",
+        backgroundColor: "#f5eafa",
+        borderColor: "#912BBC",
+        headRow: 2,
+        head: [
+          "No",
+          "Part",
+          "Failure Mode",
+          ["Risk Characterization", ["CoF", "Rec PoF", "Current Risk"]],
+          ["Task Selection", ["Proposed Action (s)", "Proj PoF", "Proj Risk"]],
+        ],
+        body: [
+          [
+            "1a",
+            "rotor",
+            "Overheats",
+            "1",
+            "2",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "dot",
+              text: [
+                " Regular inspection and maintenance of pump casing.",
+              ],
+            },
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+          ],
+          [
+            "1b",
+            " Pump Casing",
+            "Fractured",
+            "3",
+            "1",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "dot",
+              text: [
+                " Implement containment measures and regular inspection..",
+                " Bi-weekly visual inspection of pump casings and immediate action on detected fractures.",	
+              ],
+            },
+            "1",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+          ],
+          [
+            "1c",
+            " Pump Casing",
+            "Deformed",
+            "2",
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "dot",
+              text: [
+                " Regular deformation checks and preventive maintenance.",
+                " Monthly visual inspection; semi-annual structural integrity assessment.",
+              ],
+            },
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+          ],
+          [
+            "2a",
+            "Impeller",
+            "Corroded",
+            "3",
+            "2",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "dot",
+              text: [
+                "Corrosion prevention measures and predictive maintenance..",
+                "Monthly application of corrosion inhibitors; annual cost-benefit analysis of maintenance.",	
+              ],
+            },
+            "1",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+          ],
+          [
+            "2b",
+            "Impeller",
+            "Fractured",
+            "2",
+            "3",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "dot",
+              text: [
+                " Enhanced monitoring and immediate repair upon fracture detection.",
+                " Bi-weekly inspection; immediate corrective action on detected issues.",
+              ],
+            },
+            "2",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+          ],
+          [
+            "2c",
+            "Impeller",
+            "Deformed",
+            "1",
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "dot",
+              text: [
+                " Regular impeller inspection and replacement of deformed parts.",
+                " Monthly visual inspection; annual thermal imaging to detect hot spots.",
+              ],
+            },
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+          ],
+          [
+            "3a",
+            "Bearing",
+            "Cracked",
+            "3",
+            "3",
+            {
+              type: "class",
+              text: ["Menengah"],
+            },
+            {
+              type: "dot",
+              text: [
+                "Regular bearing inspection and replacement, Quarterly bearing inspection, replace bearings as necessary.",
+              ],
+            },
+            "2",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+          ],
+          [
+            "3b",
+            "Bearing",
+            "Contaiminated",
+            "1",
+            "2",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "dot",
+              text: [
+                "Contamination control and lubrication maintenance, Monthly inspection and lubrication, immediate replacement of contaminated bearings.",
+              ],
+            },
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+          ],
+          [
+            "3c",
+            "Bearing",
+            "Fractured",
+            "2",
+            "3",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "dot",
+              text: [
+                "Implement sealing solutions and regular inspection, weekly visual inspection, immediate corrective action on detected leakage.",
+              ],
+            },
+            "2",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+          ],
+          [
+            "4a",
+            "Shaft Seal Cover",
+            "Corroded",
+            "2",
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "dot",
+              text: [
+                " Regular inspection and replacement of corroded seals.",
+                " Monthly visual inspection; replace seals as necessary.",
+              ],
+            },
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+          ],
+          [
+            "4b",
+            "Shaft Seal Cover",
+            "Fractured",
+            "2",
+            "1",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "dot",
+              text: [
+                "Implement routine lubrication and inspection schedule for gear components.",
+                "Apply proper sealing and contamination prevention measures.",
+                "Use Corroded-resistant coatings and materials for gears.",
+              ],
+            },
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+          ],
+          [
+            "4c",
+            "Shaft Seal Cover",
+            "Worn",
+            "2",
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "dot",
+              text: [
+                " Regular seal maintenance and replacement of worn components.",
+                " Monthly visual inspection; replace seals as necessary.",
+              ],
+            },
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+          ],
+          [
+            "5a",
+            "Shaft",
+            "Corroded",
+            "3",
+            "1",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "dot",
+              text: [
+                "Regular shaft inspection and anti-corrosion treatment.",
+                " Monthly visual inspection; annual ultrasonic testing for internal corrosion.",
+              ],
+            },
+            "1",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+          ],
+          [
+            "5b",
+            "Shaft",
+            "Fractured",
+            "2",
+            "2",
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "dot",
+              text: [
+                "  Immediate replacement of fractured shafts and enhanced monitoring.",
+                "  Bi-weekly visual inspection; immediate action on detected fractures.",
+              ],
+            },
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+          ],
+          [
+            "5c",
+            "Shaft",
+            "Worn",
+            "2",
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "dot",
+              text: [
+                " Regular shaft maintenance and lubrication.",
+                " Monthly visual inspection and lubrication; replace worn shafts as necessary.",
+              ],
+            },
+            "1",
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+          ],
+        ]
+      },
+      {
+        title: "Category A",
+        backgroundColor: "#003266",
+        borderColor: "#ffffff",
+        headRow: 2,
+        head: [
+          "Task",
+          "Task Type",
+          "Cause Number",
+          ["Risk", ["Current", "Projected"]],
+          "Frequency",
+          "Procedure No. Or Class Reference",
+          "Comments",
+        ],
+        body: [
+          [
+            { 
+              type: "dot", 
+              text: ["immediately clean and re-lubricate the rotor, apply a moisture barrier, and replace any corroded or damaged bearings."]
+            },
+            "CM/PM",
+            ["1.1", "1.2"],
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            "500 hours and/or Performed on: Damage or performance degradation detection test When corrosion or bearing damage occurs",
+            "-",
+            "It ensures the rotor operates efficiently and prevents further damage by replacing corroded or damaged bearings promptly.",
+          ],
+          [
+            { 
+              type: "dot", 
+              text: ["promptly clean and re-lubricate the bearings, apply a corrosion-resistant coating, and replace the damaged bearings."]
+            },
+            "CM/PM",
+            ["2.1", "2.2"],
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            "250 hours and/or Performed on: Bearing inspection or performance issues When bearing corrosion or damage is detected",
+            "-",
+            "Applying a corrosion-resistant coating and replacing damaged bearings are critical steps for long-term durability and performance.",
+          ],
+          [
+            { 
+              type: "dot", 
+              text: ["clean and lubricate rotor components, repair moisture barriers, apply corrosion-resistant coatings, and replace failed lubricants and bearings"]
+            },
+            "CM/PM",
+            ["3.1", "3.2"],
+            {
+              type: "class",
+              text: ["Menengah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            "1000 hours and/or Performed on: Implementing moisture barriers and corrosion-resistant coatings:",
+            "-",
+            "It ensures the rotor operate smoothly and have a longer service life.",
+          ],
+          [
+            { 
+              type: "dot", 
+              text: ["clean and disinfect the coils using UV-C methods, apply a protective coating, and replace any damaged coil sections with corrosion-resistant materials."]
+            },
+            "CM/PM",
+            ["4.1", "4.2"],
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            "1000 hours and/or Performed on: Coil condition assessment When coil contamination or damage occurs",
+            "-",
+            "The use of UV-C disinfection and corrosion-resistant materials helps ensure both hygiene and durability.",
+          ],
+          [
+            { 
+              type: "dot", 
+              text: ["apply protective coatings to the affected coils, replace damaged coil sections with corrosion-resistant materials, and disinfect the area using UV-C methods."]
+            },
+            "OTC",
+            ["5.1", "5.2"],
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            "500 hours and/or Performed on: Coil damage or contamination inspection When damage or corrosion is detected",
+            "-",
+            "Applying protective coatings and replacing damaged sections with corrosion-resistant materials help prevent future issues, while UV-C disinfection ensures the area remains hygienic.",
+          ],
+          [
+            { 
+              type: "dot", 
+              text: ["immediately repair the leak, clean and disinfect the coil surfaces and surrounding areas using UV-C methods, and ensure proper sealing of the repaired area."]
+            },
+            "CM/PM",
+            ["6.1", "6.2"],
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            "200 hours and/or Performed on: Filter damage or performance issues When a filter is found to be damaged or contaminated",
+            "-",
+            "Immediate attention to the leak and thorough disinfection with UV-C methods are crucial for preventing further issues and maintaining system integrity.",
+          ],
+          [
+            { 
+              type: "dot", 
+              text: ["replace the filter with a corrosion-resistant one, clean the filter housing, and disinfect the area using UV-C methods to prevent further contamination."]
+            },
+            "CM/PM",
+            ["7.1", "7.2"],
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            "200 hours and/or Performed on: Filter inspection or clogging When filter damage or contamination occurs",
+            "-",
+            "Using a corrosion-resistant filter and disinfecting with UV-C methods ensures that the system remains efficient and free from contamination.",
+          ],
+          [
+            { 
+              type: "dot", 
+              text: ["immediately replace it with a corrosion-resistant alternative, clean the housing, and use UV-C disinfection to ensure cleanliness."]
+            },
+            "CM/PM",
+            ["8.1", "8.2"],
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            "200 hours and/or Performed on: Filter damage or performance issues When a filter is found to be damaged or contaminated",
+            "-",
+            "Using corrosion-resistant materials and UV-C disinfection ensures that the replacement part functions optimally and prevents future contamination.",
+          ],
+          [
+            { 
+              type: "dot", 
+              text: ["replace them with corrosion-resistant ones, clean the housing, and disinfect using UV-C methods to maintain hygiene."]
+            },
+            "OTC",
+            ["9.1", "9.2"],
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah"],
+            },
+            "200 hours and/or Performed on: Filter inspection or contamination check When filter corrosion or damage is detected",
+            "-",
+            "Regular cleaning and UV-C disinfection help maintain hygiene and system efficiency.",
+          ],
+          [
+            { 
+              type: "dot", 
+              text: ["lubricate and inspect the gears, apply proper seals, and replace damaged gears with corrosion-resistant alternatives."]
+            },
+            "CM/PM",
+            ["10.1", "10.2"],
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            "1000 hours and/or Performed on: Gear inspection or performance review When gear damage or wear is detected",
+            "-",
+            "It ensures the gears operate smoothly and have a longer service life.",
+          ],
+          [
+            { 
+              type: "dot", 
+              text: ["re-lubricate the gear components, ensure proper sealing to prevent contamination, and replace damaged gears with corrosion-resistant materials."]
+            },
+            "CM/PM",
+            ["11.1", "11.2"],
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            "500 hours and/or Performed on: Gear component inspection or lubrication check When gears are found to be damaged or contaminated",
+            "-",
+            "Proper sealing and corrosion-resistant materials are crucial for maintaining gear performance and longevity.",
+          ],
+          [
+            { 
+              type: "dot", 
+              text: ["flush or clean the valve to remove debris, re-lubricate the gear components, apply proper sealing, and replace any damaged parts with corrosion-resistant materials."]
+            },
+            "CM/PM",
+            ["12.1", "12.2"],
+            {
+              type: "class",
+              text: ["Menengah"],
+            },
+            {
+              type: "class",
+              text: ["Rendah-Menengah"],
+            },
+            "1000 hours and/or Performed on: Valve inspection or maintenance schedule When valve debris or gear damage is detected",
+            "-",
+            "It ensures both the valve and gear components are well-maintained and protected against future issues.",
+          ],
+        ],
+      },
+    ]
+  },
+  {
     slug: "fo-transfer-hand-pump",
     type: "FUEL_OIL_SYSTEM",
     specs: {
