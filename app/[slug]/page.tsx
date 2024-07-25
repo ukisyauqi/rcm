@@ -1,7 +1,10 @@
 import { getDataWithSlug } from "@/lib/data"
-
+import { useState } from "react"
 export default function Page({ params }: { params: { slug: string } }) {
   const data = getDataWithSlug(params.slug)
+  
+  const firstCategory = data?.tables.filter((t) => t.title.includes("Category"))[0].title || ""
+
   return (
     <>
       <div className="flex justify-around">
@@ -48,7 +51,7 @@ export default function Page({ params }: { params: { slug: string } }) {
 
       {data?.tables.map((d, i) => (
         <div key={i}>
-          {d.title == "Category B" && (
+          {(d.title === firstCategory) && (
             <h1
               className="my-8 border rounded-xl w-full p-4 text-center font-bold text-xl"
               style={{
