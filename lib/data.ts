@@ -24071,7 +24071,7 @@ const data: Data = [
     ]
   },
   {
-    slug: "fo-service-tank-m/e",
+    slug: "fo-service-tank",
     type: "FUEL_OIL_SYSTEM",
     specs: {
       functionalGroup: "Propulsion Function Group",
@@ -24284,7 +24284,7 @@ const data: Data = [
     ]
   },
   {
-    slug: "fo-strainer-m/e",
+    slug: "fo-strainer",
     type: "FUEL_OIL_SYSTEM",
     specs: {
       functionalGroup: "Propulsion Function Group",
@@ -26053,7 +26053,7 @@ const data: Data = [
     ]
   },
   {
-    slug: "fo-service-tank-a/e",
+    slug: "fo-service-tank",
     type: "FUEL_OIL_SYSTEM",
     specs: {
       functionalGroup: "Propulsion Function Group",
