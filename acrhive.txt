@@ -1,0 +1,59 @@
+
+  // const cofIndex = data?.tables.map((t) => t.head.map((h,i) => h.includes("CoF")))
+
+  console.log("-------------------------------------")
+
+  const isCof: boolean[][] = []
+  const isPof: boolean[][] = []
+  const isRisk: boolean[][] = []
+
+  data?.tables.forEach((t, i) => {
+    isCof.push([])
+    isPof.push([])
+    isRisk.push([])
+
+    let alien = 0
+
+    t.head.forEach((h, j) => {
+
+      if (Array.isArray(h)) {
+        // kalau header Array
+        ;(h[1] as string[]).forEach((subH, k) => {
+          // loop didalem anak header
+
+          alien += k
+
+          isCof[i].push(subH.includes("CoF")) // kalau anak header contain CoF push true otherwise false
+          isPof[i].push(subH.includes("PoF")) // kalau anak header contain CoF push true otherwise false
+
+          isRisk[i].push((t.body[0][j] as any).type === "class" ? isPof[i][j-1+alien] && isCof[i][j-2+alien] : false)
+
+          
+        })
+      } else {
+        // kalau header String
+        isCof[i].push(h.includes("CoF")) // kalau h contain CoF push true otherwise false
+        isPof[i].push(h.includes("PoF")) // kalau h contain CoF push true otherwise false
+
+        // console.log(b)
+
+        // console.log(b.type === "class")
+        // console.log(" ".repeat(i) + " ".repeat(j) + isPof[i][j])
+
+        isRisk[i].push((t.body[0][j] as any).type === "class" ? isPof[i][j-1] && isCof[i][j-2] : false)
+      }
+    })
+  })
+
+  console.log(isRisk)
+
+  
+
+  // data?.tables.forEach((t, i) => {
+  //   isRisk.push([])
+  //   t.body[0].forEach((b, j) => {
+  //     isRisk[i].push(typeof b === "object" ? (b as any).type === "class" ? isPof[i][j-1] && isCof[i][j-2] : false : false)
+  //   })
+  // })
+
+  // console.log(isRisk)

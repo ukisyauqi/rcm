@@ -2,8 +2,15 @@ import { getDataWithSlug } from "@/lib/data"
 import { useState } from "react"
 export default function Page({ params }: { params: { slug: string } }) {
   const data = getDataWithSlug(params.slug)
-  
-  const firstCategory = data?.tables.filter((t) => t.title.includes("Category"))[0]?.title || ""
+
+  const firstCategory =
+    data?.tables.filter((t) => t.title.includes("Category"))[0]?.title || ""
+
+  // const headFlatten = data?.tables.map((t) => t.head.flat().flat())
+  // const riskIndex = headFlatten?.map((h) => h.findIndex((d) => d.includes("Risk")))
+
+  // console.log(headFlatten)
+  // console.log(riskIndex)
 
   return (
     <>
@@ -51,7 +58,7 @@ export default function Page({ params }: { params: { slug: string } }) {
 
       {data?.tables.map((d, i) => (
         <div key={i}>
-          {(d.title === firstCategory) && (
+          {d.title === firstCategory && (
             <h1
               className="my-8 border rounded-xl w-full p-4 text-center font-bold text-xl"
               style={{
@@ -143,16 +150,36 @@ export default function Page({ params }: { params: { slug: string } }) {
               <tbody className="text-center">
                 {d.body.map((b, i) => (
                   <tr key={i} className="border-b">
-                    {b.map((cell, i) => (
-                      <td className="p-2" key={i}>
+                    {b.map((cell, j) => (
+                      <td className="p-2" key={j}>
                         {typeof cell === "string" ? (
-                          <p className={`${cell.length > 30 && "text-start"}`}>
-                            {cell}
-                          </p>
+                          <>
+                            {!isNaN(parseInt(cell)) &&
+                            (typeof b[j + 1] == "object" &&
+                            (b[j + 1] as any).type === "class") ||
+                            (typeof b[j + 2] == "object" &&
+                            (b[j + 2] as any).type === "class") ? (
+                              <input
+                                type="number"
+                                defaultValue={parseInt(cell)}
+                                className="w-10 relative left-4"
+                              />
+                            ) : (
+                              <>
+                                <p
+                                  className={`${
+                                    cell.length > 30 && "text-start"
+                                  }`}
+                                >
+                                  {cell}
+                                </p>
+                              </>
+                            )}
+                          </>
                         ) : Array.isArray(cell) ? (
-                          cell.map((subCell, i) => (
+                          cell.map((subCell, k) => (
                             <p
-                              key={i}
+                              key={k}
                               className={`
                                 min-h-20 flex items-center
                                 ${
@@ -168,36 +195,18 @@ export default function Page({ params }: { params: { slug: string } }) {
                         ) : (
                           typeof cell === "object" &&
                           (cell.type === "class" ? (
-                            cell.text[0] === "Rendah-Menengah" ? (
-                              <div className="bg-[#1caf51] py-10 text-white rounded-lg font-semibold">
-                                {cell.text[0]}
-                              </div>
-                            ) : cell.text[0] === "Menengah" ? (
-                              <div className="bg-[#fddb20] py-10 rounded-lg font-semibold">
-                                {cell.text[0]}
-                              </div>
-                            ) : cell.text[0] === "Rendah" ? (
-                              <div className="bg-[#5071f3] py-10 rounded-lg text-white font-semibold">
-                                {cell.text[0]}
-                              </div>
-                            ) : (
-                              cell.text[0] === "Menengah-Tinggi" && (
-                                <div className="bg-[#fc8343] py-10 rounded-lg text-white font-semibold">
-                                  {cell.text[0]}
-                                </div>
-                              )
-                            )
+                            <RiskComp text={cell.text[0]} />
                           ) : cell.type === "number" ? (
                             <ol className="list-decimal text-left pl-8">
-                              {cell.text.map((t, i) => (
-                                <li key={i}>{t}</li>
+                              {cell.text.map((t, l) => (
+                                <li key={l}>{t}</li>
                               ))}
                             </ol>
                           ) : (
                             cell.type === "dot" && (
                               <ul className="list-disc text-left pl-8">
-                                {cell.text.map((t, i) => (
-                                  <li key={i}>{t}</li>
+                                {cell.text.map((t, l) => (
+                                  <li key={l}>{t}</li>
                                 ))}
                               </ul>
                             )
@@ -213,5 +222,29 @@ export default function Page({ params }: { params: { slug: string } }) {
         </div>
       ))}
     </>
+  )
+}
+
+function RiskComp({ text }: { text: string }) {
+  return text === "Rendah-Menengah" ? (
+    <div className="bg-[#1caf51] py-10 text-white rounded-lg font-semibold">
+      {text}
+    </div>
+  ) : text === "Menengah" ? (
+    <div className="bg-[#fddb20] py-10 rounded-lg font-semibold">{text}</div>
+  ) : text === "Tinggi" ? (
+    <div className="bg-[#fe0000] py-10 rounded-lg font-semibold text-white">
+      {text}
+    </div>
+  ) : text === "Rendah" ? (
+    <div className="bg-[#5071f3] py-10 rounded-lg text-white font-semibold">
+      {text}
+    </div>
+  ) : (
+    text === "Menengah-Tinggi" && (
+      <div className="bg-[#fc8343] py-10 rounded-lg text-white font-semibold">
+        {text}
+      </div>
+    )
   )
 }
