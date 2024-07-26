@@ -59,13 +59,13 @@ export default function Sidebar() {
           <p>Table</p>
         </div>
 
-        <div className="flex items-center gap-2.5 bg-blue-500 text-white ml-5 mt-2 mb-4 p-2 rounded-lg cursor-pointer w-48">
+        <Link href="/add-maintenance-task" className="flex items-center gap-2.5 bg-blue-500 text-white ml-5 mt-2 mb-4 p-2 rounded-lg cursor-pointer w-48">
           <div className="text-2xl font-light ml-2">+</div>
           <div className="text-left leading-5">
             Add Maintenance <br />
             Task
           </div>
-        </div>
+        </Link>
       </div>
     </>
   )
