@@ -37,7 +37,7 @@ export default function Sidebar() {
         <div className="collapse-content pt-2 space-y-6 pl-8">
           {routeType.map((type, i) => (
             <div key={i} className="space-y-6">
-              <p className="font-semibold text-lg">{String.fromCharCode(65 + i)}. {snakeToUpperCase(type)}</p>
+              <p className="font-semibold text-lg max-w-40">{String.fromCharCode(65 + i)}. {snakeToUpperCase(type)}</p>
               <div className="ml-3 font-semibold text-sm text-gray-500 space-y-8 flex flex-col">
                 {getSlugAtType(type).map((slug, j) => (
                   <Link href={slug} key={j}>
