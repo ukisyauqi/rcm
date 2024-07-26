@@ -41,8 +41,8 @@ export default function Sidebar() {
               <div className="ml-3 font-semibold text-sm text-gray-500 space-y-8 flex flex-col">
                 {getSlugAtType(type).map((slug, j) => (
                   <Link href={slug} key={j}>
-                    {kebabToTitleCase(slug)}
-                    {pathname === slug && (
+                    {kebabToTitleCase(slug)}                    
+                    {pathname === "/" + slug && (
                       <span className="text-red-500 font-bold ml-2 absolute">
                         •
                       </span>
