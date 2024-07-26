@@ -3,7 +3,7 @@ import { useState } from "react"
 export default function Page({ params }: { params: { slug: string } }) {
   const data = getDataWithSlug(params.slug)
   
-  const firstCategory = data?.tables.filter((t) => t.title.includes("Category"))[0].title || ""
+  const firstCategory = data?.tables.filter((t) => t.title.includes("Category"))[0]?.title || ""
 
   return (
     <>

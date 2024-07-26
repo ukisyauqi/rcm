@@ -13,41 +13,6 @@ import { usePathname } from "next/navigation"
 import React from "react"
 
 export default function Sidebar() {
-  const routes = [
-    [
-      "/boss-propeller",
-      "/hull-cap",
-      "/propeller-shaft",
-      "/propeller",
-      "/stern-tube",
-    ],
-    [
-      "/coupling-1",
-      "/coupling-2",
-      "/intermediet-shaft-1",
-      "/intermediet-shaft-2",
-      "/intermediet-bearing-1",
-      "/intermediet-bearing-2",
-    ],
-  ]
-
-  const titles = [
-    [
-      "Boss Propeller",
-      "Hull Cap",
-      "Propeller Shaft",
-      "Propeller",
-      "Stern Tube",
-    ],
-    [
-      "Coupling 1",
-      "Coupling 2",
-      "Intermediet Shaft 1",
-      "Intermediet Shaft 2",
-      "Intermediet Bearing 1",
-      "Intermediet Bearing 2",
-    ],
-  ]
 
   const pathname = usePathname()
 
