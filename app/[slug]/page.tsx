@@ -1,6 +1,8 @@
+import { auth } from "@/auth"
 import { getDataWithSlug } from "@/lib/data"
-import { useState } from "react"
-export default function Page({ params }: { params: { slug: string } }) {
+import { getCurrentRisk } from "@/lib/risk"
+import { redirect } from "next/navigation"
+export default async function Page({ params }: { params: { slug: string } }) {
   const data = getDataWithSlug(params.slug)
 
   const firstCategory =
@@ -154,11 +156,11 @@ export default function Page({ params }: { params: { slug: string } }) {
                       <td className="p-2" key={j}>
                         {typeof cell === "string" ? (
                           <>
-                            {!isNaN(parseInt(cell)) &&
-                            (typeof b[j + 1] == "object" &&
-                            (b[j + 1] as any).type === "class") ||
+                            {(isNaN(parseInt(cell)) &&
+                              typeof b[j + 1] == "object" &&
+                              (b[j + 1] as any).type === "class") ||
                             (typeof b[j + 2] == "object" &&
-                            (b[j + 2] as any).type === "class") ? (
+                              (b[j + 2] as any).type === "class") ? (
                               <input
                                 type="number"
                                 defaultValue={parseInt(cell)}
@@ -194,9 +196,9 @@ export default function Page({ params }: { params: { slug: string } }) {
                           ))
                         ) : (
                           typeof cell === "object" &&
-                          (cell.type === "class" ? (
-                            <RiskComp text={cell.text[0]} />
-                          ) : cell.type === "number" ? (
+                          (cell.type === "class" ?
+                            <RiskComp text={cell.text[0]} b={b} j={j}/>
+                           : cell.type === "number" ? (
                             <ol className="list-decimal text-left pl-8">
                               {cell.text.map((t, l) => (
                                 <li key={l}>{t}</li>
@@ -225,7 +227,22 @@ export default function Page({ params }: { params: { slug: string } }) {
   )
 }
 
-function RiskComp({ text }: { text: string }) {
+function RiskComp({ text, b, j }: { text: string, b: any, j: number }) {
+
+
+  const cof = parseInt(b[j-2])
+  const pof = parseInt(b[j-1])
+
+
+  if ((!isNaN(cof)) && (!isNaN(pof))) {
+    const risk = getCurrentRisk(cof, pof)
+  }
+
+  // if (isNumber(b[j-1].text) && isNumber(b[j-2].text)) {
+  //   const a = getCurrentRisk(parseInt(b[j-1].text), parseInt(b[j-2].text))
+  //   console.log(a)
+  // }
+
   return text === "Rendah-Menengah" ? (
     <div className="bg-[#1caf51] py-10 text-white rounded-lg font-semibold">
       {text}
