@@ -112,4 +112,16 @@ model MaintenanceTask {
   updatedAt      DateTime @updatedAt
 
   assetProfile AssetProfile @relation(fields: [assetProfileId], references: [id], onDelete: Cascade)
+
+}
+
+model AssetRegister {
+  id String @id @default(cuid())
+  slug String @unique
+  type String
+  specs Json
+  tables Json[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
 }
