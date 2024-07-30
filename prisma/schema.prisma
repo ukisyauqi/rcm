@@ -43,75 +43,76 @@ enum SubSubsystem {
 }
 
 model AssetProfile {
-  id String @id @default(cuid())
-  system System
-  subsystem Subsystem
-  subSubsystem SubSubsystem
-  equipmentId String
-  equipmentName String
-  drawing String
+  id                 String                         @id @default(cuid())
+  system             System
+  subsystem          Subsystem
+  subSubsystem       SubSubsystem
+  equipmentId        String
+  equipmentName      String
+  drawing            String
   functionalFailures FunctionAndFunctionalFailure[]
-  fmecas Fmeca[]
-  fmecasLanjutan FmecaLanjutan[]
-  maintenanceTasks MaintenanceTask[]
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  fmecas             Fmeca[]
+  fmecasLanjutan     FmecaLanjutan[]
+  maintenanceTasks   MaintenanceTask[]
+  createdAt          DateTime                       @default(now())
+  updatedAt          DateTime                       @updatedAt
 }
 
 model FunctionAndFunctionalFailure {
-  id Int @id @default(autoincrement())
-  functionStatement String
-  functionType String
-  number Float
+  id                         Int      @id @default(autoincrement())
+  functionStatement          String
+  functionType               String
+  number                     Float
   functionalFailureStatement String
-  assetProfileId String
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  assetProfileId             String
+  createdAt                  DateTime @default(now())
+  updatedAt                  DateTime @updatedAt
 
   assetProfile AssetProfile @relation(fields: [assetProfileId], references: [id], onDelete: Cascade)
 }
 
 model Fmeca {
-  id Int @id @default(autoincrement())
-  failureMode String
-  causes String
+  id                    Int      @id @default(autoincrement())
+  failureMode           String
+  causes                String
   failureCharacteristic String
-  localEffect String
-  functionalFailure String
-  assetProfileId String
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  localEffect           String
+  functionalFailure     String
+  assetProfileId        String
+  createdAt             DateTime @default(now())
+  updatedAt             DateTime @updatedAt
 
   assetProfile AssetProfile @relation(fields: [assetProfileId], references: [id], onDelete: Cascade)
 }
 
 model FmecaLanjutan {
-  id Int @id @default(autoincrement())
-  endEffect String
-  cof Int
-  recPof Int
-  currentRisk String
+  id               Int    @id @default(autoincrement())
+  endEffect        String
+  cof              Int
+  recPof           Int
+  currentRisk      String
   failureDetection String
-  mntc String
+  mntc             String
 
   assetProfileId String
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
 
   assetProfile AssetProfile @relation(fields: [assetProfileId], references: [id], onDelete: Cascade)
 }
 
 model MaintenanceTask {
-  id Int @id @default(autoincrement())
+  id             Int    @id @default(autoincrement())
   proposedAction String
-  projPof Int
-  projRisk String
+  projPof        Int
+  projRisk       String
 
   assetProfileId String
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
 
   assetProfile AssetProfile @relation(fields: [assetProfileId], references: [id], onDelete: Cascade)
+
 }
 
 model AssetRegister {
@@ -122,4 +123,5 @@ model AssetRegister {
   tables Json[]
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+
 }
