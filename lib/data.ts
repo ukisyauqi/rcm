@@ -42765,6 +42765,13 @@ export function kebabToTitleCase(str: string) {
     .join(' '); // Join the words with spaces
 }
 
+export function camelToTitleCase(str: string) {
+  return str
+    .replace(/([A-Z])/g, ' $1') // Replace all uppercase letters with spaces followed by a lowercase letter
+    .replace(/^\w/, (c) => c.toUpperCase()) // Capitalize the first letter
+    .trim();
+}
+
 export function snakeToUpperCase(str: string) {
   return str
     .split('_') // Split the string by underscores
