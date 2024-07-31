@@ -1,18 +1,45 @@
 import { auth } from "@/auth"
+import { getAssetRegisterBySlug } from "@/lib/assetRegister"
 import { getDataWithSlug } from "@/lib/data"
 import { getCurrentRisk } from "@/lib/risk"
 import { redirect } from "next/navigation"
+
+type Data =
+  | {
+      slug: string
+      type: string
+      specs: {
+        functionalGroup: string
+        system: string
+        subsystem: string
+        equipmentID: string
+        equipmentName: string
+        drawing: string
+      }
+      tables: {
+        title: string
+        backgroundColor: string
+        borderColor: string
+        headRow: number
+        head: (string | (string | string[])[])[]
+        body: (
+          | string
+          | string[]
+          | {
+              type: string
+              text: string[]
+            }
+        )[][]
+      }[]
+    }
+  | undefined
 export default async function Page({ params }: { params: { slug: string } }) {
-  const data = getDataWithSlug(params.slug)
+  const data = (await getAssetRegisterBySlug(params.slug)) as Data
+
+  // console.log(JSON.stringify(data,null,2))
 
   const firstCategory =
     data?.tables.filter((t) => t.title.includes("Category"))[0]?.title || ""
-
-  // const headFlatten = data?.tables.map((t) => t.head.flat().flat())
-  // const riskIndex = headFlatten?.map((h) => h.findIndex((d) => d.includes("Risk")))
-
-  // console.log(headFlatten)
-  // console.log(riskIndex)
 
   return (
     <>
@@ -196,9 +223,9 @@ export default async function Page({ params }: { params: { slug: string } }) {
                           ))
                         ) : (
                           typeof cell === "object" &&
-                          (cell.type === "class" ?
-                            <RiskComp text={cell.text[0]} b={b} j={j}/>
-                           : cell.type === "number" ? (
+                          (cell.type === "class" ? (
+                            <RiskComp text={cell.text[0]} b={b} j={j} />
+                          ) : cell.type === "number" ? (
                             <ol className="list-decimal text-left pl-8">
                               {cell.text.map((t, l) => (
                                 <li key={l}>{t}</li>
@@ -227,14 +254,11 @@ export default async function Page({ params }: { params: { slug: string } }) {
   )
 }
 
-function RiskComp({ text, b, j }: { text: string, b: any, j: number }) {
+function RiskComp({ text, b, j }: { text: string; b: any; j: number }) {
+  const cof = parseInt(b[j - 2])
+  const pof = parseInt(b[j - 1])
 
-
-  const cof = parseInt(b[j-2])
-  const pof = parseInt(b[j-1])
-
-
-  if ((!isNaN(cof)) && (!isNaN(pof))) {
+  if (!isNaN(cof) && !isNaN(pof)) {
     const risk = getCurrentRisk(cof, pof)
   }
 

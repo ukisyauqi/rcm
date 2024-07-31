@@ -1,3 +1,5 @@
+import { getCurrentRisk, riskStyles } from "./risk"
+
 export function findDuplicateIndices(arr: string[]): number[][] {
   const elementIndices: { [key: string]: number[] } = {}
   const duplicateIndices: number[][] = []
@@ -112,3 +114,34 @@ export function getObjValue(obj: object, key: string) {
   return values[i] || ""
 }
 
+export function getObjValuesStartsWith(obj: object, key: string) {
+  const keys = Object.keys(obj)
+  const values = Object.values(obj)
+
+  const result = []
+
+  for (let i = 0; i < keys.length; i++) {
+    if (keys[i].startsWith(key)) {
+      result.push(values[i])
+    }
+  }
+  return result
+}
+
+export function normalCasetoKebabCase(str: string) {
+  return str.split(" ").join("-")
+}
+
+
+export function snakeToTitleCase(snakeStr: string): string {
+  return snakeStr
+    .split('_') // Memisahkan string menjadi array kata-kata menggunakan underscore sebagai pemisah
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()) // Mengubah setiap kata menjadi Title Case
+    .join(' '); // Menggabungkan kembali kata-kata menjadi satu string dengan spasi
+}
+
+export function getRiskText(pof: string, cof: string){
+  if (!isNumberString(cof) && !isNumberString(pof)) return "Rendah-Menengah"
+  const riskIndex = getCurrentRisk(parseInt(cof), parseInt(pof))
+  return riskStyles[riskIndex-1].text
+}

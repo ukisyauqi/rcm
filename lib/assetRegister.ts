@@ -1,9 +1,9 @@
 "use server"
 
+import prisma from "@/db"
 import { Prisma, PrismaClient, Subsystem } from "@prisma/client"
 import { z } from "zod"
-
-const prisma = new PrismaClient()
+import { getDataWithSlug, getSlugAtType } from "./data"
 
 const ContentItemSchema = z.object({
   type: z.string().optional(),
@@ -40,21 +40,19 @@ const AssetRegisterSchema = z.object({
   tables: z.array(TableSchema),
 })
 
-export async function createAssetRegister(data: Record<string, object>) {
-  const validatedFields = AssetRegisterSchema.safeParse({
-    specs: data.specs as Prisma.JsonObject,
-    tables: data.tables as Prisma.JsonArray,
-    ...data,
-  })
 
-  console.log(validatedFields)
+export async function createAssetRegister(data: any) {
 
-  if (!validatedFields.success)
-    throw new Error(validatedFields.error.toString())
+  console.log(JSON.stringify(data, null, 2));
 
-  await prisma.assetRegister.create({
-    data: validatedFields.data,
-  })
+  // const validatedFields = AssetRegisterSchema.safeParse(data)
+
+  // console.log(validatedFields)
+
+  // if (!validatedFields.success)
+  //   throw new Error(validatedFields.error.toString())
+
+  await prisma.assetRegister.create({data})
 }
 
 export async function getAssetRegister() {
@@ -72,6 +70,10 @@ export async function getAssetRegister() {
 }
 
 export async function getAssetRegisterBySlug(slug: string) {
+  const dummy = getDataWithSlug(slug)
+
+  if (dummy) return dummy
+  
   try {
     const assetRegister = await prisma.assetRegister.findUnique({
       where: { slug },
@@ -83,4 +85,20 @@ export async function getAssetRegisterBySlug(slug: string) {
   } catch (error) {
     throw new Error("Error Loading Data")
   }
+}
+
+export async function mixGetSlugAtType(type: string) {
+  let data = await prisma.assetRegister.findMany({
+    where: {
+      type: type
+    },
+    select: {
+      slug: true
+    }
+  })
+
+  const dbSlug = data.map((s) => s.slug)
+  const dummySlug = getSlugAtType(type)
+
+  return [...dummySlug, ...dbSlug]
 }

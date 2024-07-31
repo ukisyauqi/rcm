@@ -1,4 +1,4 @@
-type Data = {
+export type Data = {
   slug: string;
   type: string;
   specs: {

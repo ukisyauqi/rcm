@@ -1,21 +1,18 @@
-"use client"
-
 import {
   getRouteTypes,
   getSlugAtType,
   kebabToTitleCase,
   snakeToUpperCase,
 } from "@/lib/data"
-import { ChevronDown } from "lucide-react"
+import { ChevronDown, LogOut } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import React from "react"
+import React, { Suspense } from "react"
+import Slugs from "./Slugs"
+import { SignOutButton } from "./SignOutButton"
 
 export default function Sidebar() {
-  const pathname = usePathname()
-  const routeType = getRouteTypes()
-
   return (
     <>
       <div className="collapse pl-1">
@@ -33,25 +30,9 @@ export default function Sidebar() {
           </div>
         </div>
         <div className="collapse-content pt-2 space-y-6 pl-8">
-          {routeType.map((type, i) => (
-            <div key={i} className="space-y-6">
-              <p className="font-semibold text-lg max-w-40">
-                {String.fromCharCode(65 + i)}. {snakeToUpperCase(type)}
-              </p>
-              <div className="ml-3 font-semibold text-sm text-gray-500 space-y-8 flex flex-col">
-                {getSlugAtType(type).map((slug, j) => (
-                  <Link href={slug} key={j}>
-                    {kebabToTitleCase(slug)}
-                    {pathname === "/" + slug && (
-                      <span className="text-red-500 font-bold ml-2 absolute">
-                        •
-                      </span>
-                    )}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          ))}
+          <Suspense>
+            <Slugs />
+          </Suspense>
         </div>
         {/* Table */}
         <Link
@@ -65,7 +46,7 @@ export default function Sidebar() {
         
 
         <Link
-          href="/add-maintenance-task"
+          href="/add-task"
           className="flex items-center gap-2.5 bg-blue-500 text-white ml-5 mt-2 mb-4 p-2 rounded-lg cursor-pointer w-48"
         >
           <div className="text-2xl font-light ml-2">+</div>
@@ -74,6 +55,11 @@ export default function Sidebar() {
             Task
           </div>
         </Link>
+        <div
+          className=" hover:bg-gray-200 flex items-center gap-2.5 ml-5 mt-2 mb-4 pl-2 p-2 rounded-lg cursor-pointer w-48"
+        >
+          <LogOut /><SignOutButton/>
+        </div>
       </div>
     </>
   )
