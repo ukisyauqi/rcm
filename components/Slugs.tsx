@@ -27,7 +27,7 @@ export default async function Slugs() {
           </p>
           <div className="ml-3 font-semibold text-sm text-gray-500 space-y-8 flex flex-col">
             {slugs[type].map((slug, j) => (
-              <Link href={slug} key={j}>
+              <Link href={"/summary/"+slug} key={j}>
                 {kebabToTitleCase(slug)}
                 <ActiveLinkIndicator slug={slug} />
               </Link>
