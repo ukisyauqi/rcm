@@ -40,6 +40,7 @@ const AssetRegisterSchema = z.object({
   tables: z.array(TableSchema),
 })
 
+
 export async function createAssetRegister(data: any) {
 
   console.log(JSON.stringify(data, null, 2));
