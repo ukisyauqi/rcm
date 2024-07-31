@@ -5,8 +5,6 @@ import { redirect } from "next/navigation"
 import React from "react"
 
 export default async function Page() {
-  const session = await auth()
-  if (session) redirect("/form")
   return (
     <FormLayout>
       <div className="flex flex-col items-center">
@@ -18,7 +16,7 @@ export default async function Page() {
         <form
           action={async () => {
             "use server"
-            await signIn()
+            await signIn("google", { redirectTo: "/add-task" })
           }}
           className="w-full"
         >
