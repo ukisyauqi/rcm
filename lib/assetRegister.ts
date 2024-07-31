@@ -40,7 +40,7 @@ const AssetRegisterSchema = z.object({
   tables: z.array(TableSchema),
 })
 
-export async function createFmeca(data: Record<string, object>) {
+export async function createAssetRegister(data: Record<string, object>) {
   const validatedFields = AssetRegisterSchema.safeParse({
     specs: data.specs as Prisma.JsonObject,
     tables: data.tables as Prisma.JsonArray,

@@ -54,10 +54,15 @@ export default function Sidebar() {
           ))}
         </div>
         {/* Table */}
-        <div className="flex items-center gap-2 font-semibold text-lg p-2 px-2 rounded-lg ml-6">
-          <Image src="/icons/table-icon.svg" alt="" width={20} height={20} />
-          <p>Table</p>
-        </div>
+        <Link
+          href="/table"
+        >
+          <div className="flex items-center gap-2 font-semibold text-lg p-2 px-2 rounded-lg ml-6">
+            <Image src="/icons/table-icon.svg" alt="" width={20} height={20} />
+            <p>Table</p>
+          </div>
+        </Link>
+        
 
         <Link
           href="/add-maintenance-task"
