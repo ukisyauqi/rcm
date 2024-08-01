@@ -11,8 +11,7 @@ export default async function Page() {
         <h1 className="text-3xl font-semibold text-center mb-8">
           Apakah kamu sudah memiliki akun?
         </h1>
-        <div className="bg-[url('/img-login.png')] w-[321px] h-[320px]"></div>
-        {/* <Image src="/img-login.png" alt="" width={321} height={320} /> */}
+        <Image src="/img-login.png" alt="" width={321} height={320} />
 
         <form
           action={async () => {
