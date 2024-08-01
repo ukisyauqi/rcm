@@ -3,6 +3,7 @@ import FormLayout from "@/components/layout/FormLayout"
 import Image from "next/image"
 import { redirect } from "next/navigation"
 import React from "react"
+import imgLogin from "@/public/img-login.png"
 
 export default async function Page() {
   return (
@@ -11,7 +12,7 @@ export default async function Page() {
         <h1 className="text-3xl font-semibold text-center mb-8">
           Apakah kamu sudah memiliki akun?
         </h1>
-        <Image src="/img-login.png" alt="" width={321} height={320} />
+        <Image src={imgLogin} alt="" width={321} height={320} />
 
         <form
           action={async () => {
