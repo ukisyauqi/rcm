@@ -4,6 +4,7 @@ import prisma from "@/db"
 import { Prisma, PrismaClient, Subsystem } from "@prisma/client"
 import { z } from "zod"
 import { getDataWithSlug, getSlugAtType } from "./data"
+import { redirect } from "next/navigation"
 
 const ContentItemSchema = z.object({
   type: z.string().optional(),
@@ -53,6 +54,8 @@ export async function createAssetRegister(data: any) {
   //   throw new Error(validatedFields.error.toString())
 
   await prisma.assetRegister.create({data})
+
+  redirect("/")
 }
 
 export async function getAssetRegister() {
