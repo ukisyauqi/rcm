@@ -15,7 +15,7 @@ import { SignOutButton } from "./SignOutButton"
 export default function Sidebar() {
   return (
     <>
-      <div className="collapse pl-1">
+      <div className="collapse pl-1 pr-5">
         <input type="checkbox" />
         <div className="collapse-title pr-0">
           <div className="bg-[#e7f2ff] flex items-center text-blue-500 gap-2 font-semibold text-lg py-2 px-4 rounded-lg w-fit">

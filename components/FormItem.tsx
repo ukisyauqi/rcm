@@ -16,7 +16,7 @@ export default function FormItem({
 
   return (
     <div
-      className="gap-6 group pr-10 -mr-10"
+      className="gap-2 sm:gap-6 group pr-10 -mr-10"
       style={
         formStructure.type === "risk"
           ? { display: "none" }
@@ -34,7 +34,7 @@ export default function FormItem({
                 key={j}
                 type="text"
                 placeholder="Isi dengan text..."
-                className="input w-[300px]"
+                className="input w-[18rem]"
                 name={formStructure.name + "-" + j}
                 required
               />
@@ -48,7 +48,7 @@ export default function FormItem({
                 key={j}
                 type="number"
                 placeholder="Isi dengan nomor..."
-                className="input w-[300px]"
+                className="input w-[18rem]"
                 name={formStructure.name + "-" + j}
                 step={0.1}
                 required
@@ -59,7 +59,7 @@ export default function FormItem({
         {formStructure.type === "select" && (
           <>
             <select
-              className="select w-[300px]"
+              className="select w-[18rem]"
               defaultValue={formStructure.options && formStructure.options[0]}
               name={formStructure.name}
               required
@@ -81,7 +81,7 @@ export default function FormItem({
             <input
               type="text"
               placeholder="Isi dengan text..."
-              className="input w-[300px]"
+              className="input w-[18rem]"
               name={formStructure.name}
               defaultValue="risk"
               hidden
@@ -89,7 +89,6 @@ export default function FormItem({
             />
           </>
         )}
-      </div>
       {formStructure.type !== "select" && (
         <div className="hidden group-hover:block absolute right-1 pr-2 pl-3 pt-[5px]">
           <div
@@ -102,6 +101,7 @@ export default function FormItem({
           </div>
         </div>
       )}
+      </div>
     </div>
   )
 }

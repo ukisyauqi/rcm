@@ -21,7 +21,7 @@ export default function Layout({
           </label>
 
           {/* Page Content */}
-          <div className="bg-white rounded-2xl mt-10 p-8 shadow border mx-2 lg:mx-8 min-w-[1000px]">
+          <div className="bg-white rounded-2xl mt-10 p-8 shadow border mx-2 lg:mx-4 min-w-[1000px]">
             {children}
           </div>
         </div>

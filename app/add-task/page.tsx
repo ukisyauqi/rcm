@@ -123,7 +123,7 @@ export default function Page() {
           <label className="font-bold whitespace-nowrap text-left text-xl grow">
             Functional Group
           </label>
-          <div className="input w-[300px] flex items-center text-sm">
+          <div className="input w-[18rem] flex items-center text-sm">
             Propulsion Functional Group
           </div>
         </div>
@@ -148,10 +148,10 @@ export default function Page() {
     heads.unshift("Functional Group")
     return (
       <>
-        <div className="grid grid-rows-4 grid-flow-col">
+        <div className="grid grid-rows-7 sm:grid-rows-4 grid-flow-col">
           {values.map((v, i) => (
             <div key={i} className="flex items-center">
-              <p className="text-right font-bold py-2">
+              <p className="text-right font-bold py-2 whitespace-nowrap">
                 {heads[i].split("-")[0]}
               </p>
               <p className="px-2 text-center font-bold">:</p>
