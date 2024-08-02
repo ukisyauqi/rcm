@@ -1,7 +1,6 @@
 "use server"
 
 import prisma from "@/db"
-import { Prisma, PrismaClient, Subsystem } from "@prisma/client"
 import { z } from "zod"
 import { getDataWithSlug, getSlugAtType } from "./data"
 import { redirect } from "next/navigation"
@@ -41,10 +40,8 @@ const AssetRegisterSchema = z.object({
   tables: z.array(TableSchema),
 })
 
-
 export async function createAssetRegister(data: any) {
-
-  console.log(JSON.stringify(data, null, 2));
+  console.log(JSON.stringify(data, null, 2))
 
   // const validatedFields = AssetRegisterSchema.safeParse(data)
 
@@ -53,7 +50,7 @@ export async function createAssetRegister(data: any) {
   // if (!validatedFields.success)
   //   throw new Error(validatedFields.error.toString())
 
-  await prisma.assetRegister.create({data})
+  await prisma.assetRegister.create({ data })
 
   redirect("/")
 }
@@ -76,7 +73,7 @@ export async function getAssetRegisterBySlug(slug: string) {
   const dummy = getDataWithSlug(slug)
 
   if (dummy) return dummy
-  
+
   try {
     const assetRegister = await prisma.assetRegister.findUnique({
       where: { slug },
@@ -93,15 +90,27 @@ export async function getAssetRegisterBySlug(slug: string) {
 export async function mixGetSlugAtType(type: string) {
   let data = await prisma.assetRegister.findMany({
     where: {
-      type: type
+      type: type,
     },
     select: {
-      slug: true
-    }
+      slug: true,
+    },
   })
 
   const dbSlug = data.map((s) => s.slug)
   const dummySlug = getSlugAtType(type)
 
   return [...dummySlug, ...dbSlug]
+}
+
+export async function checkDuplicateSlug(slug: string) {
+  const check = await prisma.assetRegister.findFirst({
+    where: {
+      slug: slug,
+    },
+  })
+
+  if (check) return true
+
+  return false
 }

@@ -4,20 +4,25 @@ import CAHead from "@/components/CAHead"
 import FormItem from "@/components/FormItem"
 import MTHead from "@/components/MTHead"
 import Risk from "@/components/Risk"
+import { checkDuplicateSlug } from "@/lib/assetRegister"
 import {
   camelCaseToTitleCase,
   findDuplicateIndices,
   getObjValue,
+  getObjValuesStartsWith,
   groupByIndices,
   isNumberString,
+  normalCasetoKebabCase,
   removeDuplicate,
 } from "@/lib/function"
 import { getCurrentRisk } from "@/lib/risk"
 import submitForm from "@/lib/submitForm"
 import React, { useEffect, useState } from "react"
+import { useFormStatus } from "react-dom"
 
 export default function Page() {
   const [formIndex, setFormIndex] = useState(0)
+  const [loading, setLoading] = useState(false)
 
   // FORM Asset Profile (AP)
   const [AP, setAP] = useState({})
@@ -98,12 +103,20 @@ export default function Page() {
     return (
       <form
         className="space-y-6"
-        onSubmit={(e) => {
+        onSubmit={async (e) => {
           e.preventDefault()
           const formElm = e.target as HTMLFormElement
           const data = Object.fromEntries(new FormData(formElm))
-          setAP(data)
-          setFormIndex(formIndex + 1)
+          const slug = normalCasetoKebabCase(
+            getObjValuesStartsWith(data, "equipmentName")[0]
+          )
+          const isDuplicate = await checkDuplicateSlug(slug)
+          if (isDuplicate) {
+            alert(`Sudah ada Equipment Name yang sama.`)
+          } else {
+            setAP(data)
+            setFormIndex(formIndex + 1)
+          }
         }}
       >
         <div className="flex items-center gap-6">
@@ -1218,6 +1231,7 @@ export default function Page() {
         <button
           className="btn btn-primary text-white w-full text-xl mt-10 mb-4"
           onClick={() => {
+            setLoading(true)
             submitForm({
               AP,
               FF,
@@ -1229,8 +1243,9 @@ export default function Page() {
               CC,
             })
           }}
+          disabled={loading}
         >
-          Lanjut
+          {loading ? "Submitting..." : "Lanjut"}
         </button>
         <button
           className="btn btn-secondary text-primary w-full text-xl"

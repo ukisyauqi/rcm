@@ -373,5 +373,9 @@ export default async function submitForm(data: {
 
   // console.log(JSON.stringify(d, null, 2));
 
-  await createAssetRegister(d)
+  try {
+    await createAssetRegister(d)
+  } catch (error) {
+    alert(error)
+  }
 }
