@@ -4,6 +4,7 @@ import Image from "next/image"
 import { redirect } from "next/navigation"
 import React from "react"
 import imgLogin from "@/public/img-login.png"
+import { headers } from "next/headers"
 
 export default async function Page() {
   return (
